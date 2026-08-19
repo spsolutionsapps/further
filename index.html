@@ -5,63 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="FURTHER — Films worth going the distance for. International film and storytelling studio." />
   <title>FURTHER — Films worth going the distance for.</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            ink: '#050608',
-            panel: '#0b0d11',
-            line: '#24262d',
-            ivory: '#f2eee5',
-            muted: '#9a9aa1',
-            gold: '#d9b24b',
-          },
-          fontFamily: {
-            display: ['Anton', 'Arial Narrow', 'sans-serif'],
-            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
-            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-          },
-          boxShadow: {
-            cinema: '0 30px 90px rgba(0,0,0,.45)',
-          }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="css/main.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <style>
-    :root { --gold: #d9b24b; --bg: #050608; --panel:#0b0d11; }
-    * { box-sizing: border-box; }
-    body { margin:0; background:var(--bg); color:#f2eee5; font-family:Inter,system-ui,sans-serif; overflow-x:hidden; }
-    .display { font-family:'Anton', 'Arial Narrow', sans-serif; font-weight:400; letter-spacing:-.015em; }
-    .serif-copy { font-family:'Cormorant Garamond', Georgia, serif; }
-    .grain::before { content:""; position:fixed; inset:-50%; pointer-events:none; opacity:.07; z-index:60; mix-blend-mode:screen;
-      background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.65'/%3E%3C/svg%3E");
-      animation:grain .18s steps(2) infinite; }
-    @keyframes grain { 0%{transform:translate(0,0)} 25%{transform:translate(2%,-1%)} 50%{transform:translate(-1%,2%)} 75%{transform:translate(1%,1%)} 100%{transform:translate(0,0)} }
-    .hero-bg { transform:scale(1.08); will-change:transform; }
-    .vignette { background:radial-gradient(circle at 50% 42%, transparent 0 18%, rgba(0,0,0,.18) 46%, rgba(0,0,0,.72) 100%); }
-    .film-lines { background:linear-gradient(90deg, transparent, rgba(255,255,255,.08), transparent); }
-    .reveal { opacity:0; transform:translateY(28px); }
-    .reveal.is-visible { opacity:1; transform:translateY(0); transition:opacity .9s ease, transform .9s cubic-bezier(.22,1,.36,1); }
-    .card-img { transition:transform 1s cubic-bezier(.16,1,.3,1), filter .7s ease; }
-    .work-card:hover .card-img { transform:scale(1.065); filter:saturate(1.08) contrast(1.06); }
-    .work-card .overlay { background:linear-gradient(180deg, transparent 28%, rgba(0,0,0,.82) 100%); }
-    .btn { position:relative; overflow:hidden; }
-    .btn::after { content:""; position:absolute; inset:0; transform:translateX(-110%); background:linear-gradient(100deg,transparent,rgba(255,255,255,.25),transparent); transition:transform .8s ease; }
-    .btn:hover::after { transform:translateX(110%); }
-    .dot { width:5px; height:5px; border-radius:999px; background:var(--gold); box-shadow:0 0 16px rgba(217,178,75,.65); }
-    .section-rule { height:1px; background:linear-gradient(90deg, transparent, #26282e 12%, #26282e 88%, transparent); }
-    .cursor-glow { position:fixed; width:260px; height:260px; border-radius:50%; background:radial-gradient(circle, rgba(217,178,75,.08), transparent 68%); pointer-events:none; z-index:1; transform:translate(-50%,-50%); mix-blend-mode:screen; }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation:none !important; transition:none !important; scroll-behavior:auto !important; }
-      .reveal { opacity:1; transform:none; }
-    }
-  </style>
 </head>
 <body class="grain">
   <div id="cursorGlow" class="cursor-glow hidden md:block"></div>
@@ -101,14 +48,14 @@
       </div>
       <div class="relative z-10 w-full max-w-6xl px-6 pt-24 pb-20 text-center">
         <p class="text-[9px] uppercase tracking-[.48em] text-gold mb-6 reveal">Production Slate 2025 // Global</p>
-        <div class="reveal" style="transition-delay:.1s">
+        <div class="reveal delay-100">
           <h1 class="display text-[64px] sm:text-[90px] md:text-[128px] lg:text-[156px] leading-[.73] tracking-[-.045em]">FURTHER</h1>
           <p class="mt-7 text-sm sm:text-base text-white/75 tracking-[.15em] uppercase">Films worth going the distance for</p>
         </div>
-        <div class="reveal mt-8" style="transition-delay:.22s">
+        <div class="reveal mt-8 delay-220">
           <a href="#contact" class="btn inline-flex items-center justify-center rounded-full bg-white text-black px-7 py-3 text-[10px] uppercase tracking-[.25em] font-medium">Start a project</a>
         </div>
-        <div class="mt-28 md:mt-36 flex items-center justify-center gap-5 text-[9px] uppercase tracking-[.3em] text-white/45 reveal" style="transition-delay:.34s">
+        <div class="mt-28 md:mt-36 flex items-center justify-center gap-5 text-[9px] uppercase tracking-[.3em] text-white/45 reveal delay-340">
           <span>ARRI ALEXA 35</span><span class="w-1 h-1 rounded-full bg-gold"></span><span>ANAMORPHIC PRIMES</span><span class="w-1 h-1 rounded-full bg-gold"></span><span>8K</span><span class="w-1 h-1 rounded-full bg-gold"></span><span>NEURAL TRANSFER</span>
         </div>
       </div>
@@ -122,7 +69,7 @@
       <div class="mx-auto max-w-[1400px] px-[18px] sm:px-8 md:px-10 lg:px-12">
         <div class="grid lg:grid-cols-[minmax(0,1.55fr)_minmax(300px,.9fr)] gap-12 lg:gap-20 items-start reveal">
           <div>
-            <p class="text-[7px] sm:text-[8px] uppercase tracking-[.26em] text-[#d7b948] mb-5">Origin &amp; Intent <span class="text-white/30">/</span> The Manifesto</p>
+            <p class="text-[7px] sm:text-[8px] uppercase tracking-[.26em] text-gold mb-5">Origin &amp; Intent <span class="text-white/30">/</span> The Manifesto</p>
             <h2 class="display text-[42px] leading-[.82] sm:text-[54px] md:text-[72px] lg:text-[92px] xl:text-[104px] max-w-[860px] text-white uppercase">
               We record fragile legacies.<br>
               We engrave them into<br>
@@ -136,7 +83,7 @@
 
         <div class="my-14 md:my-16 h-px bg-white/10"></div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-6 reveal" style="transition-delay:.12s">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-6 reveal delay-120">
           <div>
             <div class="text-[6px] sm:text-[7px] uppercase tracking-[.22em] text-white/30 mb-3">Sovereign Stamp / World Territories</div>
             <div class="display text-[27px] sm:text-[30px] md:text-[34px] leading-none text-white uppercase">10+ Countries</div>
@@ -164,17 +111,17 @@
               <div><div class="text-[8px] uppercase tracking-[.28em] text-gold mb-2">Docu-series 04:12</div><h3 class="display text-2xl md:text-3xl">The Remote Horizon</h3></div><span class="w-7 h-7 rounded-full bg-white text-black grid place-items-center text-sm">↗</span>
             </div>
           </article>
-          <article class="work-card group relative aspect-[1.5] rounded-xl overflow-hidden border border-white/5 reveal" style="transition-delay:.08s">
+          <article class="work-card group relative aspect-[1.5] rounded-xl overflow-hidden border border-white/5 reveal delay-80">
             <img class="card-img absolute inset-0 w-full h-full object-cover" src="assets/img-004.png" alt="Monolith Speed">
             <div class="overlay absolute inset-0"></div>
             <div class="absolute inset-x-4 bottom-4 flex items-end justify-between gap-4"><div><div class="text-[8px] uppercase tracking-[.28em] text-gold mb-2">Commercial 01:30</div><h3 class="display text-2xl md:text-3xl">Monolith Speed</h3></div><span class="w-7 h-7 rounded-full bg-white text-black grid place-items-center text-sm">↗</span></div>
           </article>
-          <article class="work-card group relative aspect-[1.5] rounded-xl overflow-hidden border border-white/5 reveal" style="transition-delay:.16s">
+          <article class="work-card group relative aspect-[1.5] rounded-xl overflow-hidden border border-white/5 reveal delay-160">
             <img class="card-img absolute inset-0 w-full h-full object-cover" src="assets/img-006.png" alt="Wild Stallion Spirit">
             <div class="overlay absolute inset-0"></div>
             <div class="absolute inset-x-4 bottom-4 flex items-end justify-between gap-4"><div><div class="text-[8px] uppercase tracking-[.28em] text-gold mb-2">Legacy Film 08:45</div><h3 class="display text-2xl md:text-3xl">Wild Stallion Spirit</h3></div><span class="w-7 h-7 rounded-full bg-white text-black grid place-items-center text-sm">↗</span></div>
           </article>
-          <article class="work-card group relative aspect-[1.5] rounded-xl overflow-hidden border border-white/5 reveal" style="transition-delay:.24s">
+          <article class="work-card group relative aspect-[1.5] rounded-xl overflow-hidden border border-white/5 reveal delay-240">
             <img class="card-img absolute inset-0 w-full h-full object-cover" src="assets/img-008.png" alt="Spaces of Silence">
             <div class="overlay absolute inset-0"></div>
             <div class="absolute inset-x-4 bottom-4 flex items-end justify-between gap-4"><div><div class="text-[8px] uppercase tracking-[.28em] text-gold mb-2">Art &amp; Architecture 03:20</div><h3 class="display text-2xl md:text-3xl">Spaces of Silence</h3></div><span class="w-7 h-7 rounded-full bg-white text-black grid place-items-center text-sm">↗</span></div>
@@ -225,7 +172,7 @@
         <div class="reveal mb-10"><p class="text-[9px] uppercase tracking-[.38em] text-gold mb-4">In-House Cinema / Originals</p><h2 class="display text-5xl md:text-7xl">ORIGINALS</h2></div>
         <div class="grid md:grid-cols-2 gap-4">
           <article class="relative overflow-hidden rounded-xl aspect-[.84] group reveal"><img src="assets/img-012.png" class="w-full h-full object-cover transition duration-[1.2s] group-hover:scale-105" alt="The Heritage Guardian"><div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div><div class="absolute inset-0 flex items-end p-6 md:p-8"><div><div class="text-[9px] uppercase tracking-[.27em] text-gold mb-5">Original Series</div><h3 class="display text-5xl leading-[.82] max-w-[7ch]">The Heritage Guardian</h3><p class="mt-5 text-sm text-white/65 max-w-xs">Culture. Heritage. Identity.</p><button class="mt-6 text-[9px] uppercase tracking-[.22em]">Explore THG ↗</button></div></div></article>
-          <article class="relative overflow-hidden rounded-xl aspect-[.84] group reveal" style="transition-delay:.12s"><img src="assets/img-014.png" class="w-full h-full object-cover transition duration-[1.2s] group-hover:scale-105" alt="Horses & Humans"><div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div><div class="absolute inset-0 flex items-end p-6 md:p-8"><div><div class="text-[9px] uppercase tracking-[.27em] text-gold mb-5">Feature Documentary</div><h3 class="display text-5xl leading-[.82] max-w-[6ch]">Horses &amp; Humans</h3><p class="mt-5 text-sm text-white/65 max-w-sm">The relationship between horses, people and cultures around the world.</p><button class="mt-6 text-[9px] uppercase tracking-[.22em]">Explore Horses &amp; Humans ↗</button></div></div></article>
+          <article class="relative overflow-hidden rounded-xl aspect-[.84] group reveal delay-120"><img src="assets/img-014.png" class="w-full h-full object-cover transition duration-[1.2s] group-hover:scale-105" alt="Horses & Humans"><div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div><div class="absolute inset-0 flex items-end p-6 md:p-8"><div><div class="text-[9px] uppercase tracking-[.27em] text-gold mb-5">Feature Documentary</div><h3 class="display text-5xl leading-[.82] max-w-[6ch]">Horses &amp; Humans</h3><p class="mt-5 text-sm text-white/65 max-w-sm">The relationship between horses, people and cultures around the world.</p><button class="mt-6 text-[9px] uppercase tracking-[.22em]">Explore Horses &amp; Humans ↗</button></div></div></article>
         </div>
       </div>
     </section>
@@ -300,55 +247,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-  <script>
-    gsap.registerPlugin(ScrollTrigger);
-
-    // Hero intro + subtle parallax
-    const heroTimeline = gsap.timeline({ defaults: { ease: 'power3.out' } });
-    heroTimeline
-      .from('.hero-bg', { scale: 1.18, duration: 2.2, ease: 'power2.out' }, 0)
-      .from('h1', { y: 50, opacity: 0, duration: 1.2 }, .25)
-      .from('section:first-of-type p', { y: 22, opacity: 0, duration: .9 }, .55);
-
-    gsap.to('#heroImage', {
-      yPercent: 8,
-      scale: 1.12,
-      ease: 'none',
-      scrollTrigger: { trigger: 'section:first-of-type', start: 'top top', end: 'bottom top', scrub: 1.2 }
-    });
-
-    // Global reveals
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); } });
-    }, { threshold: .12 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    // Header state
-    const header = document.getElementById('siteHeader');
-    addEventListener('scroll', () => {
-      header.classList.toggle('bg-black/55', scrollY > 30);
-      header.classList.toggle('backdrop-blur-xl', scrollY > 30);
-      header.classList.toggle('border-b', scrollY > 30);
-      header.classList.toggle('border-white/5', scrollY > 30);
-    }, { passive: true });
-
-    // Mobile menu
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
-
-    // Cursor glow
-    const glow = document.getElementById('cursorGlow');
-    addEventListener('pointermove', e => {
-      glow.style.left = e.clientX + 'px'; glow.style.top = e.clientY + 'px';
-    }, { passive: true });
-
-    // Gentle service row interaction
-    document.querySelectorAll('.service-row').forEach(row => {
-      row.addEventListener('mouseenter', () => gsap.to(row, { x: 8, duration: .35, ease:'power2.out' }));
-      row.addEventListener('mouseleave', () => gsap.to(row, { x: 0, duration: .45, ease:'power2.out' }));
-    });
-  </script>
+  <script src="src/js/main.js"></script>
 </body>
 </html>
