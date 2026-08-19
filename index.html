@@ -15,20 +15,21 @@
 
   <header class="fixed top-0 inset-x-0 z-50 transition-all duration-500" id="siteHeader">
     <div class="mx-auto max-w-[1400px] px-5 md:px-8 lg:px-12">
-      <nav class="flex items-center justify-between py-5 md:py-7">
-        <a href="#top" class="tracking-[.35em] text-xs text-white/90">FURTHER</a>
-        <div class="hidden md:flex items-center gap-8 text-[10px] uppercase tracking-[.24em] text-white/55">
-          <a href="#work" class="hover:text-white transition">Work</a>
-          <a href="#services" class="hover:text-white transition">Services</a>
-          <a href="#originals" class="hover:text-white transition">Originals</a>
-          <a href="#clients" class="hover:text-white transition">Clients</a>
-          <a href="#about" class="hover:text-white transition">About</a>
-          <a href="#contact" class="hover:text-white transition">Contact</a>
+      <nav class="grid grid-cols-3 items-center py-5 md:py-7">
+        <div class="flex items-center gap-6 lg:gap-8 text-[12px] uppercase tracking-[.24em] text-white/55">
+          <a href="#work" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition hidden md:inline">Work</a>
+          <a href="#services" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition hidden md:inline">Services</a>
+          <a href="#originals" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition hidden md:inline">Originals</a>
         </div>
-        <a href="#contact" class="hidden md:inline-flex text-[10px] uppercase tracking-[.2em] text-white/90 border border-white/15 rounded-full px-4 py-2 hover:border-white/40 transition">Start a project</a>
-        <button id="menuBtn" class="md:hidden text-white/80" aria-label="Open menu">
-          <span class="block w-6 h-px bg-white mb-1.5"></span><span class="block w-4 h-px bg-white ml-auto"></span>
-        </button>
+        <a href="#top" class="header-logo-link" aria-label="FURTHER home"><img src="assets/logo-chico.png" alt="FURTHER" class="header-logo"></a>
+        <div class="justify-self-end flex items-center gap-6 lg:gap-8 text-[12px] uppercase tracking-[.24em] text-white/55">
+          <a href="#clients" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition hidden md:inline">Clients</a>
+          <a href="#about" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition hidden md:inline">About</a>
+          <a href="#contact" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition hidden md:inline">Contact</a>
+          <button id="menuBtn" class="md:hidden text-white/80" aria-label="Open menu">
+            <span class="block w-6 h-px bg-white mb-1.5"></span><span class="block w-4 h-px bg-white ml-auto"></span>
+          </button>
+        </div>
       </nav>
     </div>
     <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 bg-black/85 backdrop-blur-xl">
@@ -37,6 +38,13 @@
       </div>
     </div>
   </header>
+
+  <a href="https://wa.me/5491134910182?text=Hi%20FURTHER%2C%20I%20would%20like%20to%20start%20a%20project." target="_blank" rel="noopener" aria-label="Chat on WhatsApp" class="fixed bottom-5 right-5 md:bottom-7 md:right-7 z-[60] flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-black/40 transition hover:scale-110 hover:bg-[#1fb958]">
+    <span class="absolute inset-0 rounded-full bg-[#25D366] opacity-40 animate-ping"></span>
+    <svg viewBox="0 0 24 24" fill="currentColor" class="relative h-7 w-7" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
 
   <main id="top">
     <!-- HERO -->
@@ -49,61 +57,47 @@
       <div class="relative z-10 w-full max-w-6xl px-6 pt-24 pb-20 text-center">
         <p class="text-[9px] uppercase tracking-[.48em] text-gold mb-6 reveal">Production Slate 2025 // Global</p>
         <div class="reveal delay-100">
-          <h1 class="display text-[64px] sm:text-[90px] md:text-[128px] lg:text-[156px] leading-[.73] tracking-[-.045em]">FURTHER</h1>
-          <p class="mt-7 text-sm sm:text-base text-white/75 tracking-[.15em] uppercase">Films worth going the distance for</p>
+          <img src="assets/logo.png" alt="FURTHER — Films worth going the distance for" class="hero-logo">
         </div>
         <div class="reveal mt-8 delay-220">
           <a href="#contact" class="btn inline-flex items-center justify-center rounded-full bg-white text-black px-7 py-3 text-[10px] uppercase tracking-[.25em] font-medium">Start a project</a>
         </div>
-        <div class="mt-28 md:mt-36 flex items-center justify-center gap-5 text-[9px] uppercase tracking-[.3em] text-white/45 reveal delay-340">
-          <span>ARRI ALEXA 35</span><span class="w-1 h-1 rounded-full bg-gold"></span><span>ANAMORPHIC PRIMES</span><span class="w-1 h-1 rounded-full bg-gold"></span><span>8K</span><span class="w-1 h-1 rounded-full bg-gold"></span><span>NEURAL TRANSFER</span>
-        </div>
       </div>
-      <div class="absolute bottom-5 left-1/2 -translate-x-1/2 flex items-center gap-3 text-[8px] tracking-[.28em] uppercase text-white/35">
-        <span class="w-px h-10 bg-white/20"></span><span>Scroll</span>
+      <div class="absolute bottom-5 left-1/2 -translate-x-1/2 text-white/35">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-5 w-5 animate-bounce" aria-hidden="true"><path d="M4 8l8 8 8-8"/></svg>
       </div>
     </section>
 
     <!-- INTENT -->
     <section class="relative bg-black py-20 sm:py-24 md:py-28 overflow-hidden" id="about">
-      <div class="mx-auto max-w-[1400px] px-[18px] sm:px-8 md:px-10 lg:px-12">
-        <div class="grid lg:grid-cols-[minmax(0,1.55fr)_minmax(300px,.9fr)] gap-12 lg:gap-20 items-start reveal">
-          <div>
-            <p class="text-[7px] sm:text-[8px] uppercase tracking-[.26em] text-gold mb-5">Origin &amp; Intent <span class="text-white/30">/</span> The Manifesto</p>
-            <h2 class="display text-[42px] leading-[.82] sm:text-[54px] md:text-[72px] lg:text-[92px] xl:text-[104px] max-w-[860px] text-white uppercase">
-              We record fragile legacies.<br>
-              We engrave them into<br>
-              immortal cinema.
-            </h2>
-          </div>
-          <div class="pt-5 lg:pt-10">
-            <p class="serif-copy text-[15px] sm:text-[16px] leading-[1.75] tracking-[.01em] text-white/60 max-w-[470px]">An international storytelling collective forging raw, uncompromising documentaries and cinematic captures. We venture to the edge of geography to extract narratives of architecture, legacy estates, human craftsmanship, and pristine wilderness.</p>
-          </div>
+      <div class="mx-auto max-w-[1400px] px-[18px] sm:px-8 md:px-10 lg:px-12 text-center">
+        <div class="flex flex-col items-center gap-8 reveal">
+          <h2 class="display text-[42px] leading-[44px] sm:text-[54px] sm:leading-[56px] md:text-[72px] md:leading-[78px] lg:text-[92px] lg:leading-[96px] xl:text-[104px] xl:leading-[106px] w-full max-w-[1100px] mx-auto text-white uppercase">
+            WE CREATE FILMS THAT BUILD IDENTITY, VALUE AND VISIBILITY.
+          </h2>
+          <p class="serif-copy text-[18px] sm:text-[18px] leading-[1.75] tracking-[.01em] text-white/60 w-full">An international storytelling collective forging raw, uncompromising documentaries and cinematic captures. We venture to the edge of geography to extract narratives of architecture, legacy estates, human craftsmanship, and pristine wilderness.</p>
         </div>
 
         <div class="my-14 md:my-16 h-px bg-white/10"></div>
 
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-6 reveal delay-120">
-          <div>
-            <div class="text-[6px] sm:text-[7px] uppercase tracking-[.22em] text-white/30 mb-3">Sovereign Stamp / World Territories</div>
+          <div class="flex flex-col items-center gap-4">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-7 w-7 text-gold" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.6 2.5 15.4 0 18"/><path d="M12 3c-2.5 2.6-2.5 15.4 0 18"/></svg>
             <div class="display text-[27px] sm:text-[30px] md:text-[34px] leading-none text-white uppercase">10+ Countries</div>
           </div>
-          <div>
-            <div class="text-[6px] sm:text-[7px] uppercase tracking-[.22em] text-white/30 mb-3">Ultra-Wide Visual Architecture</div>
-            <div class="display text-[27px] sm:text-[30px] md:text-[34px] leading-[.9] text-white uppercase max-w-[220px]">Pure<br>anamorphic</div>
+          <div class="flex flex-col items-center gap-4">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-7 w-7 text-gold" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M7 5l2 4M12 5l2 4M17 5l2 4"/><path d="M3 9h18"/></svg>
+            <div class="display text-[27px] sm:text-[30px] md:text-[34px] leading-[1.02] text-white uppercase max-w-[300px]">International Productions</div>
           </div>
-          <div>
-            <div class="text-[6px] sm:text-[7px] uppercase tracking-[.22em] text-white/30 mb-3">Distributed Intellectual Value</div>
-            <div class="display text-[27px] sm:text-[30px] md:text-[34px] leading-none text-white uppercase">Global Slate</div>
+          <div class="flex flex-col items-center gap-4">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-7 w-7 text-gold" aria-hidden="true"><circle cx="5" cy="12" r="2.2"/><circle cx="19" cy="6" r="2.2"/><circle cx="19" cy="18" r="2.2"/><path d="M7.1 10.8 16.9 7.2"/><path d="M7.1 13.2l9.8 3.6"/></svg>
+            <div class="display text-[27px] sm:text-[30px] md:text-[34px] leading-none text-white uppercase">Global Distribution</div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- WORK -->
-    <section class="bg-ink pb-24 md:pb-32" id="work">
-      <div class="mx-auto max-w-6xl px-6 md:px-10">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
+        <div class="my-14 md:my-16 h-px bg-white/10"></div>
+
+        <div id="work" class="mx-auto max-w-6xl grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 scroll-mt-28">
           <article class="work-card group relative aspect-[1.5] rounded-xl overflow-hidden border border-white/5 reveal">
             <img class="card-img absolute inset-0 w-full h-full object-cover" src="assets/img-002.png" alt="The Remote Horizon">
             <div class="overlay absolute inset-0"></div>
@@ -130,38 +124,85 @@
       </div>
     </section>
 
-    <!-- SHOWREEL -->
-    <section class="bg-ink pb-24 md:pb-32">
-      <div class="mx-auto max-w-6xl px-6 md:px-10">
-        <div class="relative rounded-2xl overflow-hidden border border-white/5 min-h-[520px] md:min-h-[620px] reveal">
-          <img src="assets/img-010.png" class="absolute inset-0 w-full h-full object-cover" alt="Showreel mountain landscape">
-          <div class="absolute inset-0 bg-black/40"></div>
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent"></div>
-          <div class="absolute inset-x-0 bottom-0 p-6 md:p-10 lg:p-12">
-            <div class="flex flex-wrap items-center justify-between gap-5 mb-8">
-              <div class="text-[8px] uppercase tracking-[.28em] text-gold">Selected Showreel / Feature Film Presentation</div>
-              <div class="text-[8px] uppercase tracking-[.28em] text-white/55">REC // 00:00:15:24</div>
-            </div>
-            <div class="max-w-xl">
-              <h2 class="display text-5xl md:text-7xl leading-[.88]">Go the distance.</h2>
-              <p class="mt-5 text-sm leading-7 text-white/70 max-w-lg">An overview of our cinematic language, highlighting films capturing raw human stories, architectural wonders, and breathtaking locations.</p>
-              <button class="btn mt-7 inline-flex items-center gap-3 rounded-full bg-white text-black px-6 py-3 text-[10px] uppercase tracking-[.23em]">Watch showreel <span>↗</span></button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- SERVICES -->
     <section class="bg-panel border-y border-white/[.035] py-24 md:py-28" id="services">
       <div class="mx-auto max-w-6xl px-6 md:px-10">
-        <div class="mb-10 reveal"><p class="text-[9px] uppercase tracking-[.38em] text-gold mb-5">Capabilities / What we do</p><h2 class="display text-5xl md:text-7xl">WHAT WE DO</h2></div>
-        <div class="divide-y divide-white/10 border-y border-white/10">
-          <div class="service-row grid md:grid-cols-[60px_220px_1fr_40px] items-center gap-4 py-6 reveal"><span class="text-[10px] text-gold">01</span><h3>Brand Films</h3><p class="text-sm text-white/45">Brand stories · Campaign films · Product storytelling · Branded content</p><span class="text-white/45 text-xl">+</span></div>
-          <div class="service-row grid md:grid-cols-[60px_220px_1fr_40px] items-center gap-4 py-6 reveal"><span class="text-[10px] text-gold">02</span><h3>Hospitality &amp; Destinations</h3><p class="text-sm text-white/45">Destination films · Hotel films · Experiences · Social content</p><span class="text-white/45 text-xl">+</span></div>
-          <div class="service-row grid md:grid-cols-[60px_220px_1fr_40px] items-center gap-4 py-6 reveal"><span class="text-[10px] text-gold">03</span><h3>Ranches &amp; Equestrian</h3><p class="text-sm text-white/45">Legacy films · Ranch films · Breeding programs · Equestrian content</p><span class="text-white/45 text-xl">+</span></div>
-          <div class="service-row grid md:grid-cols-[60px_220px_1fr_40px] items-center gap-4 py-6 reveal"><span class="text-[10px] text-gold">04</span><h3>Real Estate</h3><p class="text-sm text-white/45">Cinematic films for exceptional properties, ranches and estates</p><span class="text-white/45 text-xl">+</span></div>
-          <div class="service-row grid md:grid-cols-[60px_220px_1fr_40px] items-center gap-4 py-6 reveal"><span class="text-[10px] text-gold">05</span><h3>Institutions &amp; Associations</h3><p class="text-sm text-white/45">Institutional films · Heritage · Events · Communications</p><span class="text-white/45 text-xl">+</span></div>
+        <div class="mb-10 reveal"><p class="text-[9px] uppercase tracking-[.38em] text-gold mb-5">Services / What we do</p><h2 class="display text-5xl md:text-7xl">WHAT WE DO</h2></div>
+        <div class="flex flex-col gap-4">
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <article class="service-card group relative rounded-xl overflow-hidden border border-white/5 bg-black/20 reveal">
+            <div class="relative aspect-[16/10] overflow-hidden">
+              <img src="assets/img-001.png" class="w-full h-full object-cover transition duration-[1.2s] group-hover:scale-105" alt="Brand Films">
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-transparent"></div>
+              <span class="absolute top-4 left-4 text-[9px] uppercase tracking-[.25em] text-gold">01</span>
+              <div class="absolute inset-x-4 bottom-4"><h3 class="display text-2xl md:text-3xl">Brand Films</h3></div>
+            </div>
+            <div class="p-5 md:p-6">
+              <p class="text-sm text-white/50 leading-6">Películas para marcas.</p>
+              <ul class="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2 text-[9px] uppercase tracking-[.18em] text-white/40">
+                <li>Brand stories</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Campaign films</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Product storytelling</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Branded content</li>
+              </ul>
+            </div>
+          </article>
+          <article class="service-card group relative rounded-xl overflow-hidden border border-white/5 bg-black/20 reveal delay-80">
+            <div class="relative aspect-[16/10] overflow-hidden">
+              <img src="assets/img-003.png" class="w-full h-full object-cover transition duration-[1.2s] group-hover:scale-105" alt="Hospitality and Destinations">
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-transparent"></div>
+              <span class="absolute top-4 left-4 text-[9px] uppercase tracking-[.25em] text-gold">02</span>
+              <div class="absolute inset-x-4 bottom-4"><h3 class="display text-2xl md:text-3xl">Hospitality &amp; Destinations</h3></div>
+            </div>
+            <div class="p-5 md:p-6">
+              <p class="text-sm text-white/50 leading-6">Hoteles, resorts, guest ranches y destinos.</p>
+              <ul class="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2 text-[9px] uppercase tracking-[.18em] text-white/40">
+                <li>Destination films</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Hotel films</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Experiences</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Social content</li>
+              </ul>
+            </div>
+          </article>
+          <article class="service-card group relative rounded-xl overflow-hidden border border-white/5 bg-black/20 reveal delay-160">
+            <div class="relative aspect-[16/10] overflow-hidden">
+              <img src="assets/img-005.png" class="w-full h-full object-cover transition duration-[1.2s] group-hover:scale-105" alt="Ranches and Equestrian">
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-transparent"></div>
+              <span class="absolute top-4 left-4 text-[9px] uppercase tracking-[.25em] text-gold">03</span>
+              <div class="absolute inset-x-4 bottom-4"><h3 class="display text-2xl md:text-3xl">Ranches &amp; Equestrian</h3></div>
+            </div>
+            <div class="p-5 md:p-6">
+              <p class="text-sm text-white/50 leading-6">Ranchos, haras, criaderos, asociaciones y universo ecuestre / ganadero.</p>
+              <ul class="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2 text-[9px] uppercase tracking-[.18em] text-white/40">
+                <li>Legacy films</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Ranch films</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Breeding programs</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Equestrian content</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:mx-auto lg:w-[calc((100%_-_2rem)/3*2_+_1rem)]">
+          <article class="service-card group relative rounded-xl overflow-hidden border border-white/5 bg-black/20 reveal delay-240">
+            <div class="relative aspect-[16/10] overflow-hidden">
+              <img src="assets/img-007.png" class="w-full h-full object-cover transition duration-[1.2s] group-hover:scale-105" alt="Real Estate">
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-transparent"></div>
+              <span class="absolute top-4 left-4 text-[9px] uppercase tracking-[.25em] text-gold">04</span>
+              <div class="absolute inset-x-4 bottom-4"><h3 class="display text-2xl md:text-3xl">Real Estate</h3></div>
+            </div>
+            <div class="p-5 md:p-6">
+              <p class="text-sm text-white/50 leading-6">Acá hay un producto comercial muy claro.</p>
+              <ul class="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2 text-[9px] uppercase tracking-[.18em] text-white/40">
+                <li>Cinematic films</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Exceptional properties</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Ranches</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Estates</li>
+              </ul>
+            </div>
+          </article>
+          <article class="service-card group relative rounded-xl overflow-hidden border border-white/5 bg-black/20 reveal delay-320">
+            <div class="relative aspect-[16/10] overflow-hidden">
+              <img src="assets/img-009.png" class="w-full h-full object-cover transition duration-[1.2s] group-hover:scale-105" alt="Institutions and Associations">
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-transparent"></div>
+              <span class="absolute top-4 left-4 text-[9px] uppercase tracking-[.25em] text-gold">05</span>
+              <div class="absolute inset-x-4 bottom-4"><h3 class="display text-2xl md:text-3xl">Institutions &amp; Associations</h3></div>
+            </div>
+            <div class="p-5 md:p-6">
+              <p class="text-sm text-white/50 leading-6">Federaciones, asociaciones y organizaciones.</p>
+              <ul class="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2 text-[9px] uppercase tracking-[.18em] text-white/40">
+                <li>Institutional films</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Heritage</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Events</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Communications</li>
+              </ul>
+            </div>
+          </article>
+        </div>
         </div>
       </div>
     </section>
@@ -178,11 +219,37 @@
     </section>
 
     <!-- CLIENTS -->
-    <section class="bg-panel py-16 md:py-20 border-y border-white/[.035]" id="clients">
-      <div class="mx-auto max-w-6xl px-6 md:px-10">
-        <div class="grid md:grid-cols-2 gap-8 items-center">
-          <div class="reveal"><p class="text-[9px] uppercase tracking-[.38em] text-gold mb-6">Trusted by leading organizations</p><div class="flex flex-wrap gap-x-9 gap-y-4 text-[10px] uppercase tracking-[.24em] text-white/50"><span>Government of Argentina</span><span>Haras de la Armonia</span><span>FEI Global</span><span>Amani Reserve</span><span>Reid Associates</span></div></div>
-          <div class="reveal md:text-right"><p class="text-[9px] uppercase tracking-[.38em] text-gold mb-6">Distribution Partners</p><div class="flex flex-wrap justify-start md:justify-end gap-x-8 gap-y-4 text-[10px] uppercase tracking-[.25em] text-white/40"><span>Netflix</span><span>Prime Video</span><span>Mubi</span><span>Vimeo Staff Picks</span><span>Museum Extra</span></div></div>
+    <section class="bg-panel py-16 md:py-20 border-y border-white/[.035] overflow-hidden" id="clients">
+      <div class="mx-auto max-w-[1400px] px-6 md:px-10 mb-10 md:mb-12 text-center reveal">
+        <p class="text-[9px] uppercase tracking-[.38em] text-gold mb-4">Trusted worldwide</p>
+        <h2 class="display text-5xl md:text-7xl">CLIENTS &amp; PARTNERS</h2>
+      </div>
+      <div class="marquee overflow-hidden">
+        <div class="marquee-track flex items-center">
+          <div class="flex items-center shrink-0">
+            <span class="mx-6 md:mx-8 text-[12px] md:text-[14px] uppercase tracking-[.32em] text-white/45 hover:text-white transition">Government of Argentina</span><span class="w-1.5 h-1.5 rounded-full bg-gold/50 shrink-0"></span>
+            <span class="mx-6 md:mx-8 text-[12px] md:text-[14px] uppercase tracking-[.32em] text-white/45 hover:text-white transition">Haras de la Armonia</span><span class="w-1.5 h-1.5 rounded-full bg-gold/50 shrink-0"></span>
+            <span class="mx-6 md:mx-8 text-[12px] md:text-[14px] uppercase tracking-[.32em] text-white/45 hover:text-white transition">FEI Global</span><span class="w-1.5 h-1.5 rounded-full bg-gold/50 shrink-0"></span>
+            <span class="mx-6 md:mx-8 text-[12px] md:text-[14px] uppercase tracking-[.32em] text-white/45 hover:text-white transition">Amani Reserve</span><span class="w-1.5 h-1.5 rounded-full bg-gold/50 shrink-0"></span>
+            <span class="mx-6 md:mx-8 text-[12px] md:text-[14px] uppercase tracking-[.32em] text-white/45 hover:text-white transition">Reid Associates</span><span class="w-1.5 h-1.5 rounded-full bg-gold/50 shrink-0"></span>
+            <span class="mx-6 md:mx-8 text-[12px] md:text-[14px] uppercase tracking-[.32em] text-white/45 hover:text-white transition">Netflix</span><span class="w-1.5 h-1.5 rounded-full bg-gold/50 shrink-0"></span>
+            <span class="mx-6 md:mx-8 text-[12px] md:text-[14px] uppercase tracking-[.32em] text-white/45 hover:text-white transition">Prime Video</span><span class="w-1.5 h-1.5 rounded-full bg-gold/50 shrink-0"></span>
+            <span class="mx-6 md:mx-8 text-[12px] md:text-[14px] uppercase tracking-[.32em] text-white/45 hover:text-white transition">Mubi</span><span class="w-1.5 h-1.5 rounded-full bg-gold/50 shrink-0"></span>
+            <span class="mx-6 md:mx-8 text-[12px] md:text-[14px] uppercase tracking-[.32em] text-white/45 hover:text-white transition">Vimeo Staff Picks</span><span class="w-1.5 h-1.5 rounded-full bg-gold/50 shrink-0"></span>
+            <span class="mx-6 md:mx-8 text-[12px] md:text-[14px] uppercase tracking-[.32em] text-white/45 hover:text-white transition">Museum Extra</span><span class="w-1.5 h-1.5 rounded-full bg-gold/50 shrink-0"></span>
+          </div>
+          <div class="flex items-center shrink-0" aria-hidden="true">
+            <span class="mx-6 md:mx-8 text-[12px] md:text-[14px] uppercase tracking-[.32em] text-white/45 hover:text-white transition">Government of Argentina</span><span class="w-1.5 h-1.5 rounded-full bg-gold/50 shrink-0"></span>
+            <span class="mx-6 md:mx-8 text-[12px] md:text-[14px] uppercase tracking-[.32em] text-white/45 hover:text-white transition">Haras de la Armonia</span><span class="w-1.5 h-1.5 rounded-full bg-gold/50 shrink-0"></span>
+            <span class="mx-6 md:mx-8 text-[12px] md:text-[14px] uppercase tracking-[.32em] text-white/45 hover:text-white transition">FEI Global</span><span class="w-1.5 h-1.5 rounded-full bg-gold/50 shrink-0"></span>
+            <span class="mx-6 md:mx-8 text-[12px] md:text-[14px] uppercase tracking-[.32em] text-white/45 hover:text-white transition">Amani Reserve</span><span class="w-1.5 h-1.5 rounded-full bg-gold/50 shrink-0"></span>
+            <span class="mx-6 md:mx-8 text-[12px] md:text-[14px] uppercase tracking-[.32em] text-white/45 hover:text-white transition">Reid Associates</span><span class="w-1.5 h-1.5 rounded-full bg-gold/50 shrink-0"></span>
+            <span class="mx-6 md:mx-8 text-[12px] md:text-[14px] uppercase tracking-[.32em] text-white/45 hover:text-white transition">Netflix</span><span class="w-1.5 h-1.5 rounded-full bg-gold/50 shrink-0"></span>
+            <span class="mx-6 md:mx-8 text-[12px] md:text-[14px] uppercase tracking-[.32em] text-white/45 hover:text-white transition">Prime Video</span><span class="w-1.5 h-1.5 rounded-full bg-gold/50 shrink-0"></span>
+            <span class="mx-6 md:mx-8 text-[12px] md:text-[14px] uppercase tracking-[.32em] text-white/45 hover:text-white transition">Mubi</span><span class="w-1.5 h-1.5 rounded-full bg-gold/50 shrink-0"></span>
+            <span class="mx-6 md:mx-8 text-[12px] md:text-[14px] uppercase tracking-[.32em] text-white/45 hover:text-white transition">Vimeo Staff Picks</span><span class="w-1.5 h-1.5 rounded-full bg-gold/50 shrink-0"></span>
+            <span class="mx-6 md:mx-8 text-[12px] md:text-[14px] uppercase tracking-[.32em] text-white/45 hover:text-white transition">Museum Extra</span><span class="w-1.5 h-1.5 rounded-full bg-gold/50 shrink-0"></span>
+          </div>
         </div>
       </div>
     </section>
@@ -194,12 +261,7 @@
         <div class="relative rounded-xl overflow-hidden border border-white/5 reveal">
           <img src="assets/img-016.png" class="w-full" alt="World map showing global reach">
           <div class="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent"></div>
-          <div class="absolute left-[23%] top-[47%] text-[8px] uppercase tracking-[.22em] text-gold">London</div>
-          <div class="absolute left-[15%] top-[58%] text-[8px] uppercase tracking-[.22em] text-gold">New York</div>
-          <div class="absolute left-[59%] top-[60%] text-[8px] uppercase tracking-[.22em] text-gold">Buenos Aires</div>
-          <div class="absolute right-[12%] top-[42%] text-[8px] uppercase tracking-[.22em] text-gold">Tokyo</div>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-5 text-[9px] uppercase tracking-[.26em] text-white/40"><span>London</span><span>New York</span><span>Tokyo</span><span>Buenos Aires</span></div>
       </div>
     </section>
 
@@ -209,12 +271,12 @@
         <div class="mb-10 reveal"><p class="text-[9px] uppercase tracking-[.38em] text-gold mb-5">The Collective / Team &amp; Vision</p><h2 class="display text-5xl md:text-7xl">THE PEOPLE BEHIND THE FILMS</h2></div>
         <div class="grid lg:grid-cols-[1.1fr_.9fr] gap-4 mb-4">
           <div class="relative rounded-xl overflow-hidden min-h-[360px] reveal"><img src="assets/img-018.png" class="absolute inset-0 w-full h-full object-cover" alt="Filmmaker with camera"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div></div>
-          <div class="rounded-xl border border-white/5 bg-black/15 p-7 md:p-9 flex flex-col justify-end reveal"><div class="text-[9px] uppercase tracking-[.25em] text-gold mb-4">Founder / Director</div><h3 class="display text-4xl">Nacho Sánchez Sorondo</h3><p class="mt-4 text-sm leading-7 text-white/55">Guiding the lens with visual honesty, Nacho established FURTHER to bring dramatic, raw, and high fidelity storytelling to institutional, brand, and natural legacies worldwide.</p><div class="mt-5 text-[9px] uppercase tracking-[.23em] text-white/40">@nachossorondo</div></div>
+          <div class="rounded-xl border border-white/5 bg-black/15 p-7 md:p-9 flex flex-col justify-end reveal"><div class="text-[9px] uppercase tracking-[.25em] text-gold mb-4">Founder / Director</div><h3 class="display text-4xl">Nacho Sánchez Sorondo</h3><p class="mt-4 text-sm leading-7 text-white/55">Guiding the lens with visual honesty, Nacho established FURTHER to bring dramatic, raw, and high fidelity storytelling to institutional, brand, and natural legacies worldwide.</p><div class="mt-5 flex items-center gap-3 text-white/40"><a href="https://www.instagram.com/nachossorondo" target="_blank" rel="noopener" aria-label="Instagram de Nacho Sánchez Sorondo" class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 hover:border-white/50 hover:text-white transition"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="#" target="_blank" rel="noopener" aria-label="LinkedIn de Nacho Sánchez Sorondo" class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 hover:border-white/50 hover:text-white transition"><svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.55V9h3.57zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a><span class="text-[9px] uppercase tracking-[.23em]">@nachossorondo</span></div></div>
         </div>
         <div class="grid sm:grid-cols-3 gap-4">
-          <div class="rounded-xl border border-white/5 p-6 reveal"><div class="text-[9px] uppercase tracking-[.25em] text-gold mb-4">Lead Producer</div><h3 class="display text-2xl">Sofi Rossi</h3><p class="mt-3 text-sm text-white/50 leading-6">Coordinating multi market logistics across five continents.</p><div class="mt-5 text-[9px] uppercase tracking-[.2em] text-white/35">@sofirossi</div></div>
-          <div class="rounded-xl border border-white/5 p-6 reveal"><div class="text-[9px] uppercase tracking-[.25em] text-gold mb-4">Director of Photography</div><h3 class="display text-2xl">Mateo Diaz</h3><p class="mt-3 text-sm text-white/50 leading-6">Architect of light, master of the anamorphic canvas.</p><div class="mt-5 text-[9px] uppercase tracking-[.2em] text-white/35">@mateodp</div></div>
-          <div class="rounded-xl border border-white/5 p-6 reveal"><div class="text-[9px] uppercase tracking-[.25em] text-gold mb-4">Post-Production Supervisor</div><h3 class="display text-2xl">Lucas Vance</h3><p class="mt-3 text-sm text-white/50 leading-6">Crafting final atmospheres through pristine sound &amp; color.</p><div class="mt-5 text-[9px] uppercase tracking-[.2em] text-white/35">@lucasv_edit</div></div>
+          <div class="rounded-xl border border-white/5 p-6 reveal"><div class="text-[9px] uppercase tracking-[.25em] text-gold mb-4">Lead Producer</div><h3 class="display text-2xl">Sofi Rossi</h3><p class="mt-3 text-sm text-white/50 leading-6">Coordinating multi market logistics across five continents.</p><div class="mt-5 flex items-center gap-3 text-white/35"><a href="https://www.instagram.com/sofirossi" target="_blank" rel="noopener" aria-label="Instagram de Sofi Rossi" class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 hover:border-white/50 hover:text-white transition"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="#" target="_blank" rel="noopener" aria-label="LinkedIn de Sofi Rossi" class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 hover:border-white/50 hover:text-white transition"><svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.55V9h3.57zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a><span class="text-[9px] uppercase tracking-[.2em]">@sofirossi</span></div></div>
+          <div class="rounded-xl border border-white/5 p-6 reveal"><div class="text-[9px] uppercase tracking-[.25em] text-gold mb-4">Director of Photography</div><h3 class="display text-2xl">Mateo Diaz</h3><p class="mt-3 text-sm text-white/50 leading-6">Architect of light, master of the anamorphic canvas.</p><div class="mt-5 flex items-center gap-3 text-white/35"><a href="https://www.instagram.com/mateodp" target="_blank" rel="noopener" aria-label="Instagram de Mateo Diaz" class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 hover:border-white/50 hover:text-white transition"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="#" target="_blank" rel="noopener" aria-label="LinkedIn de Mateo Diaz" class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 hover:border-white/50 hover:text-white transition"><svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.55V9h3.57zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a><span class="text-[9px] uppercase tracking-[.2em]">@mateodp</span></div></div>
+          <div class="rounded-xl border border-white/5 p-6 reveal"><div class="text-[9px] uppercase tracking-[.25em] text-gold mb-4">Post-Production Supervisor</div><h3 class="display text-2xl">Lucas Vance</h3><p class="mt-3 text-sm text-white/50 leading-6">Crafting final atmospheres through pristine sound &amp; color.</p><div class="mt-5 flex items-center gap-3 text-white/35"><a href="https://www.instagram.com/lucasv_edit" target="_blank" rel="noopener" aria-label="Instagram de Lucas Vance" class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 hover:border-white/50 hover:text-white transition"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="#" target="_blank" rel="noopener" aria-label="LinkedIn de Lucas Vance" class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 hover:border-white/50 hover:text-white transition"><svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.55V9h3.57zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a><span class="text-[9px] uppercase tracking-[.2em]">@lucasv_edit</span></div></div>
         </div>
       </div>
     </section>
@@ -227,9 +289,8 @@
       <div class="relative z-10 mx-auto max-w-6xl px-6 md:px-10 w-full text-center reveal">
         <p class="text-[9px] uppercase tracking-[.38em] text-gold mb-6">Project Handoff / Inquiries // 2025</p>
         <h2 class="display text-5xl md:text-7xl lg:text-8xl leading-[.82] max-w-4xl mx-auto">HAVE A STORY WORTH FILMING?</h2>
-        <p class="mt-6 text-sm text-white/60">Let's create something that people will remember.</p>
-        <a href="mailto:films@further.studio" class="btn mt-8 inline-flex items-center justify-center rounded-full bg-white text-black px-7 py-3 text-[10px] uppercase tracking-[.24em]">Start a project</a>
-        <div class="mt-7 flex items-center justify-center gap-8 text-[9px] uppercase tracking-[.22em] text-white/50"><a href="mailto:films@further.studio">films@further.studio</a><a href="tel:+5491134910182">+54 9 11 3491-0182</a></div>
+        <p class="mt-6 text-sm md:text-[17px] text-white/60">Let's create something that people will remember.</p>
+        <div class="mt-7 flex items-center justify-center gap-8 text-[9px] md:text-[16px] uppercase tracking-[.22em] text-white/50"><a href="mailto:films@further.studio">films@further.studio</a><a href="tel:+5491134910182">+54 9 11 3491-0182</a></div>
       </div>
     </section>
   </main>

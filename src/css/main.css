@@ -25,6 +25,21 @@
     letter-spacing: -0.015em;
   }
 
+  .header-logo-link {
+    @apply justify-self-center flex items-center;
+  }
+
+  .header-logo {
+    @apply h-8 w-auto;
+  }
+
+  @media (min-width: 768px) {
+    .header-logo {
+      width: 218px;
+      height: 100%;
+    }
+  }
+
   .serif-copy {
     font-family: 'Cormorant Garamond', Georgia, serif;
   }
@@ -44,6 +59,19 @@
   .hero-bg {
     transform: scale(1.08);
     will-change: transform;
+  }
+
+  .hero-logo {
+    display: block;
+    width: min(78vw, 380px);
+    margin-inline: auto;
+    height: auto;
+  }
+
+  @media (min-width: 768px) {
+    .hero-logo {
+      width: 540px;
+    }
   }
 
   .vignette {
@@ -109,6 +137,31 @@
     background: radial-gradient(circle, rgba(217, 178, 75, 0.08), transparent 68%);
     transform: translate(-50%, -50%);
     mix-blend-mode: screen;
+  }
+
+  .marquee {
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  }
+
+  .marquee-track {
+    width: max-content;
+    animation: marquee 36s linear infinite;
+    will-change: transform;
+  }
+
+  .marquee:hover .marquee-track {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
   }
 }
 

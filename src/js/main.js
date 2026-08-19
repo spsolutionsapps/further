@@ -65,8 +65,8 @@ addEventListener(
   { passive: true }
 );
 
-// Gentle service row interaction
-document.querySelectorAll('.service-row').forEach((row) => {
+// Gentle service card interaction
+document.querySelectorAll('.service-card').forEach((row) => {
   row.addEventListener('mouseenter', () =>
     gsap.to(row, { x: 8, duration: 0.35, ease: 'power2.out' })
   );
