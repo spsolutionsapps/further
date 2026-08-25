@@ -18,7 +18,20 @@
     if (PORTUGUESE[country]) return 'pt';
     if (SPANISH[country]) return 'es';
     if (ENGLISH[country]) return 'en';
-    return 'es';
+    return null;
+  }
+
+  function browserLang() {
+    try {
+      var browserLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+      for (var i = 0; i < browserLangs.length; i++) {
+        var langCode = String(browserLangs[i] || '').split('-')[0].toLowerCase();
+        if (SUPPORTED[langCode]) return langCode;
+      }
+    } catch (err) {
+      /* ignore */
+    }
+    return null;
   }
 
   function go(lang) {
@@ -34,6 +47,13 @@
     location.replace(dest);
   }
 
+  var settled = false;
+  function finish(lang) {
+    if (settled) return;
+    settled = true;
+    go(lang || 'es');
+  }
+
   try {
     var saved = localStorage.getItem(STORAGE_KEY);
     if (saved && SUPPORTED[saved]) {
@@ -44,55 +64,45 @@
     /* ignore localStorage error */
   }
 
-  try {
-    var browserLangs = navigator.languages || [navigator.language || navigator.userLanguage];
-    for (var i = 0; i < browserLangs.length; i++) {
-      var langCode = String(browserLangs[i] || '').split('-')[0].toLowerCase();
-      if (SUPPORTED[langCode]) {
-        go(langCode);
-        return;
-      }
-    }
-  } catch (err) {
-    /* ignore browser lang detection error */
-  }
-
-  var settled = false;
-  function finish(lang) {
-    if (settled) return;
-    settled = true;
-    go(lang);
-  }
-
   var timer = setTimeout(function () {
-    finish('es');
-  }, 2500);
+    finish(browserLang());
+  }, 1200);
 
   function fromCountryApi() {
-    return fetch('https://api.country.is/').then(function (res) {
-      return res.json();
-    }).then(function (data) {
-      return data && data.country;
-    });
+    return fetch('https://api.country.is/', { cache: 'no-store' })
+      .then(function (res) { return res.json(); })
+      .then(function (data) { return data && data.country; });
+  }
+
+  function fromIpwho() {
+    return fetch('https://ipwho.is/', { cache: 'no-store' })
+      .then(function (res) { return res.json(); })
+      .then(function (data) { return data && data.country_code; });
   }
 
   fromCountryApi()
     .then(function (country) {
-      clearTimeout(timer);
-      finish(langFromCountry(country));
+      var lang = langFromCountry(country);
+      if (lang) {
+        clearTimeout(timer);
+        finish(lang);
+        return;
+      }
+      throw new Error('no country match');
     })
     .catch(function () {
-      return fetch('https://ipwho.is/')
-        .then(function (res) {
-          return res.json();
-        })
-        .then(function (data) {
+      return fromIpwho().then(function (country) {
+        var lang = langFromCountry(country);
+        if (lang) {
           clearTimeout(timer);
-          finish(langFromCountry(data && data.country_code));
-        });
+          finish(lang);
+          return;
+        }
+        throw new Error('no country match 2');
+      });
     })
     .catch(function () {
       clearTimeout(timer);
-      finish('es');
+      finish(browserLang());
     });
 })();
