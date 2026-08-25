@@ -688,10 +688,10 @@ function render(lang) {
 }
 
 const root = path.join(__dirname, '..');
-for (const lang of ['es', 'en', 'pt']) {
+for (const lang of ['es', 'en']) {
   const dir = path.join(root, lang);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, 'index.html'), render(lang));
 }
 
-console.log('Wrote es/en/pt index.html');
+console.log('Wrote es/en index.html');

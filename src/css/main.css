@@ -187,7 +187,6 @@
     flex-shrink: 0;
     width: 178px;
     height: 70px;
-    background: #fff;
     border-radius: 6px;
     padding: 10px 14px;
     display: flex;
@@ -202,12 +201,12 @@
     height: auto;
     max-height: 66px;
     object-fit: contain;
-    filter: grayscale(0.25);
+    filter: brightness(0) invert(1);
     transition: filter 0.35s ease;
   }
 
   .client-logo:hover img {
-    filter: grayscale(0);
+    filter: brightness(0) invert(1);
   }
 
   .clients-row + .clients-row {
@@ -329,7 +328,6 @@
     flex-shrink: 0;
     width: 178px;
     height: 70px;
-    background: #fff;
     border-radius: 6px;
     padding: 10px 14px;
     display: flex;
@@ -344,12 +342,12 @@
     height: auto;
     max-height: 66px;
     object-fit: contain;
-    filter: grayscale(0.25);
+    filter: brightness(0) invert(1);
     transition: filter 0.35s ease;
   }
 
   .distro-logo:hover img {
-    filter: grayscale(0);
+    filter: brightness(0) invert(1);
   }
 
   .distro-row + .distro-row {
