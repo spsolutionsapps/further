@@ -37,13 +37,20 @@
   function go(lang) {
     var next = SUPPORTED[lang] ? lang : 'es';
     var isFile = location.protocol === 'file:';
-    var dest = next + '/' + (isFile ? 'index.html' : '');
-    var path = location.pathname;
+    var path = location.pathname.replace(/\/+$/, '');
+    var basePath = isFile
+      ? path.substring(0, path.lastIndexOf('/'))
+      : path;
+    var isRoot = isFile
+      ? (path.endsWith('/index.html') && !path.match(/\/(en|es|pt)\/index\.html$/))
+      : (path === '' || path === '/');
+    if (SUPPORTED[next] && isRoot && next === 'es') return;
     if (isFile) {
       if (path.indexOf('/' + next + '/index.html') !== -1) return;
     } else {
-      if (path.replace(/\/+$/, '') === '/' + next) return;
+      if (path === '/' + next) return;
     }
+    var dest = next + '/' + (isFile ? 'index.html' : '');
     location.replace(dest);
   }
 
