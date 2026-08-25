@@ -1,5 +1,5 @@
 {
-  "name": "further",
+  "name": "gaucho-films",
   "private": true,
   "scripts": {
     "dev": "tailwindcss -i ./src/css/main.css -o ./css/main.css --watch",

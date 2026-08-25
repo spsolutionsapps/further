@@ -4,8 +4,8 @@ const path = require('path');
 const copy = {
   en: {
     htmlLang: 'en',
-    title: 'FURTHER — Films worth going the distance for.',
-    description: 'FURTHER — Films worth going the distance for. International film and storytelling studio.',
+    title: 'GAUCHO FILMS — Films worth going the distance for.',
+    description: 'GAUCHO FILMS — Films worth going the distance for. International film and storytelling studio.',
     navWork: 'Work',
     navServices: 'Services',
     navOriginals: 'Originals',
@@ -13,11 +13,11 @@ const copy = {
     navAbout: 'About',
     navContact: 'Contact',
     menuAria: 'Open menu',
-    homeAria: 'FURTHER home',
-    logoAlt: 'FURTHER',
-    heroLogoAlt: 'FURTHER — Films worth going the distance for',
+    homeAria: 'GAUCHO FILMS home',
+    logoAlt: 'GAUCHO FILMS',
+    heroLogoAlt: 'GAUCHO FILMS — Films worth going the distance for',
     waAria: 'Chat on WhatsApp',
-    waText: 'Hi FURTHER, I would like to start a project.',
+    waText: 'Hi GAUCHO FILMS, I would like to start a project.',
     heroKicker: 'Production Slate 2025 // Global',
     cta: 'Start a project',
     heroImgAlt: 'Moody mountain landscape with a geometric structure',
@@ -86,7 +86,7 @@ const copy = {
     teamH2: 'THE PEOPLE BEHIND THE FILMS',
     filmmakerAlt: 'Filmmaker with camera',
     nachoRole: 'Founder / Director',
-    nachoBio: 'Guiding the lens with visual honesty, Nacho established FURTHER to bring dramatic, raw, and high fidelity storytelling to institutional, brand, and natural legacies worldwide.',
+    nachoBio: 'Guiding the lens with visual honesty, Nacho established GAUCHO FILMS to bring dramatic, raw, and high fidelity storytelling to institutional, brand, and natural legacies worldwide.',
     igNacho: 'Instagram of Nacho Sánchez Sorondo',
     liNacho: 'LinkedIn of Nacho Sánchez Sorondo',
     sofiRole: 'Lead Producer',
@@ -107,14 +107,14 @@ const copy = {
     contactP: "Let's create something that people will remember.",
     footerTag: 'Films worth going the distance for.',
     footerContact: 'Contact',
-    footerCopy: '© 2025 FURTHER Studio. All Rights Reserved.',
+    footerCopy: '© 2025 GAUCHO FILMS Studio. All Rights Reserved.',
     footerWhere: 'Buenos Aires · Argentina · Working worldwide',
     langCurrent: 'English',
   },
   es: {
     htmlLang: 'es',
-    title: 'FURTHER — Películas que valen el viaje.',
-    description: 'FURTHER — Películas que valen el viaje. Estudio internacional de cine y storytelling.',
+    title: 'GAUCHO FILMS — Películas que valen el viaje.',
+    description: 'GAUCHO FILMS — Películas que valen el viaje. Estudio internacional de cine y storytelling.',
     navWork: 'Trabajo',
     navServices: 'Servicios',
     navOriginals: 'Originales',
@@ -122,11 +122,11 @@ const copy = {
     navAbout: 'Nosotros',
     navContact: 'Contacto',
     menuAria: 'Abrir menú',
-    homeAria: 'Inicio FURTHER',
-    logoAlt: 'FURTHER',
-    heroLogoAlt: 'FURTHER — Películas que valen el viaje',
+    homeAria: 'Inicio GAUCHO FILMS',
+    logoAlt: 'GAUCHO FILMS',
+    heroLogoAlt: 'GAUCHO FILMS — Películas que valen el viaje',
     waAria: 'Escribir por WhatsApp',
-    waText: 'Hola FURTHER, me gustaría comenzar un proyecto.',
+    waText: 'Hola GAUCHO FILMS, me gustaría comenzar un proyecto.',
     heroKicker: 'Slate de producción 2025 // Global',
     cta: 'Empezar un proyecto',
     heroImgAlt: 'Paisaje de montaña con una estructura geométrica',
@@ -195,7 +195,7 @@ const copy = {
     teamH2: 'LAS PERSONAS DETRÁS DE LAS PELÍCULAS',
     filmmakerAlt: 'Cineasta con cámara',
     nachoRole: 'Fundador / Director',
-    nachoBio: 'Guiando el lente con honestidad visual, Nacho fundó FURTHER para llevar un storytelling dramático, crudo y de alta fidelidad a legados institucionales, de marca y naturales en todo el mundo.',
+    nachoBio: 'Guiando el lente con honestidad visual, Nacho fundó GAUCHO FILMS para llevar un storytelling dramático, crudo y de alta fidelidad a legados institucionales, de marca y naturales en todo el mundo.',
     igNacho: 'Instagram de Nacho Sánchez Sorondo',
     liNacho: 'LinkedIn de Nacho Sánchez Sorondo',
     sofiRole: 'Productora principal',
@@ -216,14 +216,14 @@ const copy = {
     contactP: 'Creemos algo que la gente recuerde.',
     footerTag: 'Películas que valen el viaje.',
     footerContact: 'Contacto',
-    footerCopy: '© 2025 FURTHER Studio. Todos los derechos reservados.',
+    footerCopy: '© 2025 GAUCHO FILMS Studio. Todos los derechos reservados.',
     footerWhere: 'Buenos Aires · Argentina · Trabajamos en todo el mundo',
     langCurrent: 'Español',
   },
   pt: {
     htmlLang: 'pt',
-    title: 'FURTHER — Filmes que valem a jornada.',
-    description: 'FURTHER — Filmes que valem a jornada. Estúdio internacional de cinema e storytelling.',
+    title: 'GAUCHO FILMS — Filmes que valem a jornada.',
+    description: 'GAUCHO FILMS — Filmes que valem a jornada. Estúdio internacional de cinema e storytelling.',
     navWork: 'Trabalho',
     navServices: 'Serviços',
     navOriginals: 'Originais',
@@ -231,11 +231,11 @@ const copy = {
     navAbout: 'Sobre',
     navContact: 'Contato',
     menuAria: 'Abrir menu',
-    homeAria: 'Início FURTHER',
-    logoAlt: 'FURTHER',
-    heroLogoAlt: 'FURTHER — Filmes que valem a jornada',
+    homeAria: 'Início GAUCHO FILMS',
+    logoAlt: 'GAUCHO FILMS',
+    heroLogoAlt: 'GAUCHO FILMS — Filmes que valem a jornada',
     waAria: 'Conversar no WhatsApp',
-    waText: 'Olá FURTHER, gostaria de começar um projeto.',
+    waText: 'Olá GAUCHO FILMS, gostaria de começar um projeto.',
     heroKicker: 'Slate de produção 2025 // Global',
     cta: 'Começar um projeto',
     heroImgAlt: 'Paisagem de montanha com uma estrutura geométrica',
@@ -304,7 +304,7 @@ const copy = {
     teamH2: 'AS PESSOAS POR TRÁS DOS FILMES',
     filmmakerAlt: 'Cineasta com câmera',
     nachoRole: 'Fundador / Diretor',
-    nachoBio: 'Guiando as lentes com honestidade visual, Nacho fundou a FURTHER para levar um storytelling dramático, cru e de alta fidelidade a legados institucionais, de marca e naturais no mundo todo.',
+    nachoBio: 'Guiando as lentes com honestidade visual, Nacho fundou a GAUCHO FILMS para levar um storytelling dramático, cru e de alta fidelidade a legados institucionais, de marca e naturais no mundo todo.',
     igNacho: 'Instagram de Nacho Sánchez Sorondo',
     liNacho: 'LinkedIn de Nacho Sánchez Sorondo',
     sofiRole: 'Produtora principal',
@@ -325,7 +325,7 @@ const copy = {
     contactP: 'Vamos criar algo que as pessoas vão lembrar.',
     footerTag: 'Filmes que valem a jornada.',
     footerContact: 'Contato',
-    footerCopy: '© 2025 FURTHER Studio. Todos os direitos reservados.',
+    footerCopy: '© 2025 GAUCHO FILMS Studio. Todos os direitos reservados.',
     footerWhere: 'Buenos Aires · Argentina · Trabalhamos no mundo todo',
     langCurrent: 'Português',
   },
@@ -663,7 +663,7 @@ function render(lang) {
         <p class="text-[9px] uppercase tracking-[.38em] text-gold mb-6">${t.contactKicker}</p>
         <h2 class="display text-5xl md:text-7xl lg:text-8xl leading-[.82] max-w-4xl mx-auto">${t.contactH2}</h2>
         <p class="mt-6 text-sm md:text-[17px] text-white/60">${t.contactP}</p>
-        <div class="mt-7 flex items-center justify-center gap-8 text-[9px] md:text-[16px] uppercase tracking-[.22em] text-white/50"><a href="mailto:films@further.studio">films@further.studio</a><a href="tel:+5491134910182">+54 9 11 3491-0182</a></div>
+        <div class="mt-7 flex items-center justify-center gap-8 text-[9px] md:text-[16px] uppercase tracking-[.22em] text-white/50"><a href="mailto:films@gauchofilms.studio">films@gauchofilms.studio</a><a href="tel:+5491134910182">+54 9 11 3491-0182</a></div>
       </div>
     </section>
   </main>
@@ -671,9 +671,9 @@ function render(lang) {
   <footer class="bg-black py-12 md:py-14">
     <div class="mx-auto max-w-6xl px-6 md:px-10">
       <div class="grid md:grid-cols-3 gap-10 pb-10 border-b border-white/10">
-        <div><div class="tracking-[.3em] text-sm mb-3">FURTHER</div><p class="text-sm text-white/50">${t.footerTag}</p></div>
+        <div><div class="tracking-[.3em] text-sm mb-3">GAUCHO FILMS</div><p class="text-sm text-white/50">${t.footerTag}</p></div>
         <div class="grid grid-cols-3 gap-4 text-[9px] uppercase tracking-[.2em] text-white/45"><a href="#work">${t.navWork}</a><a href="#services">${t.navServices}</a><a href="#originals">${t.navOriginals}</a><a href="#clients">${t.navClients}</a><a href="#about">${t.navAbout}</a><a href="#contact">${t.navContact}</a></div>
-        <div class="md:text-right text-[9px] uppercase tracking-[.2em] text-white/45"><div class="mb-2">${t.footerContact}</div><a href="mailto:films@further.studio" class="block hover:text-white transition">films@further.studio</a><a href="tel:+5491134910182" class="block mt-2 hover:text-white transition">+54 9 11 3491 0182</a></div>
+        <div class="md:text-right text-[9px] uppercase tracking-[.2em] text-white/45"><div class="mb-2">${t.footerContact}</div><a href="mailto:films@gauchofilms.studio" class="block hover:text-white transition">films@gauchofilms.studio</a><a href="tel:+5491134910182" class="block mt-2 hover:text-white transition">+54 9 11 3491 0182</a></div>
       </div>
       <div class="pt-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-[8px] uppercase tracking-[.23em] text-white/30"><span>${t.footerCopy}</span><span>${t.footerWhere}</span></div>
     </div>

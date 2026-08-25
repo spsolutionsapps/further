@@ -13,7 +13,7 @@ if (location.protocol === 'file:') {
 document.querySelectorAll('a[data-lang]').forEach((link) => {
   link.addEventListener('click', () => {
     try {
-      localStorage.setItem('further-lang', link.getAttribute('data-lang'));
+      localStorage.setItem('gauchofilms-lang', link.getAttribute('data-lang'));
     } catch (err) {
       /* ignore quota / private mode */
     }

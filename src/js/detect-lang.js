@@ -1,5 +1,5 @@
 (function () {
-  var STORAGE_KEY = 'further-lang';
+  var STORAGE_KEY = 'gauchofilms-lang';
   var SUPPORTED = { es: true, en: true, pt: true };
   var SPANISH = {
     AR: 1, BO: 1, CL: 1, CO: 1, CR: 1, CU: 1, DO: 1, EC: 1, SV: 1,
