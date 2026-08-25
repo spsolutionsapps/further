@@ -1,5 +1,36 @@
 gsap.registerPlugin(ScrollTrigger);
 
+// Fix language switcher links for local file:// protocol
+if (location.protocol === 'file:') {
+  document.querySelectorAll('a[data-lang]').forEach((link) => {
+    const href = link.getAttribute('href');
+    if (href && href.endsWith('/')) {
+      link.setAttribute('href', href + 'index.html');
+    }
+  });
+}
+
+document.querySelectorAll('a[data-lang]').forEach((link) => {
+  link.addEventListener('click', () => {
+    try {
+      localStorage.setItem('further-lang', link.getAttribute('data-lang'));
+    } catch (err) {
+      /* ignore quota / private mode */
+    }
+  });
+});
+
+// Close details dropdown when clicking outside
+document.addEventListener('click', (e) => {
+  document.querySelectorAll('details.lang-switch').forEach((det) => {
+    if (!det.contains(e.target)) {
+      det.removeAttribute('open');
+    }
+  });
+});
+
+
+
 // Hero intro + subtle parallax
 const heroTimeline = gsap.timeline({ defaults: { ease: 'power3.out' } });
 heroTimeline
@@ -7,7 +38,7 @@ heroTimeline
   .from('h1', { y: 50, opacity: 0, duration: 1.2 }, 0.25)
   .from('section:first-of-type p', { y: 22, opacity: 0, duration: 0.9 }, 0.55);
 
-gsap.to('#heroImage', {
+gsap.to('.hero-bg', {
   yPercent: 8,
   scale: 1.12,
   ease: 'none',
@@ -54,6 +85,7 @@ mobileMenu.querySelectorAll('a').forEach((a) =>
   a.addEventListener('click', () => mobileMenu.classList.add('hidden'))
 );
 
+/*
 // Cursor glow
 const glow = document.getElementById('cursorGlow');
 addEventListener(
@@ -64,6 +96,7 @@ addEventListener(
   },
   { passive: true }
 );
+*/
 
 // Gentle service card interaction
 document.querySelectorAll('.service-card').forEach((row) => {

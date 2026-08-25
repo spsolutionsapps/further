@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "dev": "tailwindcss -i ./src/css/main.css -o ./css/main.css --watch",
-    "build": "tailwindcss -i ./src/css/main.css -o ./css/main.css --minify"
+    "build-i18n": "node scripts/build-i18n.js",
+    "build": "tailwindcss -i ./src/css/main.css -o ./css/main.css --minify && npm run build-i18n"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.17"

@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
 <head>
+  <script src="src/js/detect-lang.js"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="FURTHER — Films worth going the distance for. International film and storytelling studio." />
@@ -22,10 +23,30 @@
           <a href="#originals" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition hidden md:inline">Originals</a>
         </div>
         <a href="#top" class="header-logo-link" aria-label="FURTHER home"><img src="assets/logo-chico.png" alt="FURTHER" class="header-logo"></a>
-        <div class="justify-self-end flex items-center gap-6 lg:gap-8 text-[12px] uppercase tracking-[.24em] text-white/55">
+        <div class="justify-self-end flex items-center gap-4 lg:gap-6 text-[12px] uppercase tracking-[.24em] text-white/55">
           <a href="#clients" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition hidden md:inline">Clients</a>
           <a href="#about" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition hidden md:inline">About</a>
           <a href="#contact" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition hidden md:inline">Contact</a>
+          <details class="lang-switch relative">
+            <summary class="flex items-center gap-2 text-[10px] uppercase tracking-[.18em] text-white/80 cursor-pointer select-none">
+              <img src="assets/flags/us.svg" alt="" class="w-4 h-auto rounded-[1px] shrink-0">
+              <span>English</span>
+            </summary>
+            <div class="absolute right-0 mt-3 min-w-[180px] rounded-lg border border-white/10 bg-black/90 backdrop-blur-xl py-2 z-50">
+              <a href="es/" data-lang="es" class="flex items-center gap-2 px-4 py-2 text-[10px] uppercase tracking-[.18em] text-white/65 hover:text-white hover:bg-white/5 transition">
+                <img src="assets/flags/es.svg" alt="ES" class="w-4 h-auto rounded-[1px] shrink-0">
+                <span>Español</span>
+              </a>
+              <a href="en/" data-lang="en" class="flex items-center gap-2 px-4 py-2 text-[10px] uppercase tracking-[.18em] text-white bg-white/5" aria-current="page">
+                <img src="assets/flags/us.svg" alt="US" class="w-4 h-auto rounded-[1px] shrink-0">
+                <span>English</span>
+              </a>
+              <!-- <a href="pt/" data-lang="pt" class="flex items-center gap-2 px-4 py-2 text-[10px] uppercase tracking-[.18em] text-white/65 hover:text-white hover:bg-white/5 transition">
+                <img src="assets/flags/br.svg" alt="BR" class="w-4 h-auto rounded-[1px] shrink-0">
+                <span>Português</span>
+              </a> -->
+            </div>
+          </details>
           <button id="menuBtn" class="md:hidden text-white/80" aria-label="Open menu">
             <span class="block w-6 h-px bg-white mb-1.5"></span><span class="block w-4 h-px bg-white ml-auto"></span>
           </button>
@@ -35,6 +56,20 @@
     <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 bg-black/85 backdrop-blur-xl">
       <div class="px-5 py-5 flex flex-col gap-4 text-[10px] uppercase tracking-[.22em] text-white/65">
         <a href="#work">Work</a><a href="#services">Services</a><a href="#originals">Originals</a><a href="#clients">Clients</a><a href="#about">About</a><a href="#contact">Contact</a>
+        <div class="pt-2 mt-1 border-t border-white/10 flex flex-col gap-3">
+          <a href="es/" data-lang="es" class="flex items-center gap-2">
+            <img src="assets/flags/es.svg" alt="ES" class="w-4 h-auto rounded-[1px] shrink-0">
+            <span>Español</span>
+          </a>
+          <a href="en/" data-lang="en" class="flex items-center gap-2 text-white" aria-current="page">
+            <img src="assets/flags/us.svg" alt="US" class="w-4 h-auto rounded-[1px] shrink-0">
+            <span>English</span>
+          </a>
+          <!-- <a href="pt/" data-lang="pt" class="flex items-center gap-2">
+            <img src="assets/flags/br.svg" alt="BR" class="w-4 h-auto rounded-[1px] shrink-0">
+            <span>Português</span>
+          </a> -->
+        </div>
       </div>
     </div>
   </header>
@@ -50,7 +85,9 @@
     <!-- HERO -->
     <section class="relative min-h-screen overflow-hidden flex items-center justify-center">
       <div class="absolute inset-0">
-        <img src="assets/img-000.png" alt="Moody mountain landscape with a geometric structure" class="hero-bg w-full h-full object-cover" id="heroImage">
+        <video autoplay muted loop playsinline class="hero-bg w-full h-full object-cover" id="heroVideo" poster="assets/img-000.png">
+          <source src="video.mp4" type="video/mp4">
+        </video>
         <div class="absolute inset-0 bg-black/35"></div>
         <div class="absolute inset-0 vignette"></div>
       </div>
