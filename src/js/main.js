@@ -14,6 +14,7 @@ document.querySelectorAll('a[data-lang]').forEach((link) => {
   link.addEventListener('click', () => {
     try {
       localStorage.setItem('gauchofilms-lang', link.getAttribute('data-lang'));
+      localStorage.setItem('gauchofilms-lang-manual', '1');
     } catch (err) {
       /* ignore quota / private mode */
     }

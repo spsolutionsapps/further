@@ -1,8 +1,14 @@
 // DEPRECATED: edit es/index.html, en/index.html and pt/index.html directly.
+// pt/index.html (including header nav) is maintained ONLY in that file — never generated here.
 // This script is kept for reference only and is NOT run by npm run build.
 
 const fs = require('fs');
 const path = require('path');
+
+if (process.argv.includes('--pt')) {
+  console.error('pt/index.html is edited manually. This script does not generate Portuguese pages.');
+  process.exit(1);
+}
 
 const copy = {
   en: {
@@ -691,10 +697,11 @@ function render(lang) {
 }
 
 const root = path.join(__dirname, '..');
-for (const lang of ['es', 'en', 'pt']) {
+// Portuguese: edit pt/index.html directly — do not overwrite from this script.
+for (const lang of ['es', 'en']) {
   const dir = path.join(root, lang);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, 'index.html'), render(lang));
 }
 
-console.log('Wrote es/en/pt index.html');
+console.log('Wrote es/en index.html (pt/index.html is manual — skipped)');

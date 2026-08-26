@@ -1,5 +1,6 @@
 (function () {
   var STORAGE_KEY = 'gauchofilms-lang';
+  var MANUAL_KEY = 'gauchofilms-lang-manual';
   var SUPPORTED = { es: true, en: true, pt: true };
   var SPANISH = {
     AR: 1, BO: 1, CL: 1, CO: 1, CR: 1, CU: 1, DO: 1, EC: 1, SV: 1,
@@ -13,8 +14,19 @@
     PK: 1, MY: 1, HK: 1,
   };
 
-  var path = location.pathname.replace(/\/+$/, '') || '/';
-  if (/\/(es|en|pt)(?:\/index\.html)?$/i.test(path)) return;
+  var pathname = location.pathname.replace(/\/+$/, '') || '/';
+  if (/\/(es|en|pt)(?:\/index\.html)?$/i.test(pathname)) return;
+
+  function isRootEntry() {
+    if (pathname === '/' || pathname === '' || pathname === '/index.html') return true;
+    if (location.protocol === 'file:') {
+      return /(?:^|\/)index\.html$/i.test(pathname) &&
+        !/\/(es|en|pt)\/index\.html$/i.test(pathname);
+    }
+    return false;
+  }
+
+  if (!isRootEntry()) return;
 
   function langFromCountry(code) {
     var country = String(code || '').toUpperCase();
@@ -39,13 +51,7 @@
 
   function go(lang) {
     var next = SUPPORTED[lang] ? lang : 'es';
-    var isFile = location.protocol === 'file:';
-    var currentPath = location.pathname.replace(/\/+$/, '');
-    var isRoot = isFile
-      ? (currentPath.endsWith('/index.html') && !currentPath.match(/\/(en|es|pt)\/index\.html$/i))
-      : (currentPath === '' || currentPath === '/');
-    if (!isRoot) return;
-    if (isFile) {
+    if (location.protocol === 'file:') {
       location.replace(next + '/index.html');
       return;
     }
@@ -59,11 +65,14 @@
     go(lang || 'es');
   }
 
+  // Manual language choice (header switcher) overrides IP on future root visits.
   try {
-    var saved = localStorage.getItem(STORAGE_KEY);
-    if (saved && SUPPORTED[saved]) {
-      finish(saved);
-      return;
+    if (localStorage.getItem(MANUAL_KEY) === '1') {
+      var saved = localStorage.getItem(STORAGE_KEY);
+      if (saved && SUPPORTED[saved]) {
+        finish(saved);
+        return;
+      }
     }
   } catch (err) {
     /* ignore localStorage error */
@@ -71,7 +80,7 @@
 
   var timer = setTimeout(function () {
     finish(browserLang());
-  }, 1200);
+  }, 1500);
 
   function fromCountryApi() {
     return fetch('https://api.country.is/', { cache: 'no-store' })
@@ -82,7 +91,16 @@
   function fromIpwho() {
     return fetch('https://ipwho.is/', { cache: 'no-store' })
       .then(function (res) { return res.json(); })
-      .then(function (data) { return data && data.country_code; });
+      .then(function (data) { return data && data.success !== false && data.country_code; });
+  }
+
+  function fromIpapi() {
+    return fetch('https://ipapi.co/country_code/', { cache: 'no-store' })
+      .then(function (res) {
+        if (!res.ok) throw new Error('ipapi failed');
+        return res.text();
+      })
+      .then(function (code) { return code && code.trim(); });
   }
 
   fromCountryApi()
@@ -104,6 +122,17 @@
           return;
         }
         throw new Error('no country match 2');
+      });
+    })
+    .catch(function () {
+      return fromIpapi().then(function (country) {
+        var lang = langFromCountry(country);
+        if (lang) {
+          clearTimeout(timer);
+          finish(lang);
+          return;
+        }
+        throw new Error('no country match 3');
       });
     })
     .catch(function () {
