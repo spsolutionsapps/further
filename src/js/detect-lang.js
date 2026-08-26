@@ -13,6 +13,9 @@
     PK: 1, MY: 1, HK: 1,
   };
 
+  var path = location.pathname.replace(/\/+$/, '') || '/';
+  if (/\/(es|en|pt)(?:\/index\.html)?$/i.test(path)) return;
+
   function langFromCountry(code) {
     var country = String(code || '').toUpperCase();
     if (PORTUGUESE[country]) return 'pt';
@@ -37,21 +40,16 @@
   function go(lang) {
     var next = SUPPORTED[lang] ? lang : 'es';
     var isFile = location.protocol === 'file:';
-    var path = location.pathname.replace(/\/+$/, '');
-    var basePath = isFile
-      ? path.substring(0, path.lastIndexOf('/'))
-      : path;
+    var currentPath = location.pathname.replace(/\/+$/, '');
     var isRoot = isFile
-      ? (path.endsWith('/index.html') && !path.match(/\/(en|es|pt)\/index\.html$/))
-      : (path === '' || path === '/');
-    if (SUPPORTED[next] && isRoot && next === 'es') return;
+      ? (currentPath.endsWith('/index.html') && !currentPath.match(/\/(en|es|pt)\/index\.html$/i))
+      : (currentPath === '' || currentPath === '/');
+    if (!isRoot) return;
     if (isFile) {
-      if (path.indexOf('/' + next + '/index.html') !== -1) return;
-    } else {
-      if (path === '/' + next) return;
+      location.replace(next + '/index.html');
+      return;
     }
-    var dest = next + '/' + (isFile ? 'index.html' : '');
-    location.replace(dest);
+    location.replace(next + '/');
   }
 
   var settled = false;
@@ -64,7 +62,7 @@
   try {
     var saved = localStorage.getItem(STORAGE_KEY);
     if (saved && SUPPORTED[saved]) {
-      go(saved);
+      finish(saved);
       return;
     }
   } catch (err) {

@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <meta name="description" content="GAUCHO FILMS — Filmes que valem a jornada. Estúdio internacional de cinema e storytelling." />
   <title>GAUCHO FILMS — Filmes que valem a jornada.</title>
   <link rel="canonical" href="./" />
@@ -10,7 +13,7 @@
   <link rel="alternate" hreflang="en" href="../en/" />
   <link rel="alternate" hreflang="pt" href="../pt/" />
   <link rel="alternate" hreflang="x-default" href="../es/" />
-  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/main.css?v=7" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -20,51 +23,47 @@
 
   <header class="fixed top-0 inset-x-0 z-50 transition-all duration-500" id="siteHeader">
     <div class="mx-auto max-w-[1400px] px-5 md:px-8 lg:px-12">
-       <nav class="flex items-center justify-between py-4 md:py-7">
-         <a href="#top" class="header-logo-link shrink-0" aria-label="Início GAUCHO FILMS"><img src="../assets/logo-chico.png" alt="GAUCHO FILMS" class="header-logo"></a>
-         <div class="hidden md:grid md:grid-cols-3 md:items-center w-full px-8">
-           <div class="flex items-center justify-start gap-6 lg:gap-8 text-[12px] uppercase tracking-[.24em] text-white/55">
-             <a href="#work" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition">Trabalho</a>
-             <a href="#why" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition">Impacto</a>
-             <a href="#services" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition">Serviços</a>
-             <a href="#originals" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition">Originais</a>
-           </div>
-           <div class="flex items-center justify-center gap-4 lg:gap-6 text-[12px] uppercase tracking-[.24em] text-white/55">
-             <a href="#clients" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition">Clientes</a>
-             <a href="#about" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition">Equipe</a>
-             <a href="#contact" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition">Contato</a>
-           </div>
-           <div class="flex items-center justify-end gap-4 lg:gap-6">
-             <details class="lang-switch relative">
-               <summary class="flex items-center gap-2 text-[10px] uppercase tracking-[.18em] text-white/80 cursor-pointer select-none">
-                 <img src="../assets/flags/br.svg" alt="" class="w-4 h-auto rounded-[1px] shrink-0">
-                 <span>Português</span>
-               </summary>
-               <div class="absolute right-0 mt-3 min-w-[180px] rounded-lg border border-white/10 bg-black/90 backdrop-blur-xl py-2 z-50">
-                 <a href="../es/" data-lang="es" class="flex items-center gap-2 px-4 py-2 text-[10px] uppercase tracking-[.18em] text-white/65 hover:text-white hover:bg-white/5 transition">
-                   <img src="../assets/flags/es.svg" alt="ES" class="w-4 h-auto rounded-[1px] shrink-0">
-                   <span>Español</span>
-                 </a>
-                 <a href="../en/" data-lang="en" class="flex items-center gap-2 px-4 py-2 text-[10px] uppercase tracking-[.18em] text-white/65 hover:text-white hover:bg-white/5 transition">
-                   <img src="../assets/flags/us.svg" alt="US" class="w-4 h-auto rounded-[1px] shrink-0">
-                   <span>English</span>
-                 </a>
-                 <a href="../pt/" data-lang="pt" class="flex items-center gap-2 px-4 py-2 text-[10px] uppercase tracking-[.18em] text-white bg-white/5" aria-current="page">
-                   <img src="../assets/flags/br.svg" alt="BR" class="w-4 h-auto rounded-[1px] shrink-0">
-                   <span>Português</span>
-                 </a>
-               </div>
-             </details>
-           </div>
-         </div>
-         <button id="menuBtn" class="md:hidden text-white/80 shrink-0" aria-label="Abrir menu">
-           <span class="block w-6 h-px bg-white mb-1.5"></span><span class="block w-4 h-px bg-white ml-auto"></span>
-         </button>
-       </nav>
+      <nav class="flex w-full items-center py-4 md:grid md:grid-cols-3 md:items-center md:py-7">
+        <div class="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-8 text-[12px] uppercase tracking-[.24em] text-white/55 md:order-1">
+          <a href="#work" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition">Trabalho</a>
+          <a href="#why" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition">Impacto</a>
+          <a href="#services" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition">Serviços</a>
+          <a href="#originals" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition">Originais</a>
+        </div>
+        <a href="#top" class="header-logo-link order-first md:order-2" aria-label="Início GAUCHO FILMS"><span class="header-logo-text">GAUCHO FILMS</span><img src="../assets/logo-chico.png" alt="GAUCHO FILMS" class="header-logo"></a>
+        <div class="header-nav-right order-2 md:order-3">
+          <a href="#clients" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition hidden md:inline">Clientes</a>
+          <a href="#about" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition hidden md:inline">Equipe</a>
+          <a href="#contact" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition hidden md:inline">Contato</a>
+          <details class="lang-switch relative hidden md:block">
+            <summary class="flex items-center gap-2 text-[10px] uppercase tracking-[.18em] text-white/80 cursor-pointer select-none">
+              <img src="../assets/flags/br.svg" alt="" class="w-4 h-auto rounded-[1px] shrink-0">
+              <span>Português</span>
+            </summary>
+            <div class="absolute right-0 mt-3 min-w-[180px] rounded-lg border border-white/10 bg-black/90 backdrop-blur-xl py-2 z-50">
+              <a href="../es/" data-lang="es" class="flex items-center gap-2 px-4 py-2 text-[10px] uppercase tracking-[.18em] text-white/65 hover:text-white hover:bg-white/5 transition">
+                <img src="../assets/flags/es.svg" alt="ES" class="w-4 h-auto rounded-[1px] shrink-0">
+                <span>Español</span>
+              </a>
+              <a href="../en/" data-lang="en" class="flex items-center gap-2 px-4 py-2 text-[10px] uppercase tracking-[.18em] text-white/65 hover:text-white hover:bg-white/5 transition">
+                <img src="../assets/flags/us.svg" alt="US" class="w-4 h-auto rounded-[1px] shrink-0">
+                <span>English</span>
+              </a>
+              <a href="../pt/" data-lang="pt" class="flex items-center gap-2 px-4 py-2 text-[10px] uppercase tracking-[.18em] text-white bg-white/5" aria-current="page">
+                <img src="../assets/flags/br.svg" alt="BR" class="w-4 h-auto rounded-[1px] shrink-0">
+                <span>Português</span>
+              </a>
+            </div>
+          </details>
+          <button id="menuBtn" class="md:hidden text-white/80 shrink-0" aria-label="Abrir menu">
+            <span class="block w-6 h-px bg-white mb-1.5"></span><span class="block w-4 h-px bg-white ml-auto"></span>
+          </button>
+        </div>
+      </nav>
     </div>
     <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 bg-black/85 backdrop-blur-xl">
       <div class="px-5 py-5 flex flex-col gap-4 text-[10px] uppercase tracking-[.22em] text-white/65">
-        <a href="#work">Trabalho</a><a href="#why">Impacto</a><a href="#services">Serviços</a><a href="#originals">Originais</a><a href="#clients">Clientes</a><a href="#about">Sobre</a><a href="#contact">Contato</a>
+        <a href="#work">Trabalho</a><a href="#why">Impacto</a><a href="#services">Serviços</a><a href="#originals">Originais</a><a href="#clients">Clientes</a><a href="#about">Equipe</a><a href="#contact">Contato</a>
         <div class="pt-2 mt-1 border-t border-white/10 flex flex-col gap-3">
           <a href="../es/" data-lang="es" class="flex items-center gap-2">
             <img src="../assets/flags/es.svg" alt="ES" class="w-4 h-auto rounded-[1px] shrink-0">
@@ -91,17 +90,16 @@
   </a>
 
   <main id="top">
-    <section class="relative min-h-screen overflow-hidden flex items-center justify-center">  
-      
-      <div class="heroLogo reveal delay-100">
-        <img src="../assets/logo.png" alt="FURTHER — Filmes que valem a jornada" class="hero-logo">
-      </div>
+    <section class="relative min-h-screen overflow-hidden flex items-center justify-center">
       <div class="absolute inset-0">
         <video autoplay muted loop playsinline class="hero-bg w-full h-full object-cover" id="heroVideo">
           <source src="../video.mp4" type="video/mp4">
         </video>
         <div class="absolute inset-0 bg-black/35"></div>
         <div class="absolute inset-0 vignette"></div>
+      </div>
+      <div class="hero-logo-wrap reveal delay-100">
+        <img src="../assets/logo.png" alt="GAUCHO FILMS — Filmes que valem a jornada" class="hero-logo">
       </div>
       <div class="relative z-10 w-full max-w-6xl px-6 pt-24 pb-20 text-center">
         <p class="text-[9px] uppercase tracking-[.48em] text-gold mb-6 reveal">Slate de produção 2025 // Global</p>
@@ -265,9 +263,8 @@
 
     <section class="bg-panel border-y border-white/[.035] py-24 md:py-28" id="services">
       <div class="mx-auto max-w-6xl px-6 md:px-10">
-        <div class="mb-10 reveal"><p class="text-[9px] uppercase tracking-[.38em] text-gold mb-5">Serviços / O que fazemos</p><h2 class="display text-5xl md:text-7xl">O QUE FAZEMOS</h2><p class="mt-6 text-[11px] uppercase tracking-[.3em] text-white/50">Produção audiovisual · Fotografia · Conteúdo</p></div>
-        <div class="flex flex-col gap-4">
-          <div class="grid sm:grid-cols-2 gap-4">
+        <div class="mb-10 reveal"><p class="text-[9px] uppercase tracking-[.38em] text-gold mb-5">Serviços / O que fazemos</p><h2 class="display text-5xl md:text-7xl">SERVIÇOS</h2><p class="mt-6 text-[11px] uppercase tracking-[.3em] text-white/50">Produção audiovisual · Fotografia · Conteúdo</p></div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <article class="service-card group relative rounded-xl overflow-hidden border border-white/5 bg-black/20 reveal">
             <div class="relative aspect-[16/10] overflow-hidden">
               <img src="../assets/1.jpg" class="w-full h-full object-cover transition duration-[1.2s] group-hover:scale-105" alt="Marcas">
@@ -310,8 +307,6 @@
               </ul>
             </div>
           </article>
-        </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <article class="service-card group relative rounded-xl overflow-hidden border border-white/5 bg-black/20 reveal delay-240">
             <div class="relative aspect-[16/10] overflow-hidden">
               <img src="../assets/4.jpg" class="w-full h-full object-cover transition duration-[1.2s] group-hover:scale-105" alt="Mercado Imobiliário">
@@ -354,7 +349,6 @@
               </ul>
             </div>
           </article>
-        </div>
         </div>
       </div>
     </section>
@@ -468,7 +462,7 @@
     <!-- ABOUT -->
     <section class="bg-panel py-24 md:py-28 border-y border-white/[.035]" id="about">
       <div class="mx-auto max-w-6xl px-6 md:px-10">
-        <div class="grid md:grid-cols-2 gap-10 lg:gap-16 items-start">
+        <div class="grid md:grid-cols-2 gap-10 lg:gap-16 items-start mb-20">
           <div class="block">
             <div class="relative rounded-xl overflow-hidden border border-gold/40 bg-emerald-600/30 min-h-[420px] md:min-h-[520px] shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_20px_50px_-20px_rgba(0,0,0,0.6)]">
               <img src="../assets/img-018.png" class="absolute inset-0 w-full h-full object-cover" alt="Equipe GAUCHO FILMS no set">
@@ -486,23 +480,17 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-
 
     <!-- TEAM GRID: 3 filas x 2 columnas em desktop -->
-    <div class="mt-8">
-      <!-- Fila 1 -->
-      <div class="grid md:grid-cols-2 gap-4 mb-4">
+    <div class="team-grid mt-8">
         <!-- Membro 1: Nacho Saso -->
-        <div class="rounded-xl border border-white/5 bg-black/10 flex flex-row gap-4 sm:gap-5 items-start" style="padding:10px;">
-          <img src="../assets/img-018.png" style="width:156px; height:180px;" class="shrink-0 rounded-lg object-cover" alt="Nacho Saso">
+        <div class="team-card">
+          <img src="../assets/img-018.png" class="team-card-photo" alt="Nacho Saso">
           <div class="flex-1 min-w-0">
             <div class="text-[9px] uppercase tracking-[.25em] text-gold mb-3">Diretor &amp; Fundador</div>
             <h3 class="display text-xl sm:text-2xl">NACHO SASO</h3>
             <p class="mt-3 text-sm text-white/50 leading-6">Lidera a visão e a narrativa de Horses &amp; Humans, capturando culturas através de narrativas cinematográficas em torno do cavalo.</p>
-            <div class="mt-4 flex items-center gap-3 text-white/35">
+            <div class="team-card-social">
               <a href="https://www.instagram.com/nachosaso" target="_blank" rel="noopener" aria-label="Instagram" class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 hover:border-white/50 hover:text-white transition">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
               </a>
@@ -515,13 +503,13 @@
         </div>
 
         <!-- Membro 2: Santiago Walsh -->
-        <div class="rounded-xl border border-white/5 bg-black/10 flex flex-row gap-4 sm:gap-5 items-start" style="padding:10px;">
-          <img src="../assets/santiago.png" style="width:156px; height:180px;" class="shrink-0 rounded-lg object-cover" alt="Santiago Walsh">
+        <div class="team-card">
+          <img src="../assets/santiago.png" class="team-card-photo" alt="Santiago Walsh">
           <div class="flex-1 min-w-0">
             <div class="text-[9px] uppercase tracking-[.25em] text-gold mb-3">Compositor</div>
             <h3 class="display text-xl sm:text-2xl">SANTIAGO WALSH</h3>
             <p class="mt-3 text-sm text-white/50 leading-6">Cria a trilha sonora original da série, construindo profundidade emocional e atmosfera através da música.</p>
-            <div class="mt-4 flex items-center gap-3 text-white/35">
+            <div class="team-card-social">
               <a href="https://www.instagram.com/santiagowalsh" target="_blank" rel="noopener" aria-label="Instagram" class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 hover:border-white/50 hover:text-white transition">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
               </a>
@@ -532,18 +520,15 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Fila 2 -->
-      <div class="grid md:grid-cols-2 gap-4 mb-4">
         <!-- Membro 3: Francisco Paz -->
-        <div class="rounded-xl border border-white/5 bg-black/10 flex flex-row gap-4 sm:gap-5 items-start" style="padding:10px;">
-          <img src="../assets/fran.jpg" style="width:156px; height:180px;" class="shrink-0 rounded-lg object-cover" alt="Francisco Paz">
+        <div class="team-card">
+          <img src="../assets/fran.jpg" class="team-card-photo" alt="Francisco Paz">
           <div class="flex-1 min-w-0">
             <div class="text-[9px] uppercase tracking-[.25em] text-gold mb-3">Locutor</div>
             <h3 class="display text-xl sm:text-2xl">FRANCISCO PAZ</h3>
             <p class="mt-3 text-sm text-white/50 leading-6">A voz por trás da série, guiando cada história com tom, ritmo e presença.</p>
-            <div class="mt-4 flex items-center gap-3 text-white/35">
+            <div class="team-card-social">
               <a href="https://www.instagram.com/franciscopaz" target="_blank" rel="noopener" aria-label="Instagram" class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 hover:border-white/50 hover:text-white transition">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
               </a>
@@ -556,13 +541,13 @@
         </div>
 
         <!-- Membro 4: Delfina Schoch -->
-        <div class="rounded-xl border border-white/5 bg-black/10 flex flex-row gap-4 sm:gap-5 items-start" style="padding:10px;">
-          <img src="../assets/delfina.jpg" style="width:156px; height:180px;" class="shrink-0 rounded-lg object-cover" alt="Delfina Schoch">
+        <div class="team-card">
+          <img src="../assets/delfina.jpg" class="team-card-photo" alt="Delfina Schoch">
           <div class="flex-1 min-w-0">
             <div class="text-[9px] uppercase tracking-[.25em] text-gold mb-3">Produtora</div>
             <h3 class="display text-xl sm:text-2xl">DELFINA SCHOCH</h3>
             <p class="mt-3 text-sm text-white/50 leading-6">Coordena a produção em diferentes países, garantindo que cada história seja executada no mais alto nível.</p>
-            <div class="mt-4 flex items-center gap-3 text-white/35">
+            <div class="team-card-social">
               <a href="https://www.instagram.com/delfinaschoch" target="_blank" rel="noopener" aria-label="Instagram" class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 hover:border-white/50 hover:text-white transition">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
               </a>
@@ -573,18 +558,15 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Fila 3 -->
-      <div class="grid md:grid-cols-2 gap-4">
         <!-- Membro 5: Vicky Figueroa -->
-        <div class="rounded-xl border border-white/5 bg-black/10 flex flex-row gap-4 sm:gap-5 items-start" style="padding:10px;">
-          <img src="../assets/bar.jpg" style="width:156px; height:180px;" class="shrink-0 rounded-lg object-cover" alt="Vicky Figueroa">
+        <div class="team-card">
+          <img src="../assets/bar.jpg" class="team-card-photo" alt="Vicky Figueroa">
           <div class="flex-1 min-w-0">
             <div class="text-[9px] uppercase tracking-[.25em] text-gold mb-3">Produtora &amp; Parcerias de Marca</div>
             <h3 class="display text-xl sm:text-2xl">VICKY FIGUEROA</h3>
             <p class="mt-3 text-sm text-white/50 leading-6">Desenvolve produções e parcerias com marcas para os projetos originais e produções comerciais da GAUCHO FILMS.</p>
-            <div class="mt-4 flex items-center gap-3 text-white/35">
+            <div class="team-card-social">
               <a href="https://www.instagram.com/Brava.grow" target="_blank" rel="noopener" aria-label="Instagram" class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 hover:border-white/50 hover:text-white transition">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
               </a>
@@ -597,13 +579,13 @@
         </div>
 
         <!-- Membro 6: Juana Fernández -->
-        <div class="rounded-xl border border-white/5 bg-black/10 flex flex-row gap-4 sm:gap-5 items-start" style="padding:10px;">
-          <img src="../assets/juana.jpg" style="width:156px; height:180px;" class="shrink-0 rounded-lg object-cover" alt="Juana Fernández">
+        <div class="team-card">
+          <img src="../assets/juana.jpg" class="team-card-photo" alt="Juana Fernández">
           <div class="flex-1 min-w-0">
             <div class="text-[9px] uppercase tracking-[.25em] text-gold mb-3">Pesquisa &amp; Parcerias Estratégicas</div>
             <h3 class="display text-xl sm:text-2xl">JUANA FERNÁNDEZ</h3>
             <p class="mt-3 text-sm text-white/50 leading-6">Pesquisa mercados e oportunidades, construindo parcerias estratégicas para os documentários originais e produções de marca da GAUCHO FILMS.</p>
-            <div class="mt-4 flex items-center gap-3 text-white/35">
+            <div class="team-card-social">
               <a href="https://www.instagram.com/juanafernandezcappi" target="_blank" rel="noopener" aria-label="Instagram" class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 hover:border-white/50 hover:text-white transition">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
               </a>
@@ -616,7 +598,6 @@
         </div>
       </div>
     </div>
-  </div>
 </section>
 
 
@@ -634,7 +615,7 @@
       <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-black/30"></div>
       <div class="relative z-10 mx-auto max-w-6xl px-6 md:px-10 w-full text-center reveal">
         <p class="text-[9px] uppercase tracking-[.38em] text-gold mb-6">Início de projeto / Consultas // 2025</p>
-        <h2 class="display text-5xl md:text-7xl lg:text-8xl leading-[.82] max-w-4xl mx-auto">TEM UMA HISTÓRIA QUE VALE A PENA FILMAR?</h2>
+        <h2 class="display text-5xl md:text-7xl lg:text-8xl leading-[56px] md:leading-[.82] max-w-4xl mx-auto">TEM UMA HISTÓRIA QUE VALE A PENA FILMAR?</h2>
         <p class="mt-6 text-sm md:text-[17px] text-white/60">Vamos criar algo que as pessoas vão lembrar.</p>
         <div class="mt-7 flex items-center justify-center gap-8 text-[9px] md:text-[16px] uppercase tracking-[.22em] text-white/50"><a href="mailto:films@gauchofilms.studio">films@gauchofilms.studio</a><a href="tel:+5491134910182">+54 9 11 3491-0182</a></div>
       </div>
@@ -654,6 +635,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-  <script src="../src/js/main.js"></script>
+  <script src="../src/js/main.js?v=6"></script>
 </body>
 </html>

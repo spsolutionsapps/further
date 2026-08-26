@@ -1,3 +1,6 @@
+// DEPRECATED: edit es/index.html, en/index.html and pt/index.html directly.
+// This script is kept for reference only and is NOT run by npm run build.
+
 const fs = require('fs');
 const path = require('path');
 
@@ -688,10 +691,10 @@ function render(lang) {
 }
 
 const root = path.join(__dirname, '..');
-for (const lang of ['es', 'en']) {
+for (const lang of ['es', 'en', 'pt']) {
   const dir = path.join(root, lang);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, 'index.html'), render(lang));
 }
 
-console.log('Wrote es/en index.html');
+console.log('Wrote es/en/pt index.html');

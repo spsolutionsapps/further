@@ -34,11 +34,11 @@
   }
 
   .header-logo-link {
-    @apply justify-self-center flex items-center;
+    @apply flex items-center shrink-0 justify-start md:justify-self-center;
   }
 
   .header-logo {
-    @apply h-8 w-auto;
+    @apply hidden md:block h-8 w-auto;
   }
 
   @media (min-width: 768px) {
@@ -46,6 +46,30 @@
       width: 218px;
       height: 100%;
     }
+  }
+
+  .header-logo-text {
+    @apply display text-[18px] tracking-[.22em] text-white leading-none text-left md:hidden;
+  }
+
+  .header-nav-right {
+    @apply ml-auto flex shrink-0 items-center gap-4 lg:gap-6 text-[12px] uppercase tracking-[.24em] text-white/55 md:ml-0 md:justify-self-end;
+  }
+
+  .team-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+  }
+
+  .team-card {
+    @apply rounded-xl border border-white/5 bg-black/10 flex flex-col sm:flex-row gap-4 sm:gap-5 sm:items-start p-4 sm:p-[10px];
+  }
+
+  .team-card-photo {
+    @apply w-full sm:w-[156px] h-52 sm:h-[180px] shrink-0 rounded-lg object-cover;
+  }
+
+  .team-card-social {
+    @apply mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-white/35;
   }
 
   .serif-copy {
@@ -73,14 +97,38 @@
 
   .hero-logo {
     display: block;
-    width: min(78vw, 380px);
-    margin-inline: auto;
+    width: min(72vw, 280px);
     height: auto;
   }
 
   @media (min-width: 768px) {
     .hero-logo {
-      width: 540px;
+      width: min(42vw, 360px);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero-logo {
+      width: 400px;
+    }
+  }
+
+  .hero-logo-wrap {
+    @apply absolute z-10;
+    bottom: 1.5rem;
+    left: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .hero-logo-wrap {
+      bottom: 2.5rem;
+      left: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero-logo-wrap {
+      left: 3rem;
     }
   }
 

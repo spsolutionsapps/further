@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <meta name="description" content="GAUCHO FILMS — Películas que valen el viaje. Estudio internacional de cine y storytelling." />
   <title>GAUCHO FILMS — Películas que valen el viaje.</title>
   <link rel="canonical" href="./" />
@@ -10,7 +13,7 @@
   <link rel="alternate" hreflang="en" href="../en/" />
   <link rel="alternate" hreflang="pt" href="../pt/" />
   <link rel="alternate" hreflang="x-default" href="../es/" />
-  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/main.css?v=7" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -20,47 +23,47 @@
 
   <header class="fixed top-0 inset-x-0 z-50 transition-all duration-500" id="siteHeader">
     <div class="mx-auto max-w-[1400px] px-5 md:px-8 lg:px-12">
-       <nav class="flex items-center justify-between py-4 md:py-7">
-         <a href="#about" class="header-logo-link shrink-0" aria-label="Inicio GAUCHO FILMS"><img src="../assets/logo-chico.png" alt="GAUCHO FILMS" class="header-logo"></a>
-         <div class="hidden md:grid md:grid-cols-3 md:items-center w-full px-8">
-           <div class="flex items-center justify-start gap-6 lg:gap-8 text-[12px] uppercase tracking-[.24em] text-white/55">
-             <a href="#work" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition">Trabajo</a>
-             <a href="#why" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition">Why</a>
-             <a href="#services" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition">Servicios</a>
-             <a href="#originals" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition">Originales</a>
-           </div>
-           <div class="flex items-center justify-center gap-4 lg:gap-6 text-[12px] uppercase tracking-[.24em] text-white/55">
-             <a href="#clients" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition">Clientes</a>
-             <a href="#about" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition">Nosotros</a>
-             <a href="#contact" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition">Contacto</a>
-           </div>
-           <div class="flex items-center justify-end gap-4 lg:gap-6">
-             <details class="lang-switch relative">
-               <summary class="flex items-center gap-2 text-[10px] uppercase tracking-[.18em] text-white/80 cursor-pointer select-none">
-                 <img src="../assets/flags/es.svg" alt="" class="w-4 h-auto rounded-[1px] shrink-0">
-                 <span>Español</span>
-               </summary>
-               <div class="absolute right-0 mt-3 min-w-[180px] rounded-lg border border-white/10 bg-black/90 backdrop-blur-xl py-2 z-50">
-                 <a href="../es/" data-lang="es" class="flex items-center gap-2 px-4 py-2 text-[10px] uppercase tracking-[.18em] text-white bg-white/5" aria-current="page">
-                   <img src="../assets/flags/es.svg" alt="ES" class="w-4 h-auto rounded-[1px] shrink-0">
-                   <span>Español</span>
-                 </a>
-                 <a href="../en/" data-lang="en" class="flex items-center gap-2 px-4 py-2 text-[10px] uppercase tracking-[.18em] text-white/65 hover:text-white hover:bg-white/5 transition">
-                   <img src="../assets/flags/us.svg" alt="US" class="w-4 h-auto rounded-[1px] shrink-0">
-                   <span>English</span>
-                 </a>
-               </div>
-             </details>
-           </div>
-         </div>
-         <button id="menuBtn" class="md:hidden text-white/80 shrink-0" aria-label="Abrir menú">
-           <span class="block w-6 h-px bg-white mb-1.5"></span><span class="block w-4 h-px bg-white ml-auto"></span>
-         </button>
-       </nav>
+      <nav class="flex w-full items-center py-4 md:grid md:grid-cols-3 md:items-center md:py-7">
+        <div class="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-8 text-[12px] uppercase tracking-[.24em] text-white/55 md:order-1">
+          <a href="#work" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition">Trabajo</a>
+          <a href="#why" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition">Impacto</a>
+          <a href="#services" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition">Servicios</a>
+          <a href="#originals" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition">Originales</a>
+        </div>
+        <a href="#top" class="header-logo-link order-first md:order-2" aria-label="Inicio GAUCHO FILMS"><span class="header-logo-text">GAUCHO FILMS</span><img src="../assets/logo-chico.png" alt="GAUCHO FILMS" class="header-logo"></a>
+        <div class="header-nav-right order-2 md:order-3">
+          <a href="#clients" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition hidden md:inline">Clientes</a>
+          <a href="#about" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition hidden md:inline">Nosotros</a>
+          <a href="#contact" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition hidden md:inline">Contacto</a>
+          <details class="lang-switch relative hidden md:block">
+            <summary class="flex items-center gap-2 text-[10px] uppercase tracking-[.18em] text-white/80 cursor-pointer select-none">
+              <img src="../assets/flags/es.svg" alt="" class="w-4 h-auto rounded-[1px] shrink-0">
+              <span>Español</span>
+            </summary>
+            <div class="absolute right-0 mt-3 min-w-[180px] rounded-lg border border-white/10 bg-black/90 backdrop-blur-xl py-2 z-50">
+              <a href="../es/" data-lang="es" class="flex items-center gap-2 px-4 py-2 text-[10px] uppercase tracking-[.18em] text-white bg-white/5" aria-current="page">
+                <img src="../assets/flags/es.svg" alt="ES" class="w-4 h-auto rounded-[1px] shrink-0">
+                <span>Español</span>
+              </a>
+              <a href="../en/" data-lang="en" class="flex items-center gap-2 px-4 py-2 text-[10px] uppercase tracking-[.18em] text-white/65 hover:text-white hover:bg-white/5 transition">
+                <img src="../assets/flags/us.svg" alt="US" class="w-4 h-auto rounded-[1px] shrink-0">
+                <span>English</span>
+              </a>
+              <a href="../pt/" data-lang="pt" class="flex items-center gap-2 px-4 py-2 text-[10px] uppercase tracking-[.18em] text-white/65 hover:text-white hover:bg-white/5 transition">
+                <img src="../assets/flags/br.svg" alt="BR" class="w-4 h-auto rounded-[1px] shrink-0">
+                <span>Português</span>
+              </a>
+            </div>
+          </details>
+          <button id="menuBtn" class="md:hidden text-white/80 shrink-0" aria-label="Abrir menú">
+            <span class="block w-6 h-px bg-white mb-1.5"></span><span class="block w-4 h-px bg-white ml-auto"></span>
+          </button>
+        </div>
+      </nav>
     </div>
     <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 bg-black/85 backdrop-blur-xl">
       <div class="px-5 py-5 flex flex-col gap-4 text-[10px] uppercase tracking-[.22em] text-white/65">
-        <a href="#about">Trabajo</a><a href="#why">Why</a><a href="#services">Servicios</a><a href="#originals">Originales</a><a href="#clients">Clientes</a><a href="#about">Nosotros</a><a href="#contact">Contacto</a>
+        <a href="#work">Trabajo</a><a href="#why">Impacto</a><a href="#services">Servicios</a><a href="#originals">Originales</a><a href="#clients">Clientes</a><a href="#about">Nosotros</a><a href="#contact">Contacto</a>
         <div class="pt-2 mt-1 border-t border-white/10 flex flex-col gap-3">
           <a href="../es/" data-lang="es" class="flex items-center gap-2 text-white" aria-current="page">
             <img src="../assets/flags/es.svg" alt="ES" class="w-4 h-auto rounded-[1px] shrink-0">
@@ -70,10 +73,10 @@
             <img src="../assets/flags/us.svg" alt="US" class="w-4 h-auto rounded-[1px] shrink-0">
             <span>English</span>
           </a>
-          <!-- <a href="../pt/" data-lang="pt" class="flex items-center gap-2">
+          <a href="../pt/" data-lang="pt" class="flex items-center gap-2">
             <img src="../assets/flags/br.svg" alt="BR" class="w-4 h-auto rounded-[1px] shrink-0">
             <span>Português</span>
-          </a> -->
+          </a>
         </div>
       </div>
     </div>
@@ -88,18 +91,15 @@
 
   <main id="top">
     <section class="relative min-h-screen overflow-hidden flex items-center justify-center">
-
-      <div class="heroLogo reveal delay-100">
-        <img src="../assets/logo.png" alt="FURTHER — Películas que valen el viaje" class="hero-logo">
-      </div>
-
-
       <div class="absolute inset-0">
         <video autoplay muted loop playsinline class="hero-bg w-full h-full object-cover" id="heroVideo">
           <source src="../video.mp4" type="video/mp4">
         </video>
         <div class="absolute inset-0 bg-black/35"></div>
         <div class="absolute inset-0 vignette"></div>
+      </div>
+      <div class="hero-logo-wrap reveal delay-100">
+        <img src="../assets/logo.png" alt="GAUCHO FILMS — Películas que valen el viaje" class="hero-logo">
       </div>
       <div class="relative z-10 w-full max-w-6xl px-6 pt-24 pb-20 text-center">
         <p class="text-[9px] uppercase tracking-[.48em] text-gold mb-6 reveal">Slate de producción 2025 // Global</p>
@@ -117,7 +117,7 @@
       <div class="mx-auto max-w-[1400px] px-[18px] sm:px-8 md:px-10 lg:px-12 text-center">
         <div class="flex flex-col items-center gap-8 reveal">
           <h2 class="display text-[42px] leading-[44px] sm:text-[54px] sm:leading-[56px] md:text-[72px] md:leading-[78px] lg:text-[92px] lg:leading-[96px] xl:text-[104px] xl:leading-[106px] w-full max-w-[1100px] mx-auto text-white uppercase">
-            CREAMOS PELÝCULAS QUE CONSTRUYEN IDENTIDAD, VALOR Y VISIBILIDAD.
+            CREAMOS PELÍCULAS QUE CONSTRUYEN IDENTIDAD, VALOR Y VISIBILIDAD.
           </h2>
           <p class="serif-copy text-[18px] sm:text-[18px] leading-[1.75] tracking-[.01em] text-white/60 w-full">Un colectivo internacional de storytelling que forja documentales crudos e intransigentes y capturas cinematográficas. Viajamos hasta el límite de la geografía para extraer narrativas de arquitectura, estates de legado, oficio humano y naturaleza prístina.</p>
         </div>
@@ -238,22 +238,22 @@
           <article class="rounded-xl border border-white/5 bg-black/20 p-7 md:p-8 reveal">
             <div class="text-[9px] uppercase tracking-[.25em] text-gold mb-4">01</div>
             <h3 class="display text-2xl md:text-3xl mb-4">LAS GRANDES HISTORIAS GENERAN VALOR</h3>
-            <p class="text-sm text-white/50 leading-6">Una gran producci�n no solo muestra lo que hac�s.<br>Transforma la forma en que te ven.</p>
+            <p class="text-sm text-white/50 leading-6">Una gran producción no solo muestra lo que hacés.<br>Transforma la forma en que te ven.</p>
           </article>
           <article class="rounded-xl border border-white/5 bg-black/20 p-7 md:p-8 reveal delay-80">
             <div class="text-[9px] uppercase tracking-[.25em] text-gold mb-4">02</div>
-            <h3 class="display text-2xl md:text-3xl mb-4">GENER� DESEO</h3>
-            <p class="text-sm text-white/50 leading-6">Convert� destinos, propiedades y experiencias en lugares de los que todos quieran ser parte.</p>
+            <h3 class="display text-2xl md:text-3xl mb-4">GENERÁ DESEO</h3>
+            <p class="text-sm text-white/50 leading-6">Convertí destinos, propiedades y experiencias en lugares de los que todos quieran ser parte.</p>
           </article>
           <article class="rounded-xl border border-white/5 bg-black/20 p-7 md:p-8 reveal delay-160">
             <div class="text-[9px] uppercase tracking-[.25em] text-gold mb-4">03</div>
-            <h3 class="display text-2xl md:text-3xl mb-4">LLEG� A M�S PERSONAS</h3>
-            <p class="text-sm text-white/50 leading-6">Transform� historias en contenido que las personas quieran ver y compartir.</p>
+            <h3 class="display text-2xl md:text-3xl mb-4">LLEGÁ A MÁS PERSONAS</h3>
+            <p class="text-sm text-white/50 leading-6">Transformá historias en contenido que las personas quieran ver y compartir.</p>
           </article>
           <article class="rounded-xl border border-white/5 bg-black/20 p-7 md:p-8 reveal delay-240">
             <div class="text-[9px] uppercase tracking-[.25em] text-gold mb-4">04</div>
-            <h3 class="display text-2xl md:text-3xl mb-4">GENER� CONFIANZA</h3>
-            <p class="text-sm text-white/50 leading-6">Mostr� las personas, el trabajo y la historia que hay detr�s de tu marca.</p>
+            <h3 class="display text-2xl md:text-3xl mb-4">GENERÁ CONFIANZA</h3>
+            <p class="text-sm text-white/50 leading-6">Mostrá las personas, el trabajo y la historia que hay detrás de tu marca.</p>
           </article>
         </div>
         <p class="mt-5 text-[10px] uppercase tracking-[.25em] text-gold reveal">Que te vean. Que te sientan. Que te recuerden.</p>
@@ -262,78 +262,92 @@
 
     <section class="bg-panel border-y border-white/[.035] py-24 md:py-28" id="services">
       <div class="mx-auto max-w-6xl px-6 md:px-10">
-        <div class="mb-10 reveal"><p class="text-[9px] uppercase tracking-[.38em] text-gold mb-5">Servicios / Lo que hacemos</p><h2 class="display text-5xl md:text-7xl">LO QUE HACEMOS</h2></div>
+        <div class="mb-10 reveal"><p class="text-[9px] uppercase tracking-[.38em] text-gold mb-5">Servicios / Lo que hacemos</p><h2 class="display text-5xl md:text-7xl">LO QUE HACEMOS</h2><p class="mt-6 text-[11px] uppercase tracking-[.3em] text-white/50">Producción audiovisual · Fotografía · Contenido</p></div>
         <div class="flex flex-col gap-4">
           <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <article class="service-card group relative rounded-xl overflow-hidden border border-white/5 bg-black/20 reveal">
             <div class="relative aspect-[16/10] overflow-hidden">
-              <img src="../assets/img-001.png" class="w-full h-full object-cover transition duration-[1.2s] group-hover:scale-105" alt="Películas de marca">
+              <img src="../assets/1.jpg" class="w-full h-full object-cover transition duration-[1.2s] group-hover:scale-105" alt="Marcas">
               <div class="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-transparent"></div>
               <span class="absolute top-4 left-4 text-[9px] uppercase tracking-[.25em] text-gold">01</span>
-              <div class="absolute inset-x-4 bottom-4"><h3 class="display text-2xl md:text-3xl">Películas de marca</h3></div>
+              <div class="absolute inset-x-4 bottom-4"><h3 class="display text-2xl md:text-3xl">MARCAS</h3></div>
             </div>
             <div class="p-5 md:p-6">
-              <p class="text-sm text-white/50 leading-6">Películas para marcas.</p>
+              <p class="text-sm text-white/50 leading-6">Producción audiovisual y fotografía para marcas.</p>
               <ul class="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2 text-[9px] uppercase tracking-[.18em] text-white/40">
-                <li>Historias de marca</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Films de campaña</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Storytelling de producto</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Contenido branded</li>
+                <li>Películas de marca</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Campañas</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Productos</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Contenido para redes sociales</li>
               </ul>
             </div>
           </article>
           <article class="service-card group relative rounded-xl overflow-hidden border border-white/5 bg-black/20 reveal delay-80">
             <div class="relative aspect-[16/10] overflow-hidden">
-              <img src="../assets/img-003.png" class="w-full h-full object-cover transition duration-[1.2s] group-hover:scale-105" alt="Hospitalidad y destinos">
+              <img src="../assets/2.jpg" class="w-full h-full object-cover transition duration-[1.2s] group-hover:scale-105" alt="Hospitalidad y destinos">
               <div class="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-transparent"></div>
               <span class="absolute top-4 left-4 text-[9px] uppercase tracking-[.25em] text-gold">02</span>
-              <div class="absolute inset-x-4 bottom-4"><h3 class="display text-2xl md:text-3xl">Hospitalidad y destinos</h3></div>
+              <div class="absolute inset-x-4 bottom-4"><h3 class="display text-2xl md:text-3xl">HOSPITALIDAD & DESTINOS</h3></div>
             </div>
             <div class="p-5 md:p-6">
-              <p class="text-sm text-white/50 leading-6">Hoteles, resorts, guest ranches y destinos.</p>
+              <p class="text-sm text-white/50 leading-6">Producción audiovisual y fotografía para hoteles, resorts y destinos.</p>
               <ul class="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2 text-[9px] uppercase tracking-[.18em] text-white/40">
-                <li>Films de destino</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Films de hotel</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Experiencias</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Contenido social</li>
+                <li>Películas de destino</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Experiencias</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Campañas</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Contenido para redes sociales</li>
               </ul>
             </div>
           </article>
           <article class="service-card group relative rounded-xl overflow-hidden border border-white/5 bg-black/20 reveal delay-160">
             <div class="relative aspect-[16/10] overflow-hidden">
-              <img src="../assets/img-005.png" class="w-full h-full object-cover transition duration-[1.2s] group-hover:scale-105" alt="Ranchos y equitación">
+              <img src="../assets/3.jpg" class="w-full h-full object-cover transition duration-[1.2s] group-hover:scale-105" alt="Ranchos y universo ecuestre">
               <div class="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-transparent"></div>
               <span class="absolute top-4 left-4 text-[9px] uppercase tracking-[.25em] text-gold">03</span>
-              <div class="absolute inset-x-4 bottom-4"><h3 class="display text-2xl md:text-3xl">Ranchos y equitación</h3></div>
+              <div class="absolute inset-x-4 bottom-4"><h3 class="display text-2xl md:text-3xl">RANCHOS & UNIVERSO ECUESTRE</h3></div>
             </div>
             <div class="p-5 md:p-6">
-              <p class="text-sm text-white/50 leading-6">Ranchos, haras, criaderos, asociaciones y el universo ecuestre / ganadero.</p>
+              <p class="text-sm text-white/50 leading-6">Producción audiovisual y fotografía para ranchos, haras, criaderos y organizaciones ecuestres.</p>
               <ul class="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2 text-[9px] uppercase tracking-[.18em] text-white/40">
-                <li>Films de legado</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Films de rancho</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Programas de cría</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Contenido ecuestre</li>
+                <li>Películas de legado</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Historias de marca</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Campañas</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Contenido ecuestre</li>
               </ul>
             </div>
           </article>
         </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:mx-auto lg:w-[calc((100%_-_2rem)/3*2_+_1rem)]">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <article class="service-card group relative rounded-xl overflow-hidden border border-white/5 bg-black/20 reveal delay-240">
             <div class="relative aspect-[16/10] overflow-hidden">
-              <img src="../assets/img-007.png" class="w-full h-full object-cover transition duration-[1.2s] group-hover:scale-105" alt="Real Estate">
+              <img src="../assets/4.jpg" class="w-full h-full object-cover transition duration-[1.2s] group-hover:scale-105" alt="Mercado inmobiliario">
               <div class="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-transparent"></div>
               <span class="absolute top-4 left-4 text-[9px] uppercase tracking-[.25em] text-gold">04</span>
-              <div class="absolute inset-x-4 bottom-4"><h3 class="display text-2xl md:text-3xl">Real Estate</h3></div>
+              <div class="absolute inset-x-4 bottom-4"><h3 class="display text-2xl md:text-3xl">MERCADO INMOBILIARIO</h3></div>
             </div>
             <div class="p-5 md:p-6">
-              <p class="text-sm text-white/50 leading-6">Un producto comercial muy claro.</p>
+              <p class="text-sm text-white/50 leading-6">Producción audiovisual y fotografía para propiedades y emprendimientos.</p>
               <ul class="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2 text-[9px] uppercase tracking-[.18em] text-white/40">
-                <li>Films cinematográficos</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Propiedades excepcionales</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Ranchos</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Estates</li>
+                <li>Películas cinematográficas</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Fotografía</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Contenido comercial</li>
               </ul>
             </div>
           </article>
           <article class="service-card group relative rounded-xl overflow-hidden border border-white/5 bg-black/20 reveal delay-320">
             <div class="relative aspect-[16/10] overflow-hidden">
-              <img src="../assets/img-009.png" class="w-full h-full object-cover transition duration-[1.2s] group-hover:scale-105" alt="Instituciones y asociaciones">
+              <img src="../assets/5.jpg" class="w-full h-full object-cover transition duration-[1.2s] group-hover:scale-105" alt="Instituciones y asociaciones">
               <div class="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-transparent"></div>
               <span class="absolute top-4 left-4 text-[9px] uppercase tracking-[.25em] text-gold">05</span>
-              <div class="absolute inset-x-4 bottom-4"><h3 class="display text-2xl md:text-3xl">Instituciones y asociaciones</h3></div>
+              <div class="absolute inset-x-4 bottom-4"><h3 class="display text-2xl md:text-3xl">INSTITUCIONES & ASOCIACIONES</h3></div>
             </div>
             <div class="p-5 md:p-6">
-              <p class="text-sm text-white/50 leading-6">Federaciones, asociaciones y organizaciones.</p>
+              <p class="text-sm text-white/50 leading-6">Producción audiovisual y fotografía para instituciones y organizaciones.</p>
               <ul class="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2 text-[9px] uppercase tracking-[.18em] text-white/40">
-                <li>Films institucionales</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Patrimonio</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Eventos</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Comunicación</li>
+                <li>Películas institucionales</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Patrimonio</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Eventos</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Comunicación</li>
+              </ul>
+            </div>
+          </article>
+          <article class="service-card group relative rounded-xl overflow-hidden border border-white/5 bg-black/20 reveal delay-400">
+            <div class="relative aspect-[16/10] overflow-hidden">
+              <img src="../assets/6.jpg" class="w-full h-full object-cover transition duration-[1.2s] group-hover:scale-105" alt="Empresas y corporaciones">
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-transparent"></div>
+              <span class="absolute top-4 left-4 text-[9px] uppercase tracking-[.25em] text-gold">06</span>
+              <div class="absolute inset-x-4 bottom-4"><h3 class="display text-2xl md:text-3xl">EMPRESAS & CORPORACIONES</h3></div>
+            </div>
+            <div class="p-5 md:p-6">
+              <p class="text-sm text-white/50 leading-6">Producción audiovisual y fotografía para empresas y equipos corporativos.</p>
+              <ul class="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2 text-[9px] uppercase tracking-[.18em] text-white/40">
+                <li>Películas corporativas</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Historias de empresas</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Entrevistas</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Campañas</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Eventos</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Contenido para comunicación interna y externa</li>
               </ul>
             </div>
           </article>
@@ -473,17 +487,15 @@
     </div>
 
     <!-- TEAM GRID: 3 filas x 2 columnas en desktop -->
-    <div class="mt-8">
-      <!-- Fila 1 -->
-      <div class="grid md:grid-cols-2 gap-4 mb-4">
+    <div class="team-grid mt-8">
         <!-- Miembro 1: Nacho Saso -->
-        <div class="rounded-xl border border-white/5 bg-black/10 flex flex-row gap-4 sm:gap-5 items-start" style="padding:10px;">
-          <img src="../assets/img-018.png" style="width:156px; height:180px;" class="shrink-0 rounded-lg object-cover" alt="Nacho Saso">
+        <div class="team-card">
+          <img src="../assets/img-018.png" class="team-card-photo" alt="Nacho Saso">
           <div class="flex-1 min-w-0">
             <div class="text-[9px] uppercase tracking-[.25em] text-gold mb-3">Director &amp; Fundador</div>
             <h3 class="display text-xl sm:text-2xl">NACHO SASO</h3>
             <p class="mt-3 text-sm text-white/50 leading-6">Lidera la visión y narrativa de Horses &amp; Humans, capturando culturas a través de narrativas cinematográficas en torno al caballo.</p>
-            <div class="mt-4 flex items-center gap-3 text-white/35">
+            <div class="team-card-social">
               <a href="https://www.instagram.com/nachosaso" target="_blank" rel="noopener" aria-label="Instagram" class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 hover:border-white/50 hover:text-white transition">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
               </a>
@@ -496,13 +508,13 @@
         </div>
 
         <!-- Miembro 2: Santiago Walsh -->
-        <div class="rounded-xl border border-white/5 bg-black/10 flex flex-row gap-4 sm:gap-5 items-start" style="padding:10px;">
-          <img src="../assets/santiago.png" style="width:156px; height:180px;" class="shrink-0 rounded-lg object-cover" alt="Santiago Walsh">
+        <div class="team-card">
+          <img src="../assets/santiago.png" class="team-card-photo" alt="Santiago Walsh">
           <div class="flex-1 min-w-0">
             <div class="text-[9px] uppercase tracking-[.25em] text-gold mb-3">Compositor</div>
             <h3 class="display text-xl sm:text-2xl">SANTIAGO WALSH</h3>
             <p class="mt-3 text-sm text-white/50 leading-6">Crea la banda sonora original de la serie, construyendo profundidad emocional y atmósfera a través de la música.</p>
-            <div class="mt-4 flex items-center gap-3 text-white/35">
+            <div class="team-card-social">
               <a href="https://www.instagram.com/santiagowalsh" target="_blank" rel="noopener" aria-label="Instagram" class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 hover:border-white/50 hover:text-white transition">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
               </a>
@@ -513,18 +525,15 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Fila 2 -->
-      <div class="grid md:grid-cols-2 gap-4 mb-4">
         <!-- Miembro 3: Francisco Paz -->
-        <div class="rounded-xl border border-white/5 bg-black/10 flex flex-row gap-4 sm:gap-5 items-start" style="padding:10px;">
-          <img src="../assets/fran.jpg" style="width:156px; height:180px;" class="shrink-0 rounded-lg object-cover" alt="Francisco Paz">
+        <div class="team-card">
+          <img src="../assets/fran.jpg" class="team-card-photo" alt="Francisco Paz">
           <div class="flex-1 min-w-0">
             <div class="text-[9px] uppercase tracking-[.25em] text-gold mb-3">Locutor</div>
             <h3 class="display text-xl sm:text-2xl">FRANCISCO PAZ</h3>
             <p class="mt-3 text-sm text-white/50 leading-6">La voz detrás de la serie, guiando cada historia con tono, ritmo y presencia.</p>
-            <div class="mt-4 flex items-center gap-3 text-white/35">
+            <div class="team-card-social">
               <a href="https://www.instagram.com/franciscopaz" target="_blank" rel="noopener" aria-label="Instagram" class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 hover:border-white/50 hover:text-white transition">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
               </a>
@@ -537,13 +546,13 @@
         </div>
 
         <!-- Miembro 4: Delfina Schoch -->
-        <div class="rounded-xl border border-white/5 bg-black/10 flex flex-row gap-4 sm:gap-5 items-start" style="padding:10px;">
-          <img src="../assets/delfina.jpg" style="width:156px; height:180px;" class="shrink-0 rounded-lg object-cover" alt="Delfina Schoch">
+        <div class="team-card">
+          <img src="../assets/delfina.jpg" class="team-card-photo" alt="Delfina Schoch">
           <div class="flex-1 min-w-0">
             <div class="text-[9px] uppercase tracking-[.25em] text-gold mb-3">Productora</div>
             <h3 class="display text-xl sm:text-2xl">DELFINA SCHOCH</h3>
             <p class="mt-3 text-sm text-white/50 leading-6">Coordina la producción en distintos países, asegurando que cada historia sea ejecutada al más alto nivel.</p>
-            <div class="mt-4 flex items-center gap-3 text-white/35">
+            <div class="team-card-social">
               <a href="https://www.instagram.com/delfinaschoch" target="_blank" rel="noopener" aria-label="Instagram" class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 hover:border-white/50 hover:text-white transition">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
               </a>
@@ -554,18 +563,15 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Fila 3 -->
-      <div class="grid md:grid-cols-2 gap-4">
         <!-- Miembro 5: Vicky Figueroa -->
-        <div class="rounded-xl border border-white/5 bg-black/10 flex flex-row gap-4 sm:gap-5 items-start" style="padding:10px;">
-          <img src="../assets/bar.jpg" style="width:156px; height:180px;" class="shrink-0 rounded-lg object-cover" alt="Vicky Figueroa">
+        <div class="team-card">
+          <img src="../assets/bar.jpg" class="team-card-photo" alt="Vicky Figueroa">
           <div class="flex-1 min-w-0">
             <div class="text-[9px] uppercase tracking-[.25em] text-gold mb-3">Productora &amp; Alianzas Estratégicas</div>
             <h3 class="display text-xl sm:text-2xl">VICKY FIGUEROA</h3>
             <p class="mt-3 text-sm text-white/50 leading-6">Desarrolla producciones y alianzas con marcas para los proyectos originales y producciones comerciales de GAUCHO FILMS.</p>
-            <div class="mt-4 flex items-center gap-3 text-white/35">
+            <div class="team-card-social">
               <a href="https://www.instagram.com/Brava.grow" target="_blank" rel="noopener" aria-label="Instagram" class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 hover:border-white/50 hover:text-white transition">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
               </a>
@@ -578,13 +584,13 @@
         </div>
 
         <!-- Miembro 6: Juana Fernández -->
-        <div class="rounded-xl border border-white/5 bg-black/10 flex flex-row gap-4 sm:gap-5 items-start" style="padding:10px;">
-          <img src="../assets/juana.jpg" style="width:156px; height:180px;" class="shrink-0 rounded-lg object-cover" alt="Juana Fernández">
+        <div class="team-card">
+          <img src="../assets/juana.jpg" class="team-card-photo" alt="Juana Fernández">
           <div class="flex-1 min-w-0">
             <div class="text-[9px] uppercase tracking-[.25em] text-gold mb-3">Investigación &amp; Alianzas Estratégicas</div>
             <h3 class="display text-xl sm:text-2xl">JUANA FERNÁNDEZ</h3>
             <p class="mt-3 text-sm text-white/50 leading-6">Investiga mercados y oportunidades, construyendo alianzas estratégicas para los documentales originales y producciones de marca de GAUCHO FILMS.</p>
-            <div class="mt-4 flex items-center gap-3 text-white/35">
+            <div class="team-card-social">
               <a href="https://www.instagram.com/juanafernandezcappi" target="_blank" rel="noopener" aria-label="Instagram" class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 hover:border-white/50 hover:text-white transition">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
               </a>
@@ -597,7 +603,6 @@
         </div>
       </div>
     </div>
-  </div>
 </section>
 
     <section class="relative min-h-[620px] flex items-center overflow-hidden" id="contact">
@@ -606,7 +611,7 @@
       <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-black/30"></div>
       <div class="relative z-10 mx-auto max-w-6xl px-6 md:px-10 w-full text-center reveal">
         <p class="text-[9px] uppercase tracking-[.38em] text-gold mb-6">Inicio de proyecto / Consultas // 2025</p>
-        <h2 class="display text-5xl md:text-7xl lg:text-8xl leading-[.82] max-w-4xl mx-auto">¿TENÉS UNA HISTORIA QUE VALE LA PENA FILMAR?</h2>
+        <h2 class="display text-5xl md:text-7xl lg:text-8xl leading-[56px] md:leading-[.82] max-w-4xl mx-auto">¿TENÉS UNA HISTORIA QUE VALE LA PENA FILMAR?</h2>
         <p class="mt-6 text-sm md:text-[17px] text-white/60">Creemos algo que la gente recuerde.</p>
         <div class="mt-7 flex items-center justify-center gap-8 text-[9px] md:text-[16px] uppercase tracking-[.22em] text-white/50"><a href="mailto:films@gauchofilms.studio">films@gauchofilms.studio</a><a href="tel:+5491134910182">+54 9 11 3491-0182</a></div>
       </div>
@@ -617,7 +622,7 @@
     <div class="mx-auto max-w-6xl px-6 md:px-10">
       <div class="grid md:grid-cols-3 gap-10 pb-10 border-b border-white/10">
         <div><div class="tracking-[.3em] text-sm mb-3">GAUCHO FILMS</div><p class="text-sm text-white/50">Películas que valen el viaje.</p></div>
-        <div class="grid grid-cols-3 gap-4 text-[9px] uppercase tracking-[.2em] text-white/45"><a href="#about">Trabajo</a><a href="#why">Why</a><a href="#services">Servicios</a><a href="#originals">Originales</a><a href="#clients">Clientes</a><a href="#about">Nosotros</a><a href="#contact">Contacto</a></div>
+        <div class="grid grid-cols-3 gap-4 text-[9px] uppercase tracking-[.2em] text-white/45"><a href="#work">Trabajo</a><a href="#why">Impacto</a><a href="#services">Servicios</a><a href="#originals">Originales</a><a href="#clients">Clientes</a><a href="#about">Nosotros</a><a href="#contact">Contacto</a></div>
         <div class="md:text-right text-[9px] uppercase tracking-[.2em] text-white/45"><div class="mb-2">Contacto</div><a href="mailto:films@gauchofilms.studio" class="block hover:text-white transition">films@gauchofilms.studio</a><a href="tel:+5491134910182" class="block mt-2 hover:text-white transition">+54 9 11 3491 0182</a></div>
       </div>
       <div class="pt-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-[8px] uppercase tracking-[.23em] text-white/30"><span>© 2025 GAUCHO FILMS Studio. Todos los derechos reservados.</span><span>Buenos Aires · Argentina · Trabajamos en todo el mundo</span></div>
@@ -626,6 +631,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-  <script src="../src/js/main.js"></script>
+  <script src="../src/js/main.js?v=6"></script>
 </body>
 </html>
