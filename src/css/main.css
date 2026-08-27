@@ -25,12 +25,22 @@
     letter-spacing: -0.015em;
   }
 
-  .lang-switch > summary {
-    list-style: none;
+  .lang-flags {
+    @apply flex items-center;
+    gap: 6px;
   }
 
-  .lang-switch > summary::-webkit-details-marker {
-    display: none;
+  .lang-flag {
+    @apply inline-flex shrink-0 overflow-hidden opacity-80 hover:opacity-100 transition;
+    width: 28px;
+    height: 21px;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15);
+  }
+
+  .lang-flag img {
+    @apply block h-full w-full;
+    object-fit: fill;
   }
 
   .header-logo-link {
@@ -78,6 +88,34 @@
 
   .contact-wa-cta svg {
     @apply h-5 w-5 shrink-0;
+  }
+
+  .scroll-top-btn {
+    @apply fixed bottom-5 left-5 md:bottom-7 md:left-7 z-[60] flex h-14 w-14 items-center justify-center rounded-full border border-white/15 bg-black/75 text-white shadow-lg shadow-black/40 backdrop-blur-xl transition-all duration-300 opacity-0 pointer-events-none translate-y-2;
+  }
+
+  .scroll-top-btn.is-visible {
+    @apply opacity-100 pointer-events-auto translate-y-0;
+  }
+
+  .scroll-top-btn:hover {
+    @apply border-gold/50 bg-black/90 scale-110;
+  }
+
+  .site-footer-main {
+    @apply flex flex-col items-center gap-8 pb-10 text-center border-b border-white/10;
+  }
+
+  .site-footer-logo img {
+    @apply h-10 md:h-12 w-auto mx-auto;
+  }
+
+  .site-footer-links {
+    @apply flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-[10px] uppercase tracking-[.22em] text-white/45;
+  }
+
+  .site-footer-links a {
+    @apply hover:text-white transition;
   }
 
   .serif-copy {
@@ -170,6 +208,30 @@
     background: linear-gradient(180deg, transparent 28%, rgba(0, 0, 0, 0.82) 100%);
   }
 
+  .work-card-player {
+    @apply hidden;
+  }
+
+  .work-card-player iframe {
+    @apply absolute inset-0 h-full w-full border-0;
+  }
+
+  .work-card.is-playing .work-card-poster,
+  .work-card.is-playing .work-card-play,
+  .work-card.is-playing .overlay,
+  .work-card.is-playing .work-card-meta {
+    @apply opacity-0 pointer-events-none;
+  }
+
+  .work-card.is-playing .work-card-player,
+  .work-card.is-playing .work-card-close {
+    @apply !block;
+  }
+
+  .work-card-close {
+    @apply hidden;
+  }
+
   .btn {
     @apply relative overflow-hidden;
   }
@@ -228,11 +290,19 @@
     mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
   }
 
-  .clients-row {
+  .clients-row,
+  .distro-row {
     display: flex;
     width: max-content;
-    animation: clients-scroll 48s linear infinite;
     will-change: transform;
+  }
+
+  .clients-row {
+    animation: clients-scroll 48s linear infinite;
+  }
+
+  .distro-row {
+    animation: distro-scroll 52s linear infinite;
   }
 
   .clients-carousel:hover .clients-row {
@@ -367,13 +437,6 @@
     margin-top: 22px;
     -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
     mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
-  }
-
-  .distro-row {
-    display: flex;
-    width: max-content;
-    animation: distro-scroll 52s linear infinite;
-    will-change: transform;
   }
 
   .distro-carousel:hover .distro-row {

@@ -13,7 +13,7 @@
   <link rel="alternate" hreflang="en" href="../en/" />
   <link rel="alternate" hreflang="pt" href="../pt/" />
   <link rel="alternate" hreflang="x-default" href="../es/" />
-  <link rel="stylesheet" href="../css/main.css?v=8" />
+  <link rel="stylesheet" href="../css/main.css?v=18" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -25,36 +25,20 @@
     <div class="mx-auto max-w-[1400px] px-5 md:px-8 lg:px-12">
       <nav class="flex w-full items-center py-4 md:grid md:grid-cols-3 md:items-center md:py-7">
         <div class="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-8 text-[12px] uppercase tracking-[.24em] text-white/55 md:order-1">
-          <a href="#work" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition">Trabalho</a>
-          <a href="#why" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition">Impacto</a>
           <a href="#services" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition">Serviços</a>
+          <a href="#why" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition">Impacto</a>
           <a href="#originals" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition">Originais</a>
+          <a href="#clients" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition">Clientes</a>
         </div>
         <a href="#top" class="header-logo-link order-first md:order-2" aria-label="Início GAUCHO FILMS"><span class="header-logo-text">GAUCHO FILMS</span><img src="../assets/logo-chico.png" alt="GAUCHO FILMS" class="header-logo"></a>
         <div class="header-nav-right order-2 md:order-3">
-          <a href="#clients" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition hidden md:inline">Clientes</a>
+          <a href="#work" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition hidden md:inline">Trabalho</a>
           <a href="#about" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition hidden md:inline">Equipe</a>
           <a href="#contact" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition hidden md:inline">Contato</a>
-          <details class="lang-switch relative hidden md:block">
-            <summary class="flex items-center gap-2 text-[10px] uppercase tracking-[.18em] text-white/80 cursor-pointer select-none">
-              <img src="../assets/flags/br.svg" alt="" class="w-4 h-auto rounded-[1px] shrink-0">
-              <span>Português</span>
-            </summary>
-            <div class="absolute right-0 mt-3 min-w-[180px] rounded-lg border border-white/10 bg-black/90 backdrop-blur-xl py-2 z-50">
-              <a href="../es/" data-lang="es" class="flex items-center gap-2 px-4 py-2 text-[10px] uppercase tracking-[.18em] text-white/65 hover:text-white hover:bg-white/5 transition">
-                <img src="../assets/flags/es.svg" alt="ES" class="w-4 h-auto rounded-[1px] shrink-0">
-                <span>Español</span>
-              </a>
-              <a href="../en/" data-lang="en" class="flex items-center gap-2 px-4 py-2 text-[10px] uppercase tracking-[.18em] text-white/65 hover:text-white hover:bg-white/5 transition">
-                <img src="../assets/flags/us.svg" alt="US" class="w-4 h-auto rounded-[1px] shrink-0">
-                <span>English</span>
-              </a>
-              <a href="../pt/" data-lang="pt" class="flex items-center gap-2 px-4 py-2 text-[10px] uppercase tracking-[.18em] text-white bg-white/5" aria-current="page">
-                <img src="../assets/flags/br.svg" alt="BR" class="w-4 h-auto rounded-[1px] shrink-0">
-                <span>Português</span>
-              </a>
-            </div>
-          </details>
+          <div class="lang-flags hidden md:flex">
+            <a href="../es/" data-lang="es" class="lang-flag" aria-label="Español"><img src="../assets/flags/es.svg" alt=""></a>
+            <a href="../en/" data-lang="en" class="lang-flag" aria-label="English"><img src="../assets/flags/us.svg" alt=""></a>
+          </div>
           <button id="menuBtn" class="md:hidden text-white/80 shrink-0" aria-label="Abrir menu">
             <span class="block w-6 h-px bg-white mb-1.5"></span><span class="block w-4 h-px bg-white ml-auto"></span>
           </button>
@@ -63,20 +47,10 @@
     </div>
     <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 bg-black/85 backdrop-blur-xl">
       <div class="px-5 py-5 flex flex-col gap-4 text-[10px] uppercase tracking-[.22em] text-white/65">
-        <a href="#work">Trabalho</a><a href="#why">Impacto</a><a href="#services">Serviços</a><a href="#originals">Originais</a><a href="#clients">Clientes</a><a href="#about">Equipe</a><a href="#contact">Contato</a>
-        <div class="pt-2 mt-1 border-t border-white/10 flex flex-col gap-3">
-          <a href="../es/" data-lang="es" class="flex items-center gap-2">
-            <img src="../assets/flags/es.svg" alt="ES" class="w-4 h-auto rounded-[1px] shrink-0">
-            <span>Español</span>
-          </a>
-          <a href="../en/" data-lang="en" class="flex items-center gap-2">
-            <img src="../assets/flags/us.svg" alt="US" class="w-4 h-auto rounded-[1px] shrink-0">
-            <span>English</span>
-          </a>
-          <a href="../pt/" data-lang="pt" class="flex items-center gap-2 text-white" aria-current="page">
-            <img src="../assets/flags/br.svg" alt="BR" class="w-4 h-auto rounded-[1px] shrink-0">
-            <span>Português</span>
-          </a>
+        <a href="#services">Serviços</a><a href="#why">Impacto</a><a href="#originals">Originais</a><a href="#clients">Clientes</a><a href="#work">Trabalho</a><a href="#about">Equipe</a><a href="#contact">Contato</a>
+        <div class="pt-2 mt-1 border-t border-white/10 flex items-center gap-3">
+          <a href="../es/" data-lang="es" class="lang-flag" aria-label="Español"><img src="../assets/flags/es.svg" alt=""></a>
+          <a href="../en/" data-lang="en" class="lang-flag" aria-label="English"><img src="../assets/flags/us.svg" alt=""></a>
         </div>
       </div>
     </div>
@@ -88,6 +62,10 @@
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
     </svg>
   </a>
+
+  <button type="button" id="scrollTopBtn" class="scroll-top-btn" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-6 w-6" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
 
   <main id="top">
     <section class="relative min-h-screen overflow-hidden flex items-center justify-center">
@@ -113,7 +91,7 @@
       </div>
     </section>
 
-    <section class="relative bg-black py-20 sm:py-24 md:py-28 overflow-hidden" id="work">
+    <section class="relative bg-black py-20 sm:py-24 md:py-28 overflow-hidden">
       <div class="mx-auto max-w-[1400px] px-[18px] sm:px-8 md:px-10 lg:px-12 text-center">
         <div class="flex flex-col items-center gap-8 reveal">
           <h2 class="display text-[42px] leading-[44px] sm:text-[54px] sm:leading-[56px] md:text-[72px] md:leading-[78px] lg:text-[92px] lg:leading-[96px] xl:text-[104px] xl:leading-[106px] w-full max-w-[1100px] mx-auto text-white uppercase">
@@ -139,125 +117,7 @@
           </div>
         </div>
 
-        <div class="my-14 md:my-16 h-px bg-white/10"></div>
-
-        <div id="work" class="mx-auto max-w-6xl grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 scroll-mt-28">
-          <!-- Video 1: Argentina 4K -->
-          <article class="work-card group relative aspect-[1.5] rounded-xl overflow-hidden border border-white/5 reveal">
-            <a href="https://www.youtube.com/watch?v=f6QFJUkORmQ&t=1980s" target="_blank" rel="noopener" class="absolute inset-0 z-10">
-              <img class="absolute inset-0 w-full h-full object-cover" src="https://img.youtube.com/vi/f6QFJUkORmQ/maxresdefault.jpg" alt="Argentina 4K">
-              <div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition duration-500"></div>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition duration-300 shadow-lg shadow-black/30">
-                  <svg class="w-7 h-7 md:w-9 md:h-9 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
-                </div>
-              </div>
-            </a>
-            <div class="overlay absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-            <div class="absolute inset-x-4 bottom-4 flex items-end justify-between gap-4 z-20">
-              <div>
-                <div class="text-[8px] uppercase tracking-[.28em] text-gold mb-2">Landscapes 4K</div>
-                <h3 class="display text-2xl md:text-3xl">Argentina 4K</h3>
-              </div>
-              <span class="w-7 h-7 rounded-full bg-white text-black grid place-items-center text-sm">↗</span>
-            </div>
-          </article>
         
-          <!-- Video 2: Horses & Humans Official Trailer -->
-          <article class="work-card group relative aspect-[1.5] rounded-xl overflow-hidden border border-white/5 reveal delay-80">
-            <a href="https://www.youtube.com/watch?v=P9vm1Cc4r0A&t=54s" target="_blank" rel="noopener" class="absolute inset-0 z-10">
-              <img class="absolute inset-0 w-full h-full object-cover" src="https://img.youtube.com/vi/P9vm1Cc4r0A/maxresdefault.jpg" alt="Horses & Humans Official Trailer">
-              <div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition duration-500"></div>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition duration-300 shadow-lg shadow-black/30">
-                  <svg class="w-7 h-7 md:w-9 md:h-9 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
-                </div>
-              </div>
-            </a>
-            <div class="overlay absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-            <div class="absolute inset-x-4 bottom-4 flex items-end justify-between gap-4 z-20">
-              <div>
-                <div class="text-[8px] uppercase tracking-[.28em] text-gold mb-2">Official Trailer</div>
-                <h3 class="display text-2xl md:text-3xl">Horses & Humans</h3>
-              </div>
-              <span class="w-7 h-7 rounded-full bg-white text-black grid place-items-center text-sm">↗</span>
-            </div>
-          </article>
-        
-          <!-- Video 3: Horses & Humans Azerbaijan Teaser -->
-          <article class="work-card group relative aspect-[1.5] rounded-xl overflow-hidden border border-white/5 reveal delay-160">
-            <a href="https://www.youtube.com/watch?v=MCiDpIdCkf8&t=7s" target="_blank" rel="noopener" class="absolute inset-0 z-10">
-              <img class="absolute inset-0 w-full h-full object-cover" src="https://img.youtube.com/vi/MCiDpIdCkf8/maxresdefault.jpg" alt="HORSES & HUMANS AZERBAIJAN — Official Teaser">
-              <div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition duration-500"></div>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition duration-300 shadow-lg shadow-black/30">
-                  <svg class="w-7 h-7 md:w-9 md:h-9 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
-                </div>
-              </div>
-            </a>
-            <div class="overlay absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-            <div class="absolute inset-x-4 bottom-4 flex items-end justify-between gap-4 z-20">
-              <div>
-                <div class="text-[8px] uppercase tracking-[.28em] text-gold mb-2">Official Teaser</div>
-                <h3 class="display text-2xl md:text-3xl">Horses & Humans Azerbaijan</h3>
-              </div>
-              <span class="w-7 h-7 rounded-full bg-white text-black grid place-items-center text-sm">↗</span>
-            </div>
-          </article>
-        
-          <!-- Video 4: Horses & Humans Documentary Series -->
-          <article class="work-card group relative aspect-[1.5] rounded-xl overflow-hidden border border-white/5 reveal delay-240">
-            <a href="https://www.youtube.com/watch?v=6h-gVD95q5w&t=4082s" target="_blank" rel="noopener" class="absolute inset-0 z-10">
-              <img class="absolute inset-0 w-full h-full object-cover" src="https://img.youtube.com/vi/6h-gVD95q5w/maxresdefault.jpg" alt="Horses & Humans Documentary Series">
-              <div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition duration-500"></div>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition duration-300 shadow-lg shadow-black/30">
-                  <svg class="w-7 h-7 md:w-9 md:h-9 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
-                </div>
-              </div>
-            </a>
-            <div class="overlay absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-            <div class="absolute inset-x-4 bottom-4 flex items-end justify-between gap-4 z-20">
-              <div>
-                <div class="text-[8px] uppercase tracking-[.28em] text-gold mb-2">Documentary Series</div>
-                <h3 class="display text-2xl md:text-3xl">Horses & Humans</h3>
-              </div>
-              <span class="w-7 h-7 rounded-full bg-white text-black grid place-items-center text-sm">↗</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-ink py-24 md:py-28" id="why">
-      <div class="mx-auto max-w-6xl px-6 md:px-10">
-        <div class="mb-12 md:mb-14 reveal">
-          
-          <h2 class="display text-5xl md:text-7xl">IMPACTO</h2>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <article class="rounded-xl border border-white/5 bg-black/20 p-7 md:p-8 reveal">
-            <div class="text-[9px] uppercase tracking-[.25em] text-gold mb-4">01</div>
-            <h3 class="display text-2xl md:text-3xl mb-4">GRANDES HISTÓRIAS GERAM VALOR</h3>
-            <p class="text-sm text-white/50 leading-6">Uma grande produção não mostra apenas o que você faz. Ela transforma a forma como as pessoas veem você.</p>
-          </article>
-          <article class="rounded-xl border border-white/5 bg-black/20 p-7 md:p-8 reveal delay-80">
-            <div class="text-[9px] uppercase tracking-[.25em] text-gold mb-4">02</div>
-            <h3 class="display text-2xl md:text-3xl mb-4">CRIE DESEJO</h3>
-            <p class="text-sm text-white/50 leading-6">Transforme destinos, propriedades e experiências em lugares dos quais todos queiram fazer parte.</p>
-          </article>
-          <article class="rounded-xl border border-white/5 bg-black/20 p-7 md:p-8 reveal delay-160">
-            <div class="text-[9px] uppercase tracking-[.25em] text-gold mb-4">03</div>
-            <h3 class="display text-2xl md:text-3xl mb-4">ALCANCE MAIS PESSOAS</h3>
-            <p class="text-sm text-white/50 leading-6">Transforme histórias em conteúdos que as pessoas queiram ver e compartilhar.</p>
-          </article>
-          <article class="rounded-xl border border-white/5 bg-black/20 p-7 md:p-8 reveal delay-240">
-            <div class="text-[9px] uppercase tracking-[.25em] text-gold mb-4">04</div>
-            <h3 class="display text-2xl md:text-3xl mb-4">GERE CONFIANÇA</h3>
-            <p class="text-sm text-white/50 leading-6">Mostre as pessoas, o trabalho e a história por trás da sua marca.</p>
-          </article>
-        </div>
-        <p class="mt-5 text-[10px] uppercase tracking-[.25em] text-gold reveal">SEJA VISTO. SEJA SENTIDO. SEJA LEMBRADO.</p>
       </div>
     </section>
 
@@ -295,13 +155,13 @@
           </article>
           <article class="service-card group relative rounded-xl overflow-hidden border border-white/5 bg-black/20 reveal delay-160">
             <div class="relative aspect-[16/10] overflow-hidden">
-              <img src="../assets/3.jpg" class="w-full h-full object-cover transition duration-[1.2s] group-hover:scale-105" alt="Ranchos & Universo Equestre">
+              <img src="../assets/3.jpg" class="w-full h-full object-cover transition duration-[1.2s] group-hover:scale-105" alt="Cabañas">
               <div class="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-transparent"></div>
               <span class="absolute top-4 left-4 text-[9px] uppercase tracking-[.25em] text-gold">03</span>
-              <div class="absolute inset-x-4 bottom-4"><h3 class="display text-2xl md:text-3xl">RANCHOS & UNIVERSO EQUESTRE</h3></div>
+              <div class="absolute inset-x-4 bottom-4"><h3 class="display text-2xl md:text-3xl">CABAÑAS</h3></div>
             </div>
             <div class="p-5 md:p-6">
-              <p class="text-sm text-white/50 leading-6">Produção audiovisual e fotografia para ranchos, fazendas, criatórios e organizações equestres.</p>
+              <p class="text-sm text-white/50 leading-6">Produção audiovisual e fotografia para cabañas, fazendas, criatórios e organizações equestres.</p>
               <ul class="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2 text-[9px] uppercase tracking-[.18em] text-white/40">
                 <li>Filmes de legado</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Histórias de marca</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Campanhas</li><li class="w-1 h-1 rounded-full bg-gold"></li><li>Conteúdo equestre</li>
               </ul>
@@ -353,22 +213,64 @@
       </div>
     </section>
 
+    <section class="bg-ink py-24 md:py-28" id="why">
+      <div class="mx-auto max-w-6xl px-6 md:px-10">
+        <div class="mb-12 md:mb-14 reveal">
+          
+          <h2 class="display text-5xl md:text-7xl">IMPACTO</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <article class="rounded-xl border border-white/5 bg-black/20 p-7 md:p-8 reveal">
+            <div class="text-[9px] uppercase tracking-[.25em] text-gold mb-4">01</div>
+            <h3 class="display text-2xl md:text-3xl mb-4">GRANDES HISTÓRIAS GERAM VALOR</h3>
+            <p class="text-sm text-white/50 leading-6">Uma grande produção não mostra apenas o que você faz. Ela transforma a forma como as pessoas veem você.</p>
+          </article>
+          <article class="rounded-xl border border-white/5 bg-black/20 p-7 md:p-8 reveal delay-80">
+            <div class="text-[9px] uppercase tracking-[.25em] text-gold mb-4">02</div>
+            <h3 class="display text-2xl md:text-3xl mb-4">CRIE DESEJO</h3>
+            <p class="text-sm text-white/50 leading-6">Transforme destinos, propriedades e experiências em lugares dos quais todos queiram fazer parte.</p>
+          </article>
+          <article class="rounded-xl border border-white/5 bg-black/20 p-7 md:p-8 reveal delay-160">
+            <div class="text-[9px] uppercase tracking-[.25em] text-gold mb-4">03</div>
+            <h3 class="display text-2xl md:text-3xl mb-4">ALCANCE MAIS PESSOAS</h3>
+            <p class="text-sm text-white/50 leading-6">Transforme histórias em conteúdos que as pessoas queiram ver e compartilhar.</p>
+          </article>
+          <article class="rounded-xl border border-white/5 bg-black/20 p-7 md:p-8 reveal delay-240">
+            <div class="text-[9px] uppercase tracking-[.25em] text-gold mb-4">04</div>
+            <h3 class="display text-2xl md:text-3xl mb-4">GERE CONFIANÇA</h3>
+            <p class="text-sm text-white/50 leading-6">Mostre as pessoas, o trabalho e a história por trás da sua marca.</p>
+          </article>
+        </div>
+        <p class="mt-5 text-[10px] uppercase tracking-[.25em] text-gold reveal">SEJA VISTO. SEJA SENTIDO. SEJA LEMBRADO.</p>
+      </div>
+    </section>
+
     <section class="bg-ink py-24 md:py-32" id="originals">
       <div class="mx-auto max-w-6xl px-6 md:px-10">
         <div class="reveal mb-10"><p class="text-[9px] uppercase tracking-[.38em] text-gold mb-4">Cinema próprio / Originais</p><h2 class="display text-5xl md:text-7xl">FILMES</h2></div>
-        <div class="grid md:grid-cols-2 gap-8 mb-12 md:mb-14">
-          <div class="reveal">
-            <p class="serif-copy text-[20px] md:text-[22px] leading-[1.75] tracking-[.01em] text-white/60">Criamos e produzimos documentários originais para Amazon Prime Video, National Geographic, History Channel e outras plataformas internacionais.<br><br>Por meio do The Heritage Guardian, desenvolvemos documentários culturais em parceria com Ministérios da Cultura, associações, embaixadas e instituições de diversos países, levando seu patrimônio, suas tradições e sua identidade a audiências internacionais.</p>
-            <a href="https://www.theheritageguardian.com/" target="_blank" rel="noopener" class="mt-6 mb-[10px] md:mb-5 inline-flex items-center gap-3 text-[10px] uppercase tracking-[.22em] text-gold hover:text-white transition">Explore The Heritage Guardian <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gold/20 text-[10px]">→</span></a>
-          </div>
-          <div class="reveal delay-80">
-            <p class="serif-copy text-[20px] md:text-[22px] leading-[1.75] tracking-[.01em] text-white/60">Também criamos Horses &amp; Humans, a primeira plataforma documental global dedicada ao universo equestre. Uma série que reúne histórias de mais de 10 países e que já alcançou audiências internacionais por meio do Amazon Prime Video, History Channel e outras plataformas.</p>
-            <a href="https://horseshuman.com/" target="_blank" rel="noopener" class="mt-6 mb-[10px] md:mb-5 inline-flex items-center gap-3 text-[10px] uppercase tracking-[.22em] text-gold hover:text-white transition">Explore Horses &amp; Humans <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gold/20 text-[10px]">→</span></a>
-          </div>
-        </div>
-        <div class="grid md:grid-cols-2 gap-4">
-          <article class="relative overflow-hidden rounded-xl aspect-[.84] group reveal"><img src="../assets/img-012.png" class="w-full h-full object-cover transition duration-[1.2s] group-hover:scale-105" alt="The Heritage Guardian"><div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div><div class="absolute inset-0 flex items-end p-6 md:p-8"><div><div class="text-[9px] uppercase tracking-[.27em] text-gold mb-5">Série original</div><h3 class="display text-5xl leading-[.82] max-w-[7ch]">The Heritage Guardian</h3><p class="mt-5 text-sm text-white/65 max-w-xs">Cultura. Patrimônio. Identidade.</p><a href="https://www.theheritageguardian.com/" target="_blank" rel="noopener" class="mt-6 inline-block text-[9px] uppercase tracking-[.22em]">Explore The Heritage Guardian →</a></div></div></article>
-          <article class="relative overflow-hidden rounded-xl aspect-[.84] group reveal delay-120"><img src="../assets/img-014.png" class="w-full h-full object-cover transition duration-[1.2s] group-hover:scale-105" alt="Horses & Humans"><div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div><div class="absolute inset-0 flex items-end p-6 md:p-8"><div><div class="text-[9px] uppercase tracking-[.27em] text-gold mb-5">Documentário de longa-metragem</div><h3 class="display text-5xl leading-[.82] max-w-[6ch]">Horses &amp; Humans</h3><p class="mt-5 text-sm text-white/65 max-w-sm">A relação entre cavalos, pessoas e culturas ao redor do mundo.</p><a href="https://horseshuman.com/" target="_blank" rel="noopener" class="mt-6 inline-block text-[9px] uppercase tracking-[.22em]">Explore Horses &amp; Humans →</a></div></div></article>
+        <div class="grid md:grid-cols-2 gap-8 md:gap-10">
+          <article class="reveal">
+            <div class="relative overflow-hidden rounded-xl aspect-[.84] group">
+              <img src="../assets/img-012.png" class="w-full h-full object-cover transition duration-[1.2s] group-hover:scale-105" alt="The Heritage Guardian">
+            </div>
+            <div class="mt-6 md:mt-8">
+              <div class="text-[9px] uppercase tracking-[.27em] text-gold mb-4">Série original</div>
+              <h3 class="display text-4xl md:text-[52px] leading-[.82] mb-5">The Heritage Guardian</h3>
+              <p class="serif-copy text-[20px] md:text-[22px] leading-[1.75] tracking-[.01em] text-white/60">Criamos e produzimos documentários originais para Amazon Prime Video, National Geographic, History Channel e outras plataformas internacionais.<br><br>Por meio do The Heritage Guardian, desenvolvemos documentários culturais em parceria com Ministérios da Cultura, associações, embaixadas e instituições de diversos países, levando seu patrimônio, suas tradições e sua identidade a audiências internacionais.</p>
+              <a href="https://www.theheritageguardian.com/" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-3 text-[10px] uppercase tracking-[.22em] text-gold hover:text-white transition">Explore The Heritage Guardian <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gold/20 text-[10px]">→</span></a>
+            </div>
+          </article>
+          <article class="reveal delay-80">
+            <div class="relative overflow-hidden rounded-xl aspect-[.84] group">
+              <img src="../assets/img-014.png" class="w-full h-full object-cover transition duration-[1.2s] group-hover:scale-105" alt="Horses & Humans">
+            </div>
+            <div class="mt-6 md:mt-8">
+              <div class="text-[9px] uppercase tracking-[.27em] text-gold mb-4">Documentário de longa-metragem</div>
+              <h3 class="display text-4xl md:text-[52px] leading-[.82] mb-5">Horses &amp; Humans</h3>
+              <p class="serif-copy text-[20px] md:text-[22px] leading-[1.75] tracking-[.01em] text-white/60">Também criamos Horses &amp; Humans, a primeira plataforma documental global dedicada ao universo equestre. Uma série que reúne histórias de mais de 10 países e que já alcançou audiências internacionais por meio do Amazon Prime Video, History Channel e outras plataformas.</p>
+              <a href="https://horseshuman.com/" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-3 text-[10px] uppercase tracking-[.22em] text-gold hover:text-white transition">Explore Horses &amp; Humans <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gold/20 text-[10px]">→</span></a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -389,20 +291,12 @@
             <div class="client-logo"><img src="../assets/logos/national.webp" width="180" height="100" alt="National Geographic"></div>
             <div class="client-logo"><img src="../assets/logos/pulperia.png" width="160" height="80" alt="Pulperia"></div>
             <div class="client-logo"><img src="../assets/logos/amarillo.png" width="160" height="80" alt="Pulperia"></div>
-          <div class="client-logo" aria-hidden="true"><img width="160" height="80" src="../assets/logos/accc.webp" alt=""></div>
-          <div class="client-logo" aria-hidden="true"><img width="160" height="80" src="../assets/logos/allmouggar.webp" alt=""></div>
-           <div class="client-logo" aria-hidden="true"><img width="160" height="80" src="../assets/logos/festa.webp" alt=""></div>
-          <div class="client-logo" aria-hidden="true"><img width="160" height="80" src="../assets/logos/kingranch.webp" alt=""></div>
-            <div class="client-logo" aria-hidden="true"><img src="../assets/logos/mexico.webp" width="160" height="80" alt=""></div>
-            <div class="client-logo" aria-hidden="true"><img src="../assets/logos/mongolia.png" width="160" height="80" alt=""></div>
-            <div class="client-logo" aria-hidden="true"><img src="../assets/logos/morocco.webp" width="160" height="80" alt=""></div>
-            <div class="client-logo" aria-hidden="true"><img width="160" height="80" src="../assets/logos/pulperia.png" alt=""></div>
-            <div class="client-logo" aria-hidden="true"><img width="160" height="80" src="../assets/logos/amarillo.png" alt=""></div>
         </div>
       </div>
     </section>
 
     <!-- DISTRIBUTION -->
+<!-- DISTRIBUTION -->
     <section class="bg-ink py-24 md:py-28 border-b border-white/[.035]" id="distribution">
       <div class="mx-auto max-w-[1400px] px-6 md:px-10 mb-10 md:mb-12 text-center reveal">
         <p class="text-[9px] uppercase tracking-[.38em] text-gold mb-4">Distribuição mundial</p>
@@ -436,22 +330,15 @@
           <div class="distro-logo"><img src="../assets/logos/disney.webp" width="160" height="80" alt="Disney"></div>
           <div class="distro-logo"><img src="../assets/logos/logo_amazon_prime.webp" width="160" height="80" alt="Amazon Prime"></div>
           <div class="distro-logo"><img src="../assets/logos/star.png" width="160" height="80" alt="Star"></div>
-          <!-- <div class="distro-logo"><img src="../assets/logos/tvf.svg" width="160" height="80" alt="TVF"></div> -->
           <div class="distro-logo"><img src="../assets/logos/american.png" width="160" height="80" alt="Airlines"></div>
           <div class="distro-logo"><img src="../assets/logos/youtube.png" width="160" height="80" alt="YouTube"></div>
-         <div class="distro-logo" aria-hidden="true"><img src="../assets/logos/natgeo.png" width="160" height="80" alt=""></div>
-          <div class="distro-logo" aria-hidden="true"><img src="../assets/logos/national.webp" width="160" height="80" alt=""></div>
-          <div class="distro-logo" aria-hidden="true"><img src="../assets/logos/disney.webp" width="160" height="80" alt=""></div>
-          <div class="distro-logo" aria-hidden="true"><img src="../assets/logos/logo_amazon_prime.webp" width="160" height="80" alt=""></div>
-          <div class="distro-logo" aria-hidden="true"><img src="../assets/logos/star.png" width="160" height="80" alt=""></div>
-          <!-- <div class="distro-logo" aria-hidden="true"><img src="../assets/logos/tvf.svg" width="160" height="80" alt=""></div> -->
-          <div class="distro-logo" aria-hidden="true"><img src="../assets/logos/american.png" width="160" height="80" alt=""></div>
-          <div class="distro-logo" aria-hidden="true"><img src="../assets/logos/youtube.png" width="160" height="80" alt=""></div>
+          <div class="distro-logo"><img src="../assets/logos/history.webp" width="160" height="80" alt="History Channel"></div>
+          <div class="distro-logo"><img src="../assets/logos/natgeo.png" width="160" height="80" alt="National Geographic"></div>
         </div>
       </div>
     </section>
 
-    <section class="bg-ink py-24 md:py-28">
+    <section class="bg-ink py-24 md:py-28 scroll-mt-28" id="map">
       <div class="mx-auto max-w-6xl px-6 md:px-10">
         <div class="mb-10 reveal"><p class="text-[9px] uppercase tracking-[.38em] text-gold mb-5">Presença / Alcance global</p><h2 class="display text-5xl md:text-7xl">HISTÓRIAS SEM FRONTEIRAS</h2></div>
         <div class="relative rounded-xl overflow-hidden border border-white/5 reveal">
@@ -462,24 +349,116 @@
     </section>
 
     <!-- ABOUT -->
+    
+    <section class="relative bg-black py-20 sm:py-24 md:py-28 overflow-hidden scroll-mt-28" id="work">
+      <div class="mx-auto max-w-[1400px] px-[18px] sm:px-8 md:px-10 lg:px-12">
+<div class="mx-auto max-w-6xl grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 scroll-mt-28">
+          <!-- Video 1: Argentina 4K -->
+          <article class="work-card group relative aspect-[1.5] rounded-xl overflow-hidden border border-white/5 reveal" data-youtube-id="f6QFJUkORmQ" data-youtube-start="1980">
+            <img class="work-card-poster absolute inset-0 w-full h-full object-cover" src="https://img.youtube.com/vi/f6QFJUkORmQ/maxresdefault.jpg" alt="Argentina 4K">
+            <button type="button" class="work-card-play absolute inset-0 z-10" aria-label="Reproduzir Argentina 4K">
+              <span class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition duration-500"></span>
+              <span class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <span class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition duration-300 shadow-lg shadow-black/30">
+                  <svg class="w-7 h-7 md:w-9 md:h-9 text-white ml-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
+                </span>
+              </span>
+            </button>
+            <div class="work-card-player absolute inset-0 z-30 hidden bg-black"></div>
+            <button type="button" class="work-card-close absolute top-3 right-3 z-40 hidden h-8 w-8 rounded-full bg-black/70 text-white text-lg leading-none" aria-label="Fechar vídeo">&times;</button>
+            <div class="overlay absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none z-[15]"></div>
+            <div class="work-card-meta absolute inset-x-4 bottom-4 flex items-end justify-between gap-4 z-20 pointer-events-none">
+              <div>
+                <div class="text-[8px] uppercase tracking-[.28em] text-gold mb-2">Landscapes 4K</div>
+                <h3 class="display text-2xl md:text-3xl">Argentina 4K</h3>
+              </div>
+              <span class="w-7 h-7 rounded-full bg-white text-black grid place-items-center text-sm" aria-hidden="true">▶</span>
+            </div>
+          </article>
+
+          <!-- Video 2: Horses & Humans Official Trailer -->
+          <article class="work-card group relative aspect-[1.5] rounded-xl overflow-hidden border border-white/5 reveal delay-80" data-youtube-id="P9vm1Cc4r0A" data-youtube-start="54">
+            <img class="work-card-poster absolute inset-0 w-full h-full object-cover" src="https://img.youtube.com/vi/P9vm1Cc4r0A/maxresdefault.jpg" alt="Horses & Humans Official Trailer">
+            <button type="button" class="work-card-play absolute inset-0 z-10" aria-label="Reproduzir Horses & Humans">
+              <span class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition duration-500"></span>
+              <span class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <span class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition duration-300 shadow-lg shadow-black/30">
+                  <svg class="w-7 h-7 md:w-9 md:h-9 text-white ml-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
+                </span>
+              </span>
+            </button>
+            <div class="work-card-player absolute inset-0 z-30 hidden bg-black"></div>
+            <button type="button" class="work-card-close absolute top-3 right-3 z-40 hidden h-8 w-8 rounded-full bg-black/70 text-white text-lg leading-none" aria-label="Fechar vídeo">&times;</button>
+            <div class="overlay absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none z-[15]"></div>
+            <div class="work-card-meta absolute inset-x-4 bottom-4 flex items-end justify-between gap-4 z-20 pointer-events-none">
+              <div>
+                <div class="text-[8px] uppercase tracking-[.28em] text-gold mb-2">Official Trailer</div>
+                <h3 class="display text-2xl md:text-3xl">Horses & Humans</h3>
+              </div>
+              <span class="w-7 h-7 rounded-full bg-white text-black grid place-items-center text-sm" aria-hidden="true">▶</span>
+            </div>
+          </article>
+
+          <!-- Video 3: Horses & Humans Azerbaijan Teaser -->
+          <article class="work-card group relative aspect-[1.5] rounded-xl overflow-hidden border border-white/5 reveal delay-160" data-youtube-id="MCiDpIdCkf8" data-youtube-start="7">
+            <img class="work-card-poster absolute inset-0 w-full h-full object-cover" src="https://img.youtube.com/vi/MCiDpIdCkf8/maxresdefault.jpg" alt="Horses & Humans Azerbaijan — Official Teaser">
+            <button type="button" class="work-card-play absolute inset-0 z-10" aria-label="Reproduzir Horses & Humans Azerbaijan">
+              <span class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition duration-500"></span>
+              <span class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <span class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition duration-300 shadow-lg shadow-black/30">
+                  <svg class="w-7 h-7 md:w-9 md:h-9 text-white ml-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
+                </span>
+              </span>
+            </button>
+            <div class="work-card-player absolute inset-0 z-30 hidden bg-black"></div>
+            <button type="button" class="work-card-close absolute top-3 right-3 z-40 hidden h-8 w-8 rounded-full bg-black/70 text-white text-lg leading-none" aria-label="Fechar vídeo">&times;</button>
+            <div class="overlay absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none z-[15]"></div>
+            <div class="work-card-meta absolute inset-x-4 bottom-4 flex items-end justify-between gap-4 z-20 pointer-events-none">
+              <div>
+                <div class="text-[8px] uppercase tracking-[.28em] text-gold mb-2">Official Teaser</div>
+                <h3 class="display text-2xl md:text-3xl">Horses & Humans Azerbaijan</h3>
+              </div>
+              <span class="w-7 h-7 rounded-full bg-white text-black grid place-items-center text-sm" aria-hidden="true">▶</span>
+            </div>
+          </article>
+
+          <!-- Video 4: Horses & Humans Documentary Series -->
+          <article class="work-card group relative aspect-[1.5] rounded-xl overflow-hidden border border-white/5 reveal delay-240" data-youtube-id="6h-gVD95q5w" data-youtube-start="4082">
+            <img class="work-card-poster absolute inset-0 w-full h-full object-cover" src="https://img.youtube.com/vi/6h-gVD95q5w/maxresdefault.jpg" alt="Horses & Humans Documentary Series">
+            <button type="button" class="work-card-play absolute inset-0 z-10" aria-label="Reproduzir Horses & Humans Documentary Series">
+              <span class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition duration-500"></span>
+              <span class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <span class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition duration-300 shadow-lg shadow-black/30">
+                  <svg class="w-7 h-7 md:w-9 md:h-9 text-white ml-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
+                </span>
+              </span>
+            </button>
+            <div class="work-card-player absolute inset-0 z-30 hidden bg-black"></div>
+            <button type="button" class="work-card-close absolute top-3 right-3 z-40 hidden h-8 w-8 rounded-full bg-black/70 text-white text-lg leading-none" aria-label="Fechar vídeo">&times;</button>
+            <div class="overlay absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none z-[15]"></div>
+            <div class="work-card-meta absolute inset-x-4 bottom-4 flex items-end justify-between gap-4 z-20 pointer-events-none">
+              <div>
+                <div class="text-[8px] uppercase tracking-[.28em] text-gold mb-2">Documentary Series</div>
+                <h3 class="display text-2xl md:text-3xl">Horses & Humans</h3>
+              </div>
+              <span class="w-7 h-7 rounded-full bg-white text-black grid place-items-center text-sm" aria-hidden="true">▶</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="bg-panel py-24 md:py-28 border-y border-white/[.035]" id="about">
       <div class="mx-auto max-w-6xl px-6 md:px-10">
-        <div class="grid md:grid-cols-2 gap-10 lg:gap-16 items-start mb-20">
-          <div class="block">
-            <div class="relative rounded-xl overflow-hidden border border-gold/40 bg-emerald-600/30 min-h-[420px] md:min-h-[520px] shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_20px_50px_-20px_rgba(0,0,0,0.6)]">
-              <img src="../assets/img-018.png" class="absolute inset-0 w-full h-full object-cover" alt="Equipe GAUCHO FILMS no set">
-            </div>
+        <div class="max-w-3xl mb-20">
+          <div>
+            <p class="text-[9px] uppercase tracking-[.38em] text-gold mb-5">A Filosofia / O Estúdio</p>
+            <h2 class="display text-5xl md:text-7xl">SOBRE NÓS</h2>
+            <div class="mt-8 h-px w-20 bg-gradient-to-r from-gold to-transparent"></div>
           </div>
-          <div class="space-y-8 md:space-y-10">
-            <div>
-              <p class="text-[9px] uppercase tracking-[.38em] text-gold mb-5">A Filosofia / O Estúdio</p>
-              <h2 class="display text-5xl md:text-7xl">SOBRE NÓS</h2>
-              <div class="mt-8 h-px w-20 bg-gradient-to-r from-gold to-transparent"></div>
-            </div>
-            <div class="text-white/65 text-[15px] md:text-[17px] leading-[1.75] md:leading-[1.85] font-light space-y-6 md:space-y-7">
-              <p>Na GAUCHO FILMS, não criamos conteúdo apenas para ficar bonito. Criamos histórias projetadas para conectar com a audiência de cada cliente, entendendo o que querem comunicar, quem querem alcançar e o impacto que querem gerar.</p>
-              <p>Combinamos estratégia, storytelling e um olhar cinematográfico para transformar cada produção em uma ferramenta poderosa para construir identidade, gerar impacto e fazer com que as marcas sejam vistas, sentidas e lembradas.</p>
-            </div>
+          <div class="mt-8 md:mt-10 text-white/65 text-[15px] md:text-[17px] leading-[1.75] md:leading-[1.85] font-light space-y-6 md:space-y-7">
+            <p>Na GAUCHO FILMS, não criamos conteúdo apenas para ficar bonito. Criamos histórias projetadas para conectar com a audiência de cada cliente, entendendo o que querem comunicar, quem querem alcançar e o impacto que querem gerar.</p>
+            <p>Combinamos estratégia, storytelling e um olhar cinematográfico para transformar cada produção em uma ferramenta poderosa para construir identidade, gerar impacto e fazer com que as marcas sejam vistas, sentidas e lembradas.</p>
           </div>
         </div>
 
@@ -629,12 +608,23 @@
     </section>
   </main>
 
-  <footer class="bg-black py-12 md:py-14">
+  <footer class="site-footer bg-black py-12 md:py-14">
     <div class="mx-auto max-w-6xl px-6 md:px-10">
-      <div class="grid md:grid-cols-3 gap-10 pb-10 border-b border-white/10">
-        <div><div class="tracking-[.3em] text-sm mb-3">GAUCHO FILMS</div><p class="text-sm text-white/50">Filmes que valem a jornada.</p></div>
-        <div class="grid grid-cols-3 gap-4 text-[9px] uppercase tracking-[.2em] text-white/45"><a href="#work">Trabalho</a><a href="#why">Impacto</a><a href="#services">Serviços</a><a href="#originals">Originais</a><a href="#clients">Clientes</a><a href="#about">Sobre</a><a href="#contact">Contato</a></div>
-        <div class="md:text-right text-[9px] uppercase tracking-[.2em] text-white/45"><div class="mb-2">Contato</div><a href="mailto:films@gauchofilms.studio" class="block hover:text-white transition">films@gauchofilms.studio</a><a href="tel:+5491134910182" class="block mt-2 hover:text-white transition">+54 9 11 3491 0182</a></div>
+      <div class="site-footer-main">
+        <a href="#top" class="site-footer-logo" aria-label="Início GAUCHO FILMS">
+          <img src="../assets/logo.png" alt="GAUCHO FILMS">
+        </a>
+        <nav class="site-footer-links" aria-label="Redes sociais">
+          <a href="https://www.instagram.com/gauchofilms/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.linkedin.com/company/gauchofilms/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.youtube.com/@GauchoFilms" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a href="https://www.facebook.com/gauchofilms" target="_blank" rel="noopener noreferrer">FB</a>
+        </nav>
+        <nav class="site-footer-links" aria-label="Contato">
+          <a href="#contact">Contato</a>
+          <a href="mailto:films@gauchofilms.studio">Email</a>
+          <a href="https://wa.me/5491134910182?text=Ol%C3%A1%20GAUCHO%20FILMS%2C%20gostaria%20de%20come%C3%A7ar%20um%20projeto." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </nav>
       </div>
       <div class="pt-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-[8px] uppercase tracking-[.23em] text-white/30"><span>© 2026 GAUCHO FILMS Studio. Todos os direitos reservados.</span><span>Buenos Aires · Argentina · Trabalhamos no mundo todo</span></div>
     </div>
@@ -642,6 +632,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-  <script src="../src/js/main.js?v=7"></script>
+  <script src="../src/js/main.js?v=11"></script>
 </body>
 </html>

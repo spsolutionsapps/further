@@ -21,15 +21,6 @@ document.querySelectorAll('a[data-lang]').forEach((link) => {
   });
 });
 
-// Close details dropdown when clicking outside
-document.addEventListener('click', (e) => {
-  document.querySelectorAll('details.lang-switch').forEach((det) => {
-    if (!det.contains(e.target)) {
-      det.removeAttribute('open');
-    }
-  });
-});
-
 
 
 // Hero intro + subtle parallax
@@ -86,6 +77,20 @@ mobileMenu.querySelectorAll('a').forEach((a) =>
   a.addEventListener('click', () => mobileMenu.classList.add('hidden'))
 );
 
+// Scroll to top — visible near page bottom
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+const pageFooter = document.querySelector('footer');
+if (scrollTopBtn && pageFooter) {
+  const scrollTopObserver = new IntersectionObserver(
+    ([entry]) => scrollTopBtn.classList.toggle('is-visible', entry.isIntersecting),
+    { threshold: 0.08 }
+  );
+  scrollTopObserver.observe(pageFooter);
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
 /*
 // Cursor glow
 const glow = document.getElementById('cursorGlow');
@@ -98,6 +103,86 @@ addEventListener(
   { passive: true }
 );
 */
+
+// Infinite carousel loop — duplicate items exactly for seamless -50% animation
+function initInfiniteLoopRow(row) {
+  if (!row || row.dataset.loopInit === 'true') return;
+
+  row.querySelectorAll('[aria-hidden="true"]').forEach((el) => el.remove());
+
+  const originals = Array.from(row.children);
+  originals.forEach((item) => {
+    const clone = item.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    row.appendChild(clone);
+  });
+
+  row.dataset.loopInit = 'true';
+}
+
+document.querySelectorAll('.clients-row, .distro-row').forEach(initInfiniteLoopRow);
+
+// Work cards — inline YouTube playback
+function buildYouTubeEmbed(id, start) {
+  const params = new URLSearchParams({
+    autoplay: '1',
+    start: String(start),
+    rel: '0',
+    playsinline: '1',
+    modestbranding: '1',
+  });
+
+  if (window.location.origin && window.location.origin !== 'null') {
+    params.set('origin', window.location.origin);
+  }
+
+  return (
+    '<iframe src="https://www.youtube.com/embed/' +
+    id +
+    '?' +
+    params.toString() +
+    '" title="Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>'
+  );
+}
+
+function closeWorkCard(card) {
+  if (!card) return;
+  card.classList.remove('is-playing');
+  const player = card.querySelector('.work-card-player');
+  const closeBtn = card.querySelector('.work-card-close');
+  if (player) {
+    player.innerHTML = '';
+    player.classList.add('hidden');
+  }
+  closeBtn?.classList.add('hidden');
+}
+
+document.querySelectorAll('.work-card-play').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const card = btn.closest('.work-card');
+    const id = card.dataset.youtubeId;
+    const start = card.dataset.youtubeStart || '0';
+    const player = card.querySelector('.work-card-player');
+    const closeBtn = card.querySelector('.work-card-close');
+    if (!id || !player) return;
+
+    document.querySelectorAll('.work-card.is-playing').forEach((other) => {
+      if (other !== card) closeWorkCard(other);
+    });
+
+    card.classList.add('is-playing');
+    player.classList.remove('hidden');
+    closeBtn?.classList.remove('hidden');
+    player.innerHTML = buildYouTubeEmbed(id, start);
+  });
+});
+
+document.querySelectorAll('.work-card-close').forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    closeWorkCard(btn.closest('.work-card'));
+  });
+});
 
 // Gentle service card interaction
 document.querySelectorAll('.service-card').forEach((row) => {
