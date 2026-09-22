@@ -13,7 +13,7 @@
   <link rel="alternate" hreflang="en" href="../en/" />
   <link rel="alternate" hreflang="pt" href="../pt/" />
   <link rel="alternate" hreflang="x-default" href="../es/" />
-  <link rel="stylesheet" href="../css/main.css?v=28" />
+  <link rel="stylesheet" href="../css/main.css?v=41" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -36,6 +36,7 @@
           <a href="#about" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition hidden md:inline">Nosotros</a>
           <a href="#contact" class="underline decoration-transparent hover:decoration-gold/80 underline-offset-[6px] hover:text-white transition hidden md:inline">Contacto</a>
           <div class="lang-flags hidden md:flex">
+            <a href="../es/" data-lang="es" class="lang-flag" aria-label="Español"><img src="../assets/flags/ar.svg" alt=""></a>
             <a href="../en/" data-lang="en" class="lang-flag" aria-label="English"><img src="../assets/flags/us.svg" alt=""></a>
             <a href="../pt/" data-lang="pt" class="lang-flag" aria-label="Português"><img src="../assets/flags/br.svg" alt=""></a>
           </div>
@@ -49,6 +50,7 @@
       <div class="px-5 py-5 flex flex-col gap-4 text-[10px] uppercase tracking-[.22em] text-white/65">
         <a href="#services">Servicios</a><a href="#why">Impacto</a><a href="#originals">Originales</a><a href="#clients">Clientes</a><a href="#work">Trabajo</a><a href="#about">Nosotros</a><a href="#contact">Contacto</a>
         <div class="pt-2 mt-1 border-t border-white/10 flex items-center gap-3">
+          <a href="../es/" data-lang="es" class="lang-flag" aria-label="Español"><img src="../assets/flags/ar.svg" alt=""></a>
           <a href="../en/" data-lang="en" class="lang-flag" aria-label="English"><img src="../assets/flags/us.svg" alt=""></a>
           <a href="../pt/" data-lang="pt" class="lang-flag" aria-label="Português"><img src="../assets/flags/br.svg" alt=""></a>
         </div>
@@ -89,7 +91,7 @@
       </div>
     </section>
 
-    <section class="bg-panel border-y border-white/[.035] py-24 md:py-28" id="services">
+    <section class="services-section" id="services">
       <div class="mx-auto max-w-6xl px-6 md:px-10">
         <div class="mb-10 reveal"><p class="services-kicker">Servicios / Qué hacemos</p><h2 class="display text-5xl md:text-7xl">QUÉ HACEMOS</h2><p class="mt-6 text-[11px] uppercase tracking-[.3em] text-white/50">Producción audiovisual · Fotografía · Contenido</p></div>
         <div class="flex flex-col gap-4">
@@ -299,7 +301,12 @@
 
         <div class="originals-section__foot reveal">
           <span>Distribución internacional</span>
-          <span class="originals-section__platforms">Amazon Prime Video · National Geographic · History Channel · International Platforms</span>
+          <div class="originals-section__platforms" aria-label="Plataformas de distribución">
+            <div class="originals-platform-logo"><img src="../assets/logos/logo_amazon_prime.webp" width="120" height="48" alt="Amazon Prime Video"></div>
+            <div class="originals-platform-logo"><img src="../assets/logos/natgeo.png" width="120" height="48" alt="National Geographic"></div>
+            <div class="originals-platform-logo"><img src="../assets/logos/history.webp" width="120" height="48" alt="History Channel"></div>
+            <div class="originals-platform-logo"><img src="../assets/logos/disney.webp" width="120" height="48" alt="Plataformas internacionales"></div>
+          </div>
           <span class="originals-section__foot-right">
             <span class="originals-section__line originals-section__line--short"></span>
             <span>Historias que perduran</span>
@@ -308,7 +315,8 @@
       </div>
     </section>
 
-    <section class="bg-panel py-16 md:py-20 border-y border-white/[.035]" id="clients">
+    <div class="clients-distribution-wrap">
+    <section class="clients-section pt-16 pb-10 md:pt-20 md:pb-12" id="clients">
       <div class="mx-auto max-w-[1400px] px-6 md:px-10 mb-10 md:mb-12 text-center reveal">
         <p class="text-[9px] uppercase tracking-[.38em] text-gold mb-4">Confianza en todo el mundo</p>
         <h2 class="display text-5xl md:text-7xl">CLIENTES Y PARTNERS</h2>
@@ -328,9 +336,7 @@
       </div>
     </section>
 
-    <!-- DISTRIBUTION -->
-<!-- DISTRIBUTION -->
-    <section class="bg-ink py-24 md:py-28 border-b border-white/[.035]" id="distribution">
+    <section class="distribution-section pt-6 pb-24 md:pt-10 md:pb-28" id="distribution">
       <div class="mx-auto max-w-[1400px] px-6 md:px-10 mb-10 md:mb-12 text-center reveal">
         <p class="text-[9px] uppercase tracking-[.38em] text-gold mb-4">Distribución mundial</p>
         <h2 class="display text-5xl md:text-7xl">DISTRIBUCIÓN INTERNACIONAL</h2>
@@ -370,6 +376,7 @@
         </div>
       </div>
     </section>
+    </div>
 
     <section class="bg-ink py-24 md:py-28 scroll-mt-28" id="map">
       <div class="mx-auto max-w-6xl px-6 md:px-10">
@@ -656,6 +663,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-  <script src="../src/js/main.js?v=11"></script>
+  <script src="../src/js/main.js?v=12"></script>
 </body>
 </html>

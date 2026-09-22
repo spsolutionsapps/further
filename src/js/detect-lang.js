@@ -2,6 +2,9 @@
   var STORAGE_KEY = 'gauchofilms-lang';
   var MANUAL_KEY = 'gauchofilms-lang-manual';
   var SUPPORTED = { es: true, en: true, pt: true };
+  var DEFAULT_LANG = 'en';
+  var GEO_TIMEOUT_MS = 4500;
+
   var SPANISH = {
     AR: 1, BO: 1, CL: 1, CO: 1, CR: 1, CU: 1, DO: 1, EC: 1, SV: 1,
     GQ: 1, GT: 1, HN: 1, MX: 1, NI: 1, PA: 1, PY: 1, PE: 1, PR: 1,
@@ -36,12 +39,25 @@
     return null;
   }
 
+  function langFromTag(tag) {
+    var parts = String(tag || '').split('-');
+    var base = (parts[0] || '').toLowerCase();
+    var region = (parts[1] || '').toUpperCase();
+    if (region && ENGLISH[region]) return 'en';
+    if (region && SPANISH[region]) return 'es';
+    if (region && PORTUGUESE[region]) return 'pt';
+    if (SUPPORTED[base]) return base;
+    return null;
+  }
+
   function browserLang() {
     try {
-      var browserLangs = navigator.languages || [navigator.language || navigator.userLanguage];
-      for (var i = 0; i < browserLangs.length; i++) {
-        var langCode = String(browserLangs[i] || '').split('-')[0].toLowerCase();
-        if (SUPPORTED[langCode]) return langCode;
+      var tags = navigator.languages && navigator.languages.length
+        ? navigator.languages.slice()
+        : [navigator.language || navigator.userLanguage];
+      for (var i = 0; i < tags.length; i++) {
+        var fromTag = langFromTag(tags[i]);
+        if (fromTag) return fromTag;
       }
     } catch (err) {
       /* ignore */
@@ -50,7 +66,7 @@
   }
 
   function go(lang) {
-    var next = SUPPORTED[lang] ? lang : 'es';
+    var next = SUPPORTED[lang] ? lang : DEFAULT_LANG;
     if (location.protocol === 'file:') {
       location.replace(next + '/index.html');
       return;
@@ -62,10 +78,9 @@
   function finish(lang) {
     if (settled) return;
     settled = true;
-    go(lang || 'es');
+    go(lang || browserLang() || DEFAULT_LANG);
   }
 
-  // Manual language choice (header switcher) overrides IP on future root visits.
   try {
     if (localStorage.getItem(MANUAL_KEY) === '1') {
       var saved = localStorage.getItem(STORAGE_KEY);
@@ -79,19 +94,28 @@
   }
 
   var timer = setTimeout(function () {
-    finish(browserLang());
-  }, 1500);
+    finish(null);
+  }, GEO_TIMEOUT_MS);
 
   function fromCountryApi() {
     return fetch('https://api.country.is/', { cache: 'no-store' })
-      .then(function (res) { return res.json(); })
+      .then(function (res) {
+        if (!res.ok) throw new Error('country.is failed');
+        return res.json();
+      })
       .then(function (data) { return data && data.country; });
   }
 
   function fromIpwho() {
     return fetch('https://ipwho.is/', { cache: 'no-store' })
-      .then(function (res) { return res.json(); })
-      .then(function (data) { return data && data.success !== false && data.country_code; });
+      .then(function (res) {
+        if (!res.ok) throw new Error('ipwho failed');
+        return res.json();
+      })
+      .then(function (data) {
+        if (!data || data.success === false) throw new Error('ipwho rejected');
+        return data.country_code;
+      });
   }
 
   function fromIpapi() {
@@ -100,43 +124,53 @@
         if (!res.ok) throw new Error('ipapi failed');
         return res.text();
       })
-      .then(function (code) { return code && code.trim(); });
+      .then(function (code) {
+        var trimmed = code && code.trim();
+        if (!trimmed || trimmed.length !== 2) throw new Error('ipapi invalid');
+        return trimmed;
+      });
   }
 
-  fromCountryApi()
-    .then(function (country) {
-      var lang = langFromCountry(country);
-      if (lang) {
-        clearTimeout(timer);
-        finish(lang);
-        return;
+  function detectCountryCode() {
+    var providers = [fromCountryApi, fromIpwho, fromIpapi];
+    return new Promise(function (resolve, reject) {
+      var pending = providers.length;
+      var resolved = false;
+      var lastError = null;
+
+      function done(code) {
+        if (resolved) return;
+        resolved = true;
+        resolve(code);
       }
-      throw new Error('no country match');
-    })
-    .catch(function () {
-      return fromIpwho().then(function (country) {
-        var lang = langFromCountry(country);
-        if (lang) {
-          clearTimeout(timer);
-          finish(lang);
-          return;
+
+      function fail(err) {
+        lastError = err;
+        pending -= 1;
+        if (pending === 0 && !resolved) {
+          reject(lastError || new Error('geo failed'));
         }
-        throw new Error('no country match 2');
+      }
+
+      providers.forEach(function (provider) {
+        provider()
+          .then(function (code) {
+            if (code) done(code);
+            else fail(new Error('empty country'));
+          })
+          .catch(fail);
       });
-    })
-    .catch(function () {
-      return fromIpapi().then(function (country) {
-        var lang = langFromCountry(country);
-        if (lang) {
-          clearTimeout(timer);
-          finish(lang);
-          return;
-        }
-        throw new Error('no country match 3');
-      });
+    });
+  }
+
+  detectCountryCode()
+    .then(function (country) {
+      clearTimeout(timer);
+      var lang = langFromCountry(country);
+      finish(lang || browserLang() || DEFAULT_LANG);
     })
     .catch(function () {
       clearTimeout(timer);
-      finish(browserLang());
+      finish(null);
     });
 })();

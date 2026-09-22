@@ -21,6 +21,19 @@ document.querySelectorAll('a[data-lang]').forEach((link) => {
   });
 });
 
+(function markCurrentLangFlag() {
+  var match = location.pathname.match(/\/(es|en|pt)(?:\/|$)/i);
+  var current = match ? match[1].toLowerCase() : null;
+  if (!current && location.protocol === 'file:') {
+    var fileMatch = location.pathname.match(/[\\/](es|en|pt)[\\/]/i);
+    if (fileMatch) current = fileMatch[1].toLowerCase();
+  }
+  if (!current) return;
+  document.querySelectorAll('a[data-lang="' + current + '"]').forEach((link) => {
+    link.classList.add('lang-flag--current');
+    link.setAttribute('aria-current', 'page');
+  });
+})();
 
 
 // Hero intro + subtle parallax
