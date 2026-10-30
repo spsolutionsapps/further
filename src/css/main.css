@@ -82,16 +82,49 @@
     }
   }
 
-  .team-card {
-    @apply rounded-xl border border-white/5 bg-black/10 flex flex-col sm:flex-row gap-4 sm:gap-5 sm:items-start p-4 sm:p-[10px];
+  .about-body {
+    color: #1b1b1b !important;
+  }
+
+  .about-section h2 {
+    color: #1b1b1b !important;
   }
 
   .team-card-photo {
     @apply w-full sm:w-[156px] h-52 sm:h-[180px] shrink-0 rounded-lg object-cover;
   }
 
+  .team-card h3 {
+    @apply display text-xl sm:text-2xl;
+    color: #1b1b1b !important;
+  }
+
+  .team-card p {
+    @apply mt-3 text-sm leading-6;
+    color: #1b1b1b !important;
+  }
+
+  .team-card .text-\[9px\].uppercase.tracking-\[\.25em\].text-gold {
+    color: #715200 !important;
+  }
+
   .team-card-social {
-    @apply mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-white/35;
+    @apply mt-4 flex flex-wrap items-center gap-x-3 gap-y-2;
+    color: #1b1b1b !important;
+  }
+
+  .team-card-social span {
+    color: #1b1b1b !important;
+  }
+
+  .team-card-social a {
+    color: #1b1b1b !important;
+    border-color: rgba(0, 0, 0, 0.4) !important;
+  }
+
+  .team-card-social a:hover {
+    color: #715200 !important;
+    border-color: #715200 !important;
   }
 
   .contact-wa-cta {
@@ -123,11 +156,11 @@
   }
 
   .site-footer-links {
-    @apply flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-[10px] uppercase tracking-[.22em] text-white/45;
+    @apply flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-[10px] uppercase tracking-[.22em] text-black;
   }
 
   .site-footer-links a {
-    @apply hover:text-white transition;
+    @apply hover:text-black/70 transition font-bold;
   }
 
   .impact-section {
@@ -202,6 +235,9 @@
 
   .impact-section__col {
     @apply border-b border-white/15 px-0 py-8 md:px-6 md:py-10 lg:px-8;
+    background: rgba(0, 0, 0, 0.44);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
 
   .impact-section__col:last-child {
@@ -270,15 +306,23 @@
   }
 
   .originals-section {
-    @apply relative overflow-hidden bg-ink text-ivory;
+    @apply relative overflow-hidden text-ivory;
+    background-color: #050608;
+    background-image: url('../assets/originales.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
+  
   .originals-section__inner {
-    @apply py-14 md:py-16 lg:py-20;
+    @apply relative z-10 py-14 md:py-16 lg:py-20;
   }
 
   .originals-section__label {
-    @apply text-[13px] uppercase tracking-[.34em] text-gold;
+    @apply text-[15px] uppercase tracking-[.34em] text-[#715200];
+    font-weight: bold;
+    font-size: 11px;
   }
 
   .originals-section__line {
@@ -302,15 +346,28 @@
 
   .originals-section__headline {
     font-family: 'Cormorant Garamond', Georgia, serif;
-    @apply text-[3.25rem] leading-none md:text-[4.5rem] lg:text-[5.25rem] font-medium text-white shrink-0;
+    @apply text-[3.25rem] leading-none md:text-[4.5rem] lg:text-[5.25rem] font-medium text-black shrink-0;
+    font-size: calc(3.25rem + 4px);
+  }
+
+  @media (min-width: 768px) {
+    .originals-section__headline {
+      font-size: calc(4.5rem + 4px);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .originals-section__headline {
+      font-size: calc(5.25rem + 4px);
+    }
   }
 
   .originals-section__subtitle {
-    @apply max-w-xs text-[12px] uppercase leading-[1.85] tracking-[.22em] text-white/55 md:max-w-sm md:text-[13px];
+    @apply max-w-xs text-[12px] uppercase leading-[1.85] tracking-[.22em] text-black md:max-w-sm md:text-[13px];
   }
 
   .originals-section__aside-text {
-    @apply text-[12px] uppercase leading-[1.9] tracking-[.24em] text-white/55 md:text-[13px] lg:text-right;
+    @apply text-[12px] uppercase leading-[1.9] tracking-[.24em] text-black md:text-[13px] lg:text-right;
   }
 
   .originals-section__grid {
@@ -435,7 +492,6 @@
   }
   */
 
-  .services-section,
   .clients-distribution-wrap {
     @apply relative overflow-hidden border-y border-white/[.05];
     background-color: #12161f;
@@ -445,12 +501,45 @@
       linear-gradient(180deg, #161b24 0%, #131820 48%, #11151c 100%);
   }
 
-  .services-section {
-    @apply py-24 md:py-28;
+  .service-card {
+    background: #fff !important;
+  }
+
+  .services-section .service-card h3 {
+    color: #fff !important;
+  }
+
+  
+  .services-section > * {
+    @apply relative z-10;
   }
 
   .services-kicker {
     @apply mb-5 text-[12px] md:text-[14px] uppercase tracking-[.38em] text-gold;
+  }
+
+  .services-subline {
+    @apply mt-6 text-[13px] uppercase tracking-[.3em] text-white/50;
+  }
+
+  .about-section,
+  .work-section {
+    @apply relative overflow-hidden;
+    background-color: #0b0d11;
+    background-image: url('../assets/sobre-nosotros.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .about-section {
+    @apply py-24 md:py-28 border-y border-white/[.035];
+  }
+
+  
+  .about-section > *,
+  .work-section > * {
+    @apply relative z-10;
   }
 
   .hero-bg {
@@ -644,7 +733,7 @@
     height: auto;
     max-height: 80px;
     object-fit: contain;
-    filter: brightness(0) invert(1);
+    filter: brightness(0);
     opacity: 0.55;
     transition: opacity 0.35s ease;
   }
@@ -803,7 +892,7 @@
     height: auto;
     max-height: 66px;
     object-fit: contain;
-    filter: brightness(0) invert(1);
+    filter: brightness(0);
     transition: opacity 0.35s ease;
   }
 
@@ -876,4 +965,43 @@
   .reveal {
     @apply opacity-100 translate-y-0;
   }
+}
+#map {
+  background-image: url('../assets/originales.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#map, #map * {
+  color: #1b1b1b !important;
+}
+.text-black {
+  color: #1b1b1b !important;
+}
+.text-black\/80 {
+  color: rgba(27, 27, 27, 0.8) !important;
+}
+
+.clients-distribution-wrap {
+  background-image: url('../assets/logos.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}.clients-distribution-wrap,
+.clients-distribution-wrap * {
+  color: #1b1b1b !important;
+}
+#map .text-\[9px\].uppercase.tracking-\[\.38em\].text-gold {
+  color: #715200 !important;
+}
+
+#map .map-stats__value {
+  color: #715200 !important;
+}
+
+#map .map-stats__label {
+  font-weight: bold !important;
+}
+.site-footer-logo img {
+  filter: brightness(0);
 }

@@ -13,7 +13,7 @@
   <link rel="alternate" hreflang="en" href="../en/" />
   <link rel="alternate" hreflang="pt" href="../pt/" />
   <link rel="alternate" hreflang="x-default" href="../es/" />
-  <link rel="stylesheet" href="../css/main.css?v=41" />
+  <link rel="stylesheet" href="../css/main.css?v=44" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -93,7 +93,7 @@
 
     <section class="services-section" id="services">
       <div class="mx-auto max-w-6xl px-6 md:px-10">
-        <div class="mb-10 reveal"><p class="services-kicker">Servicios / Qué hacemos</p><h2 class="display text-5xl md:text-7xl">QUÉ HACEMOS</h2><p class="mt-6 text-[11px] uppercase tracking-[.3em] text-white/50">Producción audiovisual · Fotografía · Contenido</p></div>
+        <div class="mb-10 reveal"><p class="services-kicker">Servicios / Qué hacemos</p><h2 class="display text-5xl md:text-7xl">QUÉ HACEMOS</h2><p class="services-subline">Producción audiovisual · Fotografía · Contenido</p></div>
         <div class="flex flex-col gap-4">
           <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <article class="service-card group relative rounded-xl overflow-hidden border border-white/5 bg-black/20 reveal">
@@ -188,7 +188,9 @@
     </section>
 
     <section class="impact-section" id="why">
-      <img src="../assets/impact-bg.png" alt="" class="impact-section__bg" aria-hidden="true">
+      <video autoplay muted loop playsinline class="impact-section__bg" aria-hidden="true">
+        <source src="../assets/impacto.mp4" type="video/mp4">
+      </video>
       <div class="impact-section__overlay" aria-hidden="true"></div>
       <div class="impact-section__inner mx-auto max-w-[1400px] px-6 md:px-10 lg:px-12">
         <div class="impact-section__top reveal">
@@ -318,7 +320,7 @@
     <div class="clients-distribution-wrap">
     <section class="clients-section pt-16 pb-10 md:pt-20 md:pb-12" id="clients">
       <div class="mx-auto max-w-[1400px] px-6 md:px-10 mb-10 md:mb-12 text-center reveal">
-        <p class="text-[9px] uppercase tracking-[.38em] text-gold mb-4">Confianza en todo el mundo</p>
+        <p class="text-[9px] uppercase tracking-[.38em] text-[#9e5902] mb-4">Confianza en todo el mundo</p>
         <h2 class="display text-5xl md:text-7xl">CLIENTES Y PARTNERS</h2>
       </div>
       <div class="clients-carousel reveal delay-80">
@@ -338,11 +340,11 @@
 
     <section class="distribution-section pt-6 pb-24 md:pt-10 md:pb-28" id="distribution">
       <div class="mx-auto max-w-[1400px] px-6 md:px-10 mb-10 md:mb-12 text-center reveal">
-        <p class="text-[9px] uppercase tracking-[.38em] text-gold mb-4">Distribución mundial</p>
+        <p class="text-[9px] uppercase tracking-[.38em] text-[#9e5902] mb-4">Distribución mundial</p>
         <h2 class="display text-5xl md:text-7xl">DISTRIBUCIÓN INTERNACIONAL</h2>
       </div>
       <div class="mx-auto max-w-6xl px-6 md:px-10 mb-8 reveal delay-80">
-        <div class="channels-label text-[10px] uppercase tracking-[.32em] text-gold font-medium"><span class="dot"></span>CANALES<span class="dot"></span></div>
+        <div class="channels-label text-[10px] uppercase tracking-[.32em] text-[#9e5902] font-medium"><span class="dot"></span>CANALES<span class="dot"></span></div>
       </div>
       <div class="reveal delay-120">
         <div class="channels-grid">
@@ -380,10 +382,9 @@
 
     <section class="bg-ink py-24 md:py-28 scroll-mt-28" id="map">
       <div class="mx-auto max-w-6xl px-6 md:px-10">
-        <div class="mb-10 reveal"><p class="text-[9px] uppercase tracking-[.38em] text-gold mb-5">Huella / Alcance global</p><h2 class="display text-5xl md:text-7xl">HISTORIAS SIN FRONTERAS</h2></div>
+        <div class="mb-10 reveal"><p class="text-[9px] uppercase tracking-[.38em] text-[#9e5902] mb-5">Huella / Alcance global</p><h2 class="display text-5xl md:text-7xl">HISTORIAS SIN FRONTERAS</h2></div>
         <div class="relative rounded-xl overflow-hidden border border-white/5 reveal">
-          <img src="../assets/img-016.png" class="w-full" alt="Mapa mundial con el alcance global">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent"></div>
+          <img src="../assets/mapa.png" class="w-full" alt="Mapa mundial con el alcance global">
         </div>
         <div class="map-stats reveal delay-80">
           <div class="map-stats__item">
@@ -406,7 +407,7 @@
       </div>
     </section>
 
-    <section class="relative bg-black py-20 sm:py-24 md:py-28 overflow-hidden scroll-mt-28" id="work">
+    <section class="work-section py-20 sm:py-24 md:py-28 scroll-mt-28" id="work">
       <div class="mx-auto max-w-[1400px] px-[18px] sm:px-8 md:px-10 lg:px-12">
         <div class="mx-auto max-w-6xl grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 scroll-mt-28">
           <!-- Video 1: Argentina 4K -->
@@ -507,16 +508,16 @@
       </div>
     </section>
 
-    <section class="bg-panel py-24 md:py-28 border-y border-white/[.035]" id="about">
+    <section class="about-section" id="about">
   <div class="mx-auto max-w-6xl px-6 md:px-10">
     <!-- Encabezado de la sección -->
     <div class="max-w-3xl mb-20">
       <div>
-        <p class="text-[9px] uppercase tracking-[.38em] text-gold mb-5">La Filosofía / El Estudio</p>
+        <p class="text-[9px] uppercase tracking-[.38em] text-gold mb-5 about-kicker hidden">La Filosofía / El Estudio</p>
         <h2 class="display text-5xl md:text-7xl">SOBRE NOSOTROS</h2>
         <div class="mt-8 h-px w-20 bg-gradient-to-r from-gold to-transparent"></div>
       </div>
-      <div class="mt-8 md:mt-10 text-white/65 text-[15px] md:text-[17px] leading-[1.75] md:leading-[1.85] font-light space-y-6 md:space-y-7">
+      <div class="mt-8 md:mt-10 text-white/65 text-[15px] md:text-[17px] leading-[1.75] md:leading-[1.85] font-light space-y-6 md:space-y-7 about-body">
         <p>En GAUCHO FILMS no creamos contenido solo para que se vea bien. Creamos historias diseñadas para conectar con la audiencia de cada cliente, entendiendo lo que quieren comunicar, a quién quieren llegar y el impacto que desean generar.</p>
         <p>Combinamos estrategia, narrativa y un enfoque cinematográfico para convertir cada producción en una herramienta poderosa que construye identidad, genera impacto y hace que las marcas sean vistas, sentidas y recordadas.</p>
       </div>
@@ -530,7 +531,7 @@
           <div class="flex-1 min-w-0">
             <div class="text-[9px] uppercase tracking-[.25em] text-gold mb-3">Director &amp; Fundador</div>
             <h3 class="display text-xl sm:text-2xl">NACHO SASO</h3>
-            <p class="mt-3 text-sm text-white/50 leading-6">Lidera la visión y narrativa de Horses &amp; Humans, capturando culturas a través de narrativas cinematográficas en torno al caballo.</p>
+            <p class="mt-3 text-sm text-white/50 leading-6">Lidera la visión creativa y estratégica de Gaucho Films, desarrollando producciones audiovisuales y proyectos internacionales que conectan marcas, personas y culturas a través de historias con identidad, impacto y una mirada cinematográfica propia.</p>
             <div class="team-card-social">
               <a href="https://www.instagram.com/nachosaso/" target="_blank" rel="noopener" aria-label="Instagram" class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 hover:border-white/50 hover:text-white transition">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
@@ -618,48 +619,91 @@
             </div>
           </div>
         </div>
+
+        <!-- Miembro 6: Rosa Novillo -->
+        <div class="team-card">
+          <img src="../assets/flor.png" class="team-card-photo" alt="Rosa Novillo">
+          <div class="flex-1 min-w-0">
+            <div class="text-[9px] uppercase tracking-[.25em] text-gold mb-3">Productora &amp; Desarrollo Comercial</div>
+            <h3 class="display text-xl sm:text-2xl">ROSA NOVILLO</h3>
+            <p class="mt-3 text-sm text-white/50 leading-6">Coordina producciones y desarrolla oportunidades comerciales, conectando proyectos, clientes y equipos para llevar cada historia desde la idea hasta su realización.</p>
+            <div class="team-card-social">
+              <a href="https://www.instagram.com/rosanovillo" target="_blank" rel="noopener" aria-label="Instagram" class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 hover:border-white/50 hover:text-white transition">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn" class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 hover:border-white/50 hover:text-white transition">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.55V9h3.57zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+              </a>
+              <span class="text-[9px] uppercase tracking-[.2em]">@rosanovillo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Miembro 7: Florencia Turrin -->
+        <div class="team-card">
+          <img src="../assets/turrin.jpg" class="team-card-photo" alt="Florencia Turrin">
+          <div class="flex-1 min-w-0">
+            <div class="text-[9px] uppercase tracking-[.25em] text-gold mb-3">Productora Ejecutiva &amp; Coordinación General</div>
+            <h3 class="display text-xl sm:text-2xl">FLORENCIA TURRIN</h3>
+            <p class="mt-3 text-sm text-white/50 leading-6">Acompaña la dirección general de Gaucho Films, coordinando equipos, producciones y oportunidades comerciales. Participa en el desarrollo de proyectos y en la organización de las distintas áreas de la productora, conectando ideas, personas y estrategias para hacerlas realidad.</p>
+            <div class="team-card-social">
+              <a href="https://www.instagram.com/florenciaturrin" target="_blank" rel="noopener" aria-label="Instagram" class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 hover:border-white/50 hover:text-white transition">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn" class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 hover:border-white/50 hover:text-white transition">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.55V9h3.57zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+              </a>
+              <span class="text-[9px] uppercase tracking-[.2em]">@florenciaturrin</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 </section>
 
-    <section class="relative min-h-[620px] flex items-center overflow-hidden" id="contact">
-      <img src="../assets/img-020.png" class="absolute inset-0 w-full h-full object-cover" alt="Amanecer sobre las montañas">
-      <div class="absolute inset-0 bg-black/55"></div>
-      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-black/30"></div>
-      <div class="relative z-10 mx-auto max-w-6xl px-6 md:px-10 w-full text-center reveal">
-        <p class="text-[9px] uppercase tracking-[.38em] text-gold mb-6">Inicio de proyecto / Consultas </p>
-        <h2 class="display text-5xl md:text-7xl lg:text-8xl leading-[56px] md:leading-[.82] max-w-4xl mx-auto">ES HORA DE MOSTRAR LO QUE HACÉS DE OTRA MANERA.</h2>
-        <p class="mt-6 text-sm md:text-[17px] text-white/60">Creemos juntos una producción que conecte con tu audiencia.</p>
-        <div class="mt-8">
-          <a href="https://wa.me/5491170985242?text=Hola%20GAUCHO%20FILMS%2C%20me%20gustar%C3%ADa%20comenzar%20un%20proyecto." target="_blank" rel="noopener" class="contact-wa-cta">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-            Comenzar un proyecto
-          </a>
+    <section class="relative min-h-[620px] flex flex-col items-center overflow-hidden" id="contact" style="padding-top: 50px;">
+      <img src="../assets/eshora.png" class="absolute inset-0 w-full h-full object-cover" alt="Es hora de mostrar lo que hacés de otra manera">
+      <div class="relative z-10 mx-auto max-w-6xl px-6 md:px-10 w-full text-center reveal flex-1 flex items-center">
+        <div class="w-full">
+          <p class="text-[9px] uppercase tracking-[.38em] mb-6" style="color: #9e5902; font-weight: bold; font-size: 11px;">Inicio de proyecto / Consultas </p>
+          <h2 class="display text-5xl md:text-7xl lg:text-8xl leading-[56px] md:leading-[.82] max-w-4xl mx-auto text-black">ES HORA DE MOSTRAR LO QUE HACÉS DE OTRA MANERA.</h2>
+          <p class="mt-6 text-sm md:text-[17px] text-black">Creemos juntos una producción que conecte con tu audiencia.</p>
+          <div class="mt-8">
+            <a href="https://wa.me/5491170985242?text=Hola%20GAUCHO%20FILMS%2C%20me%20gustar%C3%ADa%20comenzar%20un%20proyecto." target="_blank" rel="noopener" class="contact-wa-cta">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              Comenzar un proyecto
+            </a>
+          </div>
         </div>
       </div>
+      <footer class="site-footer relative z-10 w-full py-12 md:py-14">
+        <div class="mx-auto max-w-6xl px-6 md:px-10">
+        <div class="site-footer-main">
+          <a href="#top" class="site-footer-logo !text-black" aria-label="Inicio GAUCHO FILMS">
+            <img src="../assets/logo.png" alt="GAUCHO FILMS">
+          </a>
+            <nav class="site-footer-links" aria-label="Redes sociales">
+              <a href="https://www.instagram.com/nachosaso/" target="_blank" rel="noopener noreferrer" class="!text-black hover:!text-black/80">Instagram</a>
+              <a href="https://www.linkedin.com/in/nachosanchezsorondo/" target="_blank" rel="noopener noreferrer" class="!text-black hover:!text-black/80">LinkedIn</a>
+              <a href="https://www.youtube.com/@HorsesHumans" target="_blank" rel="noopener noreferrer" class="!text-black hover:!text-black/80">YouTube</a>
+            </nav>
+            <nav class="site-footer-links" aria-label="Contacto">
+              <a href="#contact" class="!text-black hover:!text-black/80">Contacto</a>
+              <a href="mailto:films@gauchofilms.studio" class="!text-black hover:!text-black/80">Email</a>
+              <a href="https://wa.me/5491170985242?text=Hola%20GAUCHO%20FILMS%2C%20me%20gustar%C3%ADa%20comenzar%20un%20proyecto." target="_blank" rel="noopener noreferrer" class="!text-black hover:!text-black/80">WhatsApp</a>
+            </nav>
+          </div>
+          <div class="pt-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-[8px] uppercase tracking-[.23em] text-black"><span>© 2026 GAUCHO FILMS Studio. Todos los derechos reservados.</span><span>Buenos Aires · Argentina · Trabajamos en todo el mundo</span></div>
+        </div>
+      </footer>
     </section>
   </main>
 
-  <footer class="site-footer bg-black py-12 md:py-14">
-    <div class="mx-auto max-w-6xl px-6 md:px-10">
-      <div class="site-footer-main">
-        <a href="#top" class="site-footer-logo" aria-label="Inicio GAUCHO FILMS">
-          <img src="../assets/logo.png" alt="GAUCHO FILMS">
-        </a>
-        <nav class="site-footer-links" aria-label="Redes sociales">
-          <a href="https://www.instagram.com/nachosaso/" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="https://www.linkedin.com/in/nachosanchezsorondo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://www.youtube.com/@HorsesHumans" target="_blank" rel="noopener noreferrer">YouTube</a>
-        </nav>
-        <nav class="site-footer-links" aria-label="Contacto">
-          <a href="#contact">Contacto</a>
-          <a href="mailto:films@gauchofilms.studio">Email</a>
-          <a href="https://wa.me/5491170985242?text=Hola%20GAUCHO%20FILMS%2C%20me%20gustar%C3%ADa%20comenzar%20un%20proyecto." target="_blank" rel="noopener noreferrer">WhatsApp</a>
-        </nav>
-      </div>
-      <div class="pt-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-[8px] uppercase tracking-[.23em] text-white/30"><span>© 2026 GAUCHO FILMS Studio. Todos los derechos reservados.</span><span>Buenos Aires · Argentina · Trabajamos en todo el mundo</span></div>
-    </div>
-  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="../src/js/main.js?v=12"></script>
+</body>
+</html>
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
