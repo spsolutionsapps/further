@@ -2,7 +2,7 @@
   var STORAGE_KEY = 'gauchofilms-lang';
   var MANUAL_KEY = 'gauchofilms-lang-manual';
   var SUPPORTED = { es: true, en: true, pt: true };
-  var DEFAULT_LANG = 'en';
+  var DEFAULT_LANG = 'es';
   var GEO_TIMEOUT_MS = 4500;
 
   var SPANISH = {
@@ -43,10 +43,10 @@
     var parts = String(tag || '').split('-');
     var base = (parts[0] || '').toLowerCase();
     var region = (parts[1] || '').toUpperCase();
-    if (region && ENGLISH[region]) return 'en';
-    if (region && SPANISH[region]) return 'es';
-    if (region && PORTUGUESE[region]) return 'pt';
     if (SUPPORTED[base]) return base;
+    if (region && PORTUGUESE[region]) return 'pt';
+    if (region && SPANISH[region]) return 'es';
+    if (region && ENGLISH[region]) return 'en';
     return null;
   }
 
@@ -82,6 +82,7 @@
   }
 
   try {
+    // if the visitor already picked a language, respect it
     if (localStorage.getItem(MANUAL_KEY) === '1') {
       var saved = localStorage.getItem(STORAGE_KEY);
       if (saved && SUPPORTED[saved]) {
