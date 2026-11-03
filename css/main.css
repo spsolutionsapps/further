@@ -806,7 +806,7 @@ body {
 
 .team-card h3,
 .team-card .display {
-  color: #1b1b1b !important;
+  color: #000 !important;
 }
 
 .team-card p {
@@ -3496,7 +3496,7 @@ body {
 }
 
 .team-card {
-  background: rgba(255, 215, 164, .3) !important;
+  background: rgb(255 215 164 / 81%) !important;
   border-color: rgba(113, 82, 0, .3) !important;
 }
 
