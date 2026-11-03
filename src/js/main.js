@@ -69,6 +69,47 @@ const observer = new IntersectionObserver(
 );
 document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
+// Map stats — count up from zero when the section enters the viewport
+(function initMapStats() {
+  const statsBlock = document.querySelector('.map-stats');
+  if (!statsBlock || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const values = Array.from(statsBlock.querySelectorAll('.map-stats__value'));
+  if (!values.length) return;
+
+  const DURATION = 1600;
+
+  const countUp = (el) => {
+    const match = el.textContent.trim().match(/^(\D*)(\d+)(.*)$/);
+    if (!match) return;
+    const [, prefix, digits, suffix] = match;
+    const target = parseInt(digits, 10);
+    const start = performance.now();
+
+    el.textContent = prefix + '0' + suffix;
+
+    const step = (now) => {
+      const progress = Math.min((now - start) / DURATION, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = prefix + Math.round(target * eased) + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    };
+
+    requestAnimationFrame(step);
+  };
+
+  const statsObserver = new IntersectionObserver(
+    (entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+      values.forEach(countUp);
+      statsObserver.disconnect();
+    },
+    { threshold: 0.4 }
+  );
+
+  statsObserver.observe(statsBlock);
+})();
+
 // Header state
 const header = document.getElementById('siteHeader');
 addEventListener(
