@@ -446,7 +446,22 @@
   }
 
   .originals-section__platforms {
-    @apply flex flex-wrap items-center justify-center gap-5 md:gap-7 lg:gap-8;
+    @apply flex flex-wrap items-center justify-center gap-5;
+  }
+
+  @media (min-width: 768px) {
+    .originals-section__platforms {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      column-gap: 1.75rem;
+      row-gap: 1rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .originals-section__platforms {
+      column-gap: 2rem;
+    }
   }
 
   .originals-platform-logo {

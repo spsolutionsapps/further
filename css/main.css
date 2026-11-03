@@ -1828,13 +1828,16 @@ body {
 
 @media (min-width: 768px) {
   .originals-section__platforms {
-    gap: 1.75rem;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 1.75rem;
+    row-gap: 1rem;
   }
 }
 
 @media (min-width: 1024px) {
   .originals-section__platforms {
-    gap: 2rem;
+    column-gap: 2rem;
   }
 }
 
