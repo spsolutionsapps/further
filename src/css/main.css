@@ -541,7 +541,7 @@
   .clients-distribution-wrap {
     @apply relative overflow-hidden border-b border-white/[.05];
     background-color: #fcd6a2;
-    background-image: url('../assets/papiro.webp');
+    background-image: url('../assets/q-hacemos.webp');
     background-size: cover;
     background-position: center;
   }
@@ -1039,7 +1039,7 @@
 
 .clients-distribution-wrap {
   background-color: #fcd6a2;
-  background-image: url('../assets/papiro.webp');
+  background-image: url('../assets/q-hacemos.webp');
   background-size: cover;
   background-position: center;
 }
