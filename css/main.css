@@ -1992,6 +1992,9 @@ body {
   border-bottom-width: 1px;
   border-color: rgb(255 255 255 / .05);
   background-color: #fcd6a2;
+  background-image: url('../assets/papiro.webp');
+  background-size: cover;
+  background-position: center;
 }
 
 .services-section {
@@ -3469,6 +3472,9 @@ body {
 
 .clients-distribution-wrap {
   background-color: #fcd6a2;
+  background-image: url('../assets/papiro.webp');
+  background-size: cover;
+  background-position: center;
 }
 
 .clients-distribution-wrap,
