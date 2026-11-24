@@ -431,6 +431,12 @@
     @apply mt-3 text-[2rem] leading-[1.02] text-white md:text-[2.35rem] lg:text-[2.65rem];
   }
 
+  .originals-card__title-logo {
+    @apply block;
+    width: 190px;
+    margin: 10px 0 0;
+  }
+
   .originals-card__desc {
     @apply mt-3 max-w-sm text-[15px] leading-[1.6] text-white/70 md:text-[16px];
   }
@@ -534,11 +540,7 @@
 
   .clients-distribution-wrap {
     @apply relative overflow-hidden border-b border-white/[.05];
-    background-color: #12161f;
-    background-image:
-      radial-gradient(ellipse 90% 55% at 50% 0%, rgba(217, 178, 75, 0.07) 0%, transparent 52%),
-      radial-gradient(ellipse 70% 45% at 0% 100%, rgba(255, 255, 255, 0.025) 0%, transparent 50%),
-      linear-gradient(180deg, #161b24 0%, #131820 48%, #11151c 100%);
+    background-color: #fcd6a2;
   }
 
   .services-section {
@@ -593,19 +595,19 @@
 
   .hero-logo {
     display: block;
-    width: min(72vw, 280px);
+    width: min(80vw, 320px);
     height: auto;
   }
 
   @media (min-width: 768px) {
     .hero-logo {
-      width: min(42vw, 360px);
+      width: min(46vw, 400px);
     }
   }
 
   @media (min-width: 1024px) {
     .hero-logo {
-      width: 400px;
+      width: 460px;
     }
   }
 
@@ -1033,10 +1035,7 @@
 }
 
 .clients-distribution-wrap {
-  background-image: url('../assets/logos.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: #fcd6a2;
 }.clients-distribution-wrap,
 .clients-distribution-wrap * {
   color: #1b1b1b !important;

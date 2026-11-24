@@ -1733,6 +1733,12 @@ body {
   }
 }
 
+.originals-card__title-logo {
+  display: block;
+  width: 190px;
+  margin: 10px 0 0;
+}
+
 .originals-card__desc {
   margin-top: 0.75rem;
   max-width: 24rem;
@@ -1985,11 +1991,7 @@ body {
   overflow: hidden;
   border-bottom-width: 1px;
   border-color: rgb(255 255 255 / .05);
-  background-color: #12161f;
-  background-image:
-      radial-gradient(ellipse 90% 55% at 50% 0%, rgba(217, 178, 75, 0.07) 0%, transparent 52%),
-      radial-gradient(ellipse 70% 45% at 0% 100%, rgba(255, 255, 255, 0.025) 0%, transparent 50%),
-      linear-gradient(180deg, #161b24 0%, #131820 48%, #11151c 100%);
+  background-color: #fcd6a2;
 }
 
 .services-section {
@@ -2117,19 +2119,19 @@ body {
 
 .hero-logo {
   display: block;
-  width: min(72vw, 280px);
+  width: min(80vw, 320px);
   height: auto;
 }
 
 @media (min-width: 768px) {
   .hero-logo {
-    width: min(42vw, 360px);
+    width: min(46vw, 400px);
   }
 }
 
 @media (min-width: 1024px) {
   .hero-logo {
-    width: 400px;
+    width: 460px;
   }
 }
 
@@ -3466,10 +3468,7 @@ body {
 }
 
 .clients-distribution-wrap {
-  background-image: url('../assets/logos.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: #fcd6a2;
 }
 
 .clients-distribution-wrap,
